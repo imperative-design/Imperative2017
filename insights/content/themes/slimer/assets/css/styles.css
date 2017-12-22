@@ -16,6 +16,8 @@ a:hover {
   margin-top: 110px;
   min-height: 200px;
   max-height: 300px; }
+  .banner img {
+    width: 100%; }
 
 .post-template .content {
   display: flex;
@@ -154,7 +156,7 @@ article.post.tag-quick-tip {
   width: 100%; }
 
 .content {
-  width: 70%;
+  width: 65%;
   margin: 20px 0 0 0;
   flex-direction: column;
   display: flex; }
