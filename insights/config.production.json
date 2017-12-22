@@ -1,0 +1,27 @@
+{
+    "url": "http://localhost:5000/insights",
+    "server": {
+      "port": 2368,
+      "host": "127.0.0.1"
+    },
+    "database": {
+      "client": "sqlite3",
+      "connection": {
+        "filename": "/Users/mariustalpos/Desktop/dev/site/insights/content/data/ghost-local.db"
+      }
+    },
+    "mail": {
+      "transport": "Direct"
+    },
+    "logging": {
+      "transports": [
+        "file",
+        "stdout"
+      ]
+    },
+    "process": "local",
+    "paths": {
+      "contentPath": "/Users/mariustalpos/Desktop/dev/site/insights/content"
+    }
+  }
+  

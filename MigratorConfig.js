@@ -1,14 +1,16 @@
-var config = require('./core/server/config'),
-    ghostVersion = require('./core/server/utils/ghost-version');
-
-/**
- * knex-migrator can be used via CLI or within the application
- * when using the CLI, we need to ensure that our global overrides are triggered
- */
-require('./core/server/overrides');
+var process = require('process');
 
 module.exports = {
-    currentVersion: ghostVersion.safe,
-    database: config.get('database'),
-    migrationPath: config.get('paths:migrationPath')
-};
+    database: {
+        client: 'mysql',
+        connection: {
+            host: "us-cdbr-iron-east-05.cleardb.net",
+            user: "b5d1e148a9ba84",
+            password: "48a7d98b",
+            database: "heroku_d6140dbbff83350"
+        }
+    },
+    migrationPath: process.cwd() + '/current/core/server/data/migrations',
+    currentVersion: 'your-current-database/project-version',
+    subfolder: 'upgrades'
+}

@@ -1,3 +1,4 @@
+
 /**
  * Integrating ghost into express.
  * used this guide on ghost 0.11.7 https://rogerstringer.com/2015/09/07/ghost-express-middleware/
@@ -5,30 +6,14 @@
  * - make sure to copy the ghost content and config over from the node_modules folder.
  * - set the content directory path in the config or it wont be able to find your theme or login.
  */
-var process 		= require('process');
 var ghost 			= require('ghost');
 var path 			= require('path');
 var utils 			= require('./node_modules/ghost/core/server/utils');
 var express     	= require('express');
 var bodyParser 		= require('body-parser');
 var path        	= require('path');
-
 var app         	= express();
 var mandrill 		= require('mandrill-api/mandrill');
-
-app.set('database', {
-	"client": "mysql",
-	"connection": {
-		"user": process.env.MYSQL_USER,
-		"password": process.env.MYSQL_PASSWORD,
-		"host": process.env.MYSQL_HOST,
-		"database": process.env.MYSQL_DB,
-	},
-	"pool": {
-		"min": 2,
-		"max": 20
-	}
-});
 
 //Middleware Configs
 app.use(express.static(__dirname + '/public'));
@@ -36,42 +21,48 @@ app.use('/scripts', express.static(__dirname + '/node_modules'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.urlencoded({ extended: true }));
- 
-let env_config = {
-	"server":{
-		"host": "http://imperativedesign.net",
-		"port": process.env.PORT
-	},
-	"url": "http://imperativedesign.net/insights",
-	"database": {
-		"client": "mysql",
-		"connection": {
-			"user": process.env.MYSQL_USER,
-			"password": process.env.MYSQL_PASSWORD,
-			"host": process.env.MYSQL_HOST,
-			"database": process.env.MYSQL_DB,
-		},
-		"pool": {
-			"min": 2,
-			"max": 20
-		}
-	}
-};
+
+//Ghost configs
+// var config_path = path.join(__dirname, '/public/insights/config.js');
 
 
+// // console.log('Ghost diagnostics: ');
+// // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+// // console.log(`port: ${process.env.PORT}`);
+// // console.log(`config_path: ${config_path}`);
+// // console.log('===========================');
 
-//console.log(`Debug Info: App is running in  ${process.env.NODE_ENV} mode on port ${process.env.PORT}`);
-//console.log(`===== prod db config is a ${typeof env_config.database} with a host of ${env_config.database.connection.host} =======`);
 
+// app.use( '/insights', ghost({
+// 	config: config_path
+// }) );
 
-// //Init Ghost in a subdirectory
-ghost(env_config).then((ghostServer) => {
-	app.use('/insights', ghostServer.rootApp);
+//Init Ghost in a subdirectory
+ghost().then(function (ghostServer) {
+	app.use(utils.url.getSubdir(), ghostServer.rootApp);
+
+	if(process.env.NODE_ENV === 'production'){
+		let blog_url = `http://imperativedesign.net/insights`;
+		ghostServer.config.set('url', blog_url);
+
+		let db = {};
+		db.client = "mysql";
+		db.connection = process.env.CLEARDB_DATABASE_URL;
+		ghostServer.config.set('databse', db);
+
+		let paths = ghostServer.config.get('paths');
+		paths.contentPath = "/app/insights/content"
+		ghostServer.config.set('paths', paths);
+	}	
 	
-	let paths = ghostServer.config.get('paths');
-	paths.contentPath = "/app/insights/content"
-	ghostServer.config.set('paths', paths);
-
+	console.log('===== database config is =====');
+	console.log(ghostServer.config.get('databse'));
+	console.log('=== url config is ======');
+	console.log(ghostServer.config.get('url'));
+	console.log('=== paths config is ======');
+	console.log(__dirname);	
+	console.log(ghostServer.config.get('paths'));
+	
     ghostServer.start(app);
 });
 
@@ -167,4 +158,4 @@ app.post('/contact', (req, res)=>{
 
 //Port Configs
 app.set('port', (process.env.PORT || 5000));
-app.listen(app.get('port'), () => console.log('Node app is running on port', app.get('port')));
+app.listen(app.get('port'), () => console.log('Node app is running on port', app.get('port'), 'Ghost mounted on', utils.url.getSubdir(), '<- here'));

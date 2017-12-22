@@ -7,12 +7,13 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "clear; node server",
-    "startdevserver": "clear; DEBUG=ghost:*  NODE_ENV=development nodemon server",
-    "blogdev": "node-sass -w insights/content/themes/slimer/assets/sass -o insights/content/themes/slimer/assets/css/",
+    "start": "clear; NODE_ENV=production node server",
+    "startdevserver": "clear; NODE_ENV=development nodemon server",
+    "blogdev": "node-sass -w public/insights/content/themes/slimer/assets/sass -o public/insights/content/themes/slimer/assets/css/",
     "dev": "node-sass -w public/styles/sass -o public/styles/css/ & browser-sync start -p 'localhost:5000' --files 'public/styles/css'",
     "deploy": "clear; git add . && git commit -m 'heroku deploy' && git push && git push heroku",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "knex-migrator init /app/node_modules/ghost"
   },
   "author": "",
   "license": "ISC",
