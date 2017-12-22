@@ -85,6 +85,12 @@ a:hover { transform: scale(1.1);}
     }
 }
 
+.tag-template { 
+    .site-wrapper{
+        flex-direction: initial;
+    }
+}
+
 .active {
     border-bottom: solid 1px;
     border-color: #0036bf;
