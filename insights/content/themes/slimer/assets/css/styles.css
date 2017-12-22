@@ -59,8 +59,14 @@ a:hover {
     text-decoration: underline;
     color: #5ba4e5; }
 
+.page-template .content {
+  width: 95%; }
+
 .page-template article.post.page {
   display: initial; }
+
+.home-template .site-wrapper {
+  flex-direction: initial; }
 
 .active {
   border-bottom: solid 1px;
@@ -148,7 +154,7 @@ article.post.tag-quick-tip {
   width: 100%; }
 
 .content {
-  width: 95%;
+  width: 70%;
   margin: 20px 0 0 0;
   flex-direction: column;
   display: flex; }
@@ -178,7 +184,8 @@ article.post.tag-quick-tip {
 
 .blog-sidebar {
   width: 27%;
-  display: flex; }
+  display: flex;
+  align-self: baseline; }
   .blog-sidebar #tag-cloud {
     width: 100%;
     font-family: 'Fjalla One';

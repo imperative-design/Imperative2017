@@ -89,10 +89,6 @@ ghost(env_config).then((ghostServer) => {
 	}
 
 	ghostServer.start(app);
-	
-	console.log('==============================');
-	console.log(app);
-	console.log('==============================');
 });
 
 //If you want to use view engines
