@@ -67,10 +67,12 @@ let env_config = {
 // //Init Ghost in a subdirectory
 ghost(env_config).then((ghostServer) => {
 	app.use('/insights', ghostServer.rootApp);
-	
-	let paths = ghostServer.config.get('paths');
-	paths.contentPath = "/app/insights/content"
-	ghostServer.config.set('paths', paths);
+
+	if(process.env == "PRODUCTION"){	
+		let paths = ghostServer.config.get('paths');
+		paths.contentPath = "/app/insights/content"
+		ghostServer.config.set('paths', paths);
+	}
 
     ghostServer.start(app);
 });

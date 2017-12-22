@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "start": "clear; node server",
-    "startdevserver": "clear; DEBUG=ghost:*  NODE_ENV=development nodemon server",
+    "startdevserver": "clear; DEBUG=ghost:* NODE_ENV=development nodemon server",
     "blogdev": "node-sass -w insights/content/themes/slimer/assets/sass -o insights/content/themes/slimer/assets/css/",
     "dev": "node-sass -w public/styles/sass -o public/styles/css/ & browser-sync start -p 'localhost:5000' --files 'public/styles/css'",
     "deploy": "clear; git add . && git commit -m 'heroku deploy' && git push && git push heroku",
