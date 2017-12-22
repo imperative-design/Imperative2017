@@ -1,0 +1,303 @@
+
+//Larger Phones
+@media only screen 
+and (max-device-width : 415px){  
+  .container{
+      overflow: hidden;
+      header {
+          display: flex;
+          position: fixed;
+          width: 100%;
+          z-index: 20;
+          margin-top: 0;
+          // display: inline-block;
+          background: #fff;
+          box-shadow: 0px 1px 1px #bbb;
+          box-sizing: border-box;
+
+          .wrapper {
+              width: 90%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+
+          .logo {
+              display: block;
+              text-align: left;
+              margin: 35px auto 20px;
+              h1 {
+                  font-size: 36pt;
+                  letter-spacing: -2px;
+                  span.tagline { font-size: 20pt; }
+              }
+          }
+
+          .nav-toggle { 
+              visibility: visible;
+              font-size: 17pt;
+              position: absolute;
+              top: 15px;
+              right: 20px;
+              &:hover { color: $blue; transform: scale(1); }
+          }
+
+          ul.nav {
+              display: block;
+              visibility: hidden;
+              position: absolute;
+              width: 100%;
+              top: 100%;
+              left: 0;
+
+              li {
+                  margin: 0;
+                  border-bottom: 1px solid #fff;
+                  a {
+                      display: block;
+                      background: $blue;
+                      color: #fff;
+                      padding: 15px 20px;
+                      box-sizing: border-box;
+                  }
+              }
+          }
+      }
+    }
+
+    .home .client-cases {
+      flex-direction: column;
+      justify-content: space-between;
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .client-img { width: 100%; margin: 0; }
+        .desc {
+          font-size: 14pt;
+          margin: 5px 0 15px;
+          max-width: 275px;
+        }
+      }
+    }
+
+    .home .ctas { 
+        margin-top: 150px; 
+        height: auto;
+        min-height: 200px;
+    }
+
+    .home .ctas .ad1 { 
+        background-position: 0 top;
+        background-size: 100%;
+        img {
+          width: 175%;
+        }
+    }
+
+    .ctas .cta .message { 
+      font-size: 15pt; 
+      bottom: 10px; 
+      right: -220%;
+      width: 98%;
+    }
+
+    .band {
+        .wrapper {
+            width: 98%;
+            display: block;
+            margin: 30px auto 40px;
+            .message, .graphic { width: 98%; display: block; margin: 0 auto; }
+            .graphic { margin: 10px auto; }
+            .message h2 { text-align: center; font-size: 26pt; }
+            .message h2 p { font-size: 23pt; margin-top: 4px; }
+            .next-steps li.btn a { 
+              padding: 5px 0;
+              h2 { margin: 0; }
+            }
+        }
+        
+        &.band2 .wrapper {
+          padding: 0;
+          margin: 0 auto 55px;
+          .graphic { max-width: 100%; }
+          .message h2 { 
+            font-size: 27pt;
+            span { display: none; }
+            p { font-size: 22pt; }
+          }
+        }
+        
+        &.band3 .wrapper {
+          width: 95%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .message { 
+            margin-bottom: 20px;
+            & > h2 { display: none; }
+          }
+          .next-steps {
+            li { margin: 0 0 7px; }
+          }
+        }
+
+        .read-more.btn { display: none; }
+    }
+
+    .services-page {
+        .ctas { margin-bottom: 25px; }
+        .content {
+            width: 98%;
+            border-left: none;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        .page.wrapper {
+            display: block;
+            width: 98%;
+            margin: 0 auto;
+        }
+        .in-page-nav { 
+          width: 100%; 
+          margin: 0 auto 25px;
+          display: block;
+          text-align: center;
+          border-bottom: 1px dotted #333;
+          padding: 0 0 20px;
+          max-width: none;
+        }
+    }
+
+    .page.wrapper h1 { font-size: 15pt; }
+    .ctas .cta .message .highlight {
+        padding: 2px 6px;
+    }
+
+    .band .quick-contact {
+      margin: 50px auto 0;
+      width: 98%;
+      left: 1%;
+      &.active { bottom: 30%; }
+    }
+
+    .about-page, .services-page {
+      .ctas { 
+        height: 200px;
+        margin-top: 150px; 
+        .cta img { height: 100%; width: initial; margin-left: -500px; }
+      }
+    }
+}
+
+@media only screen and (max-device-width: 321px) {
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    margin-top: 0;
+    display: inline-block;
+    background: #fff;
+    box-shadow: 0px 1px 1px #bbb; }
+    header .wrapper {
+      width: 100%;
+      display: block; }
+    header .logo {
+      display: block;
+      text-align: left;
+      text-indent: 20px;
+      margin: 35px auto 20px; }
+      header .logo h1 {
+        font-size: 27pt;
+        letter-spacing: -2px; }
+        header .logo h1 span.tagline {
+          font-size: 15pt; }
+    header .nav-toggle {
+      visibility: visible;
+      position: absolute;
+      top: 40px;
+      right: 7%;
+      font-size: 17pt; }
+      header .nav-toggle:hover {
+        color: #0036bf;
+        transform: scale(1); }
+    header ul.nav {
+      position: absolute;
+      width: 100%;
+      display: block;
+      visibility: hidden; }
+      header ul.nav li {
+        margin: 0; }
+        header ul.nav li a {
+          display: block;
+          background: #0036bf;
+          color: #fff;
+          padding: 2px 4px;
+          box-sizing: border-box; }
+  .home .ctas {
+    margin-top: 110px;
+    height: auto;
+    height: 140px; }
+  .home .ctas .ad1 {
+    background-position: 0 top;
+    background-size: 100%; }
+  .ctas .cta .message {
+    font-size: 10pt;
+    bottom: 1%; }
+  .band .wrapper {
+    width: 98%;
+    display: block;
+    margin: 30px auto 40px; }
+    .band .wrapper .message {
+        width: 40%;
+        font-size: 12pt;
+    }
+    .band .wrapper .message, .band .wrapper .graphic {
+      width: 98%;
+      display: block;
+      margin: 0 auto; }
+    .band .wrapper .graphic {
+      margin: 10px auto; }
+    .band .wrapper .message h2 {
+      text-align: center;
+      font-size: 24pt; }
+    .band .wrapper .message h2 p {
+      font-size: 21pt;
+      margin-top: 4px; }
+  .band.band2 .wrapper .message h2 {
+    font-size: 24pt; }
+  .band.band2 .wrapper .message h2 p {
+    font-size: 20pt; }
+  .band.band3 .wrapper .message {
+    margin-bottom: 20px; }
+  .band.band3 .wrapper .message h2 {
+    font-size: 22pt; }
+  .services-page .ctas {
+    margin-bottom: 25px; }
+  .services-page .content {
+    width: 98%;
+    border-left: none;
+    padding: 0 15px;
+    box-sizing: border-box; }
+  .services-page .page.wrapper {
+    display: block;
+    width: 98%;
+    margin: 0 auto; }
+  .services-page .in-page-nav {
+    width: 100%;
+    margin-bottom: 25px; }
+  .page.wrapper h1 {
+    font-size: 15pt; }
+  .ctas .ad1 {
+    height: 100%;
+    margin-top: 4%;
+  }
+    .next-steps li a {
+        font-size: 11pt;
+        margin-bottom: 5px;
+    } 
+    ul.connect li a {
+        font-size: 22pt;
+    }
+}

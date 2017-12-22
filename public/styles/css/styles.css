@@ -1,0 +1,825 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+p, a, span, body, html, h1, h2, h3, h4, li {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.2; }
+
+/**
+Fonts - 
+Roboto | Permanant Market | Fjalla One
+font-family: 'Roboto', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Permanent Marker', cursive;
+*/
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+p {
+  margin: 0 0 15px; }
+
+em {
+  font-style: italic;
+  color: #343434; }
+
+strong {
+  font-weight: 500; }
+
+.container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto; }
+
+.page.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 50px; }
+  .page.wrapper h1, .page.wrapper h2, .page.wrapper h3, .page.wrapper h4 {
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: -1px;
+    color: #333;
+    margin: 0 0 3px 0; }
+  .page.wrapper h1 {
+    font-size: 18pt;
+    margin: 0 0 20px; }
+  .page.wrapper h1 span {
+    font-weight: 100; }
+
+.graphic.placeholder {
+  width: 40%;
+  background: #787878;
+  min-height: 250px; }
+
+.graphic.image {
+  max-width: 40%;
+  max-height: 250px;
+  margin: 0 5% 0 0;
+  transition: all 500ms ease-in-out; }
+  .graphic.image.active {
+    filter: grayscale(0); }
+
+.ctas {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
+  background: #787878;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #787878 0%, #333333 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #787878 0%, #333333 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #787878 0%, #333333 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#787878', endColorstr='#333333',GradientType=1 );
+  /* IE6-9 */
+  position: relative;
+  overflow: hidden;
+  margin: 115px auto 50px; }
+  .ctas .cta img {
+    width: 100%; }
+  .ctas .cta .message {
+    position: absolute;
+    z-index: 10;
+    right: -110%;
+    bottom: 30%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 21pt;
+    transition: right 500ms ease-in-out; }
+    .ctas .cta .message .highlight {
+      font-family: 'Fjalla One', sans-serif;
+      text-transform: uppercase;
+      background: #333;
+      color: #fff;
+      padding: 5px 10px; }
+    .ctas .cta .message .action {
+      margin: 5px 5px 0 0; }
+      .ctas .cta .message .action a {
+        float: right;
+        color: #eee;
+        text-decoration: none;
+        font-size: 11pt; }
+  .ctas .cta.active .message {
+    right: 1%; }
+  .ctas #flare {
+    position: absolute;
+    z-index: 5; }
+
+#footer {
+  background: #333;
+  height: 35px; }
+
+.shade {
+  position: fixed;
+  top: -110%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  transition: top 500ms ease-in-out; }
+  .shade.active {
+    top: 0; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff; }
+
+header {
+  position: fixed;
+  background: white;
+  padding: 20px 3% 10px 1%;
+  margin: 0px;
+  z-index: 11;
+  width: 100%;
+  max-width: 1500px;
+  box-sizing: border-box;
+  opacity: 1; }
+  header .nav-toggle {
+    visibility: hidden; }
+  header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-between;
+    width: 100%; }
+  header .logo {
+    text-decoration: none;
+    color: #000; }
+    header .logo:hover {
+      color: #000; }
+  header h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 42pt;
+    text-transform: uppercase;
+    width: 345px;
+    letter-spacing: -4px;
+    line-height: 0.9; }
+    header h1 span:first-child {
+      font-family: 'Fjalla One', sans-serif;
+      color: #0036bf;
+      line-height: 0.9; }
+    header h1 span.tagline {
+      display: block;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 23pt;
+      line-height: 0.9; }
+  header ul.nav {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    z-index: 50;
+    justify-content: space-between;
+    min-width: 285px; }
+    header ul.nav li {
+      position: relative; }
+      header ul.nav li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 20pt;
+        font-weight: 100;
+        border-bottom: 1px solid transparent;
+        display: block; }
+        header ul.nav li a:last-child {
+          margin-right: 0; }
+        header ul.nav li a:hover {
+          color: #000;
+          border-color: #0036bf; }
+      header ul.nav li.dropdown ul {
+        position: absolute;
+        width: 325px;
+        left: -110px;
+        display: none; }
+        header ul.nav li.dropdown ul li:first-child {
+          padding-top: 10px; }
+        header ul.nav li.dropdown ul li:last-child a {
+          padding-bottom: 15px; }
+        header ul.nav li.dropdown ul li a {
+          font-size: 14pt;
+          background: rgba(255, 255, 255, 0.95);
+          display: block;
+          text-align: center;
+          padding: 7px;
+          box-sizing: border-box; }
+          header ul.nav li.dropdown ul li a:hover {
+            border-color: transparent;
+            transform: none;
+            background: #0036bf;
+            color: #fff;
+            font-weight: 400; }
+      header ul.nav li.dropdown:hover ul {
+        display: block; }
+      header ul.nav li.get_in_touch a {
+        font-size: 12pt;
+        display: inline-block;
+        background: #0036bf;
+        color: #fff;
+        padding: 0 20px;
+        margin: 0; }
+        header ul.nav li.get_in_touch a:hover {
+          transform: none;
+          border: none; }
+
+.services-page .nav li.services > a,
+.about-page .nav li.about > a,
+.insights-page .nav li.insights > a {
+  color: #000;
+  border-color: #0036bf; }
+
+.band {
+  overflow: hidden; }
+  .band .wrapper {
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between; }
+    .band .wrapper .message {
+      position: relative;
+      width: 60%;
+      font-size: 18pt;
+      margin-right: 10%; }
+      .band .wrapper .message p {
+        font-weight: 100; }
+      .band .wrapper .message h2, .band .wrapper .message h2 p {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 29pt; }
+      .band .wrapper .message h2 {
+        color: #0036bf;
+        margin: 0 0 20px 0;
+        font-size: 27pt; }
+      .band .wrapper .message h2 span {
+        color: #333;
+        font-weight: 100;
+        font-size: 24pt; }
+  .band.blue {
+    color: #fff;
+    background: #0036bf; }
+    .band.blue .message h2 {
+      color: #fff; }
+  .band.white .message h2 p {
+    background: #0036bf;
+    color: #fff; }
+  .band.band1 .wrapper {
+    margin: 10px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-direction: column; }
+    .band.band1 .wrapper h2 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 22pt;
+      margin: 7px 0 12px; }
+  .band.band1 .message p {
+    font-weight: 100; }
+  .band.band1 .message h2 p {
+    margin-top: 2px;
+    padding: 5px 0 5px 0px;
+    text-align: center; }
+  .band.band2 .wrapper > .read-more {
+    max-width: 40%;
+    max-height: 250px;
+    margin: 0 5% 0 0; }
+    .band.band2 .wrapper > .read-more img {
+      width: 100%;
+      margin: none;
+      max-width: none;
+      max-height: none; }
+  .band.band3 {
+    display: flex;
+    margin: 0 0 50px;
+    width: 100%; }
+    .band.band3 .wrapper {
+      width: 100%;
+      justify-content: space-around; }
+    .band.band3 .message {
+      margin-right: 0;
+      width: 100%;
+      display: flex;
+      align-content: space-around;
+      justify-content: space-around; }
+      .band.band3 .message h4 {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 33pt;
+        margin: 0 0 15px 0; }
+      .band.band3 .message p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        border-bottom: 1px dotted;
+        padding-bottom: 4px; }
+  .band .read-more.btn {
+    background: #4A4A4A;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: absolute;
+    font-size: 10pt;
+    bottom: 15px;
+    right: 15px;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif; }
+  .band .quick-contact {
+    width: 40%; }
+    .band .quick-contact form .close {
+      font-size: 14pt;
+      color: red;
+      position: absolute;
+      right: 20px;
+      top: 5px;
+      z-index: 115; }
+      .band .quick-contact form .close:hover {
+        cursor: pointer; }
+    .band .quick-contact form input, .band .quick-contact form textarea {
+      background: #0431a1;
+      width: 100%;
+      margin: 0 0 7px;
+      font-size: 12pt;
+      padding: 10px;
+      color: #fff;
+      border: none; }
+      .band .quick-contact form input:focus, .band .quick-contact form textarea:focus {
+        outline: 2px solid #0036bf; }
+      .band .quick-contact form input[type='submit'], .band .quick-contact form textarea[type='submit'] {
+        background: #fff;
+        color: #0036bf;
+        border: none;
+        padding: 7px 0; }
+        .band .quick-contact form input[type='submit']:hover, .band .quick-contact form textarea[type='submit']:hover {
+          cursor: pointer; }
+    .band .quick-contact .success-msg {
+      display: none; }
+
+.home .ctas {
+  margin: 110px 0 0 0;
+  max-height: 500px; }
+  .home .ctas .ad1 img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    filter: grayscale(1);
+    transition: all 500ms ease-in-out; }
+  .home .ctas .ad1.active img {
+    filter: grayscale(0); }
+
+.wip {
+  width: 100%;
+  background: #93f0ff;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 5px auto;
+  text-align: center;
+  color: #375e64;
+  font-size: 20pt; }
+
+.client-cases {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0 0 25px; }
+  .client-cases li {
+    display: flex;
+    width: 32%;
+    margin-right: 1%;
+    transition: all 500ms; }
+    .client-cases li:last-child {
+      margin-right: 0; }
+    .client-cases li .desc {
+      font-weight: bold;
+      font-size: 16pt; }
+      .client-cases li .desc p {
+        font-weight: 100;
+        font-size: 14pt; }
+    .client-cases li .client-img {
+      position: relative;
+      width: 95%;
+      margin: 0 15px 0 0;
+      max-width: 275px; }
+      .client-cases li .client-img img {
+        background: #333;
+        border: 1px solid #111;
+        outline: none;
+        width: 100%;
+        filter: grayscale(1);
+        z-index: 1;
+        position: relative; }
+      .client-cases li .client-img:hover {
+        cursor: pointer; }
+        .client-cases li .client-img:hover img {
+          filter: none; }
+        .client-cases li .client-img:hover .vignette {
+          opacity: 0.1; }
+    .client-cases li .vignette {
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 101%;
+      height: 100%;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+68&0+0,1+67 */
+      background: radial-gradient(ellipse at center, transparent 0%, black 85%);
+      transition: opacity 0.5s ease-out; }
+
+.band .wrapper .next-steps li.btn {
+  margin: 0 0 15px; }
+  .band .wrapper .next-steps li.btn h2, .band .wrapper .next-steps li.btn a {
+    font-family: 'Permanent Marker', cursive;
+    background: #fff;
+    color: #0036bf; }
+  .band .wrapper .next-steps li.btn a {
+    display: block;
+    font-size: 22pt;
+    text-align: center;
+    padding: 15px 20px; }
+
+.services-page.website-development .web-dev a,
+.services-page.appdev .appdev a,
+.services-page.seo .seo a,
+.services-page.smm .smm a,
+.services-page.strategy .strategy a,
+.services-page.copywriting .copywriting a,
+.services-page.branding .branding a,
+.services-page.mentoring .mentoring a,
+.services-page.web-rennovation .rennovation a {
+  background: #0036bf;
+  color: #fff; }
+
+.services-page .ctas {
+  min-height: 200px;
+  max-height: 300px; }
+
+.services-page .in-page-nav {
+  width: 20%;
+  max-width: 250px;
+  margin-left: 1%; }
+  .services-page .in-page-nav li {
+    margin: 0; }
+    .services-page .in-page-nav li a {
+      display: block;
+      color: #333;
+      padding: 7px; }
+
+.services-page .content {
+  width: 80%;
+  border-left: 1px dotted #333;
+  padding: 0 0 0 30px; }
+
+.about-page .ctas {
+  min-height: 200px;
+  max-height: 300px; }
+
+.about-page .content {
+  width: 80%;
+  border-left: 1px dotted #333;
+  padding: 0 0 0 30px; }
+
+.clients-page .page.wrapper {
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+.clients-page .ctas {
+  height: 300px; }
+
+a {
+  transition: all 250ms;
+  font-size: 11pt;
+  text-decoration: none; }
+
+a:hover {
+  transform: scale(1.1);
+  color: #fff; }
+
+@media only screen and (max-device-width: 415px) {
+  .container {
+    overflow: hidden; }
+    .container header {
+      display: flex;
+      position: fixed;
+      width: 100%;
+      z-index: 20;
+      margin-top: 0;
+      background: #fff;
+      box-shadow: 0px 1px 1px #bbb;
+      box-sizing: border-box; }
+      .container header .wrapper {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .container header .logo {
+        display: block;
+        text-align: left;
+        margin: 35px auto 20px; }
+        .container header .logo h1 {
+          font-size: 36pt;
+          letter-spacing: -2px; }
+          .container header .logo h1 span.tagline {
+            font-size: 20pt; }
+      .container header .nav-toggle {
+        visibility: visible;
+        font-size: 17pt;
+        position: absolute;
+        top: 15px;
+        right: 20px; }
+        .container header .nav-toggle:hover {
+          color: #0036bf;
+          transform: scale(1); }
+      .container header ul.nav {
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0; }
+        .container header ul.nav li {
+          margin: 0;
+          border-bottom: 1px solid #fff; }
+          .container header ul.nav li a {
+            display: block;
+            background: #0036bf;
+            color: #fff;
+            padding: 15px 20px;
+            box-sizing: border-box; }
+  .home .client-cases {
+    flex-direction: column;
+    justify-content: space-between; }
+    .home .client-cases li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; }
+      .home .client-cases li .client-img {
+        width: 100%;
+        margin: 0; }
+      .home .client-cases li .desc {
+        font-size: 14pt;
+        margin: 5px 0 15px;
+        max-width: 275px; }
+  .home .ctas {
+    margin-top: 150px;
+    height: auto;
+    min-height: 200px; }
+  .home .ctas .ad1 {
+    background-position: 0 top;
+    background-size: 100%; }
+    .home .ctas .ad1 img {
+      width: 175%; }
+  .ctas .cta .message {
+    font-size: 15pt;
+    bottom: 10px;
+    right: -220%;
+    width: 98%; }
+  .band .wrapper {
+    width: 98%;
+    display: block;
+    margin: 30px auto 40px; }
+    .band .wrapper .message, .band .wrapper .graphic {
+      width: 98%;
+      display: block;
+      margin: 0 auto; }
+    .band .wrapper .graphic {
+      margin: 10px auto; }
+    .band .wrapper .message h2 {
+      text-align: center;
+      font-size: 26pt; }
+    .band .wrapper .message h2 p {
+      font-size: 23pt;
+      margin-top: 4px; }
+    .band .wrapper .next-steps li.btn a {
+      padding: 5px 0; }
+      .band .wrapper .next-steps li.btn a h2 {
+        margin: 0; }
+  .band.band2 .wrapper {
+    padding: 0;
+    margin: 0 auto 55px; }
+    .band.band2 .wrapper .graphic {
+      max-width: 100%; }
+    .band.band2 .wrapper .message h2 {
+      font-size: 27pt; }
+      .band.band2 .wrapper .message h2 span {
+        display: none; }
+      .band.band2 .wrapper .message h2 p {
+        font-size: 22pt; }
+  .band.band3 .wrapper {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .band.band3 .wrapper .message {
+      margin-bottom: 20px; }
+      .band.band3 .wrapper .message > h2 {
+        display: none; }
+    .band.band3 .wrapper .next-steps li {
+      margin: 0 0 7px; }
+  .band .read-more.btn {
+    display: none; }
+  .services-page .ctas {
+    margin-bottom: 25px; }
+  .services-page .content {
+    width: 98%;
+    border-left: none;
+    padding: 0 15px;
+    box-sizing: border-box; }
+  .services-page .page.wrapper {
+    display: block;
+    width: 98%;
+    margin: 0 auto; }
+  .services-page .in-page-nav {
+    width: 100%;
+    margin: 0 auto 25px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px dotted #333;
+    padding: 0 0 20px;
+    max-width: none; }
+  .page.wrapper h1 {
+    font-size: 15pt; }
+  .ctas .cta .message .highlight {
+    padding: 2px 6px; }
+  .band .quick-contact {
+    margin: 50px auto 0;
+    width: 98%;
+    left: 1%; }
+    .band .quick-contact.active {
+      bottom: 30%; }
+  .about-page .ctas, .services-page .ctas {
+    height: 200px;
+    margin-top: 150px; }
+    .about-page .ctas .cta img, .services-page .ctas .cta img {
+      height: 100%;
+      width: initial;
+      margin-left: -500px; } }
+
+@media only screen and (max-device-width: 321px) {
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    margin-top: 0;
+    display: inline-block;
+    background: #fff;
+    box-shadow: 0px 1px 1px #bbb; }
+  header .wrapper {
+    width: 100%;
+    display: block; }
+  header .logo {
+    display: block;
+    text-align: left;
+    text-indent: 20px;
+    margin: 35px auto 20px; }
+  header .logo h1 {
+    font-size: 27pt;
+    letter-spacing: -2px; }
+  header .logo h1 span.tagline {
+    font-size: 15pt; }
+  header .nav-toggle {
+    visibility: visible;
+    position: absolute;
+    top: 40px;
+    right: 7%;
+    font-size: 17pt; }
+  header .nav-toggle:hover {
+    color: #0036bf;
+    transform: scale(1); }
+  header ul.nav {
+    position: absolute;
+    width: 100%;
+    display: block;
+    visibility: hidden; }
+  header ul.nav li {
+    margin: 0; }
+  header ul.nav li a {
+    display: block;
+    background: #0036bf;
+    color: #fff;
+    padding: 2px 4px;
+    box-sizing: border-box; }
+  .home .ctas {
+    margin-top: 110px;
+    height: auto;
+    height: 140px; }
+  .home .ctas .ad1 {
+    background-position: 0 top;
+    background-size: 100%; }
+  .ctas .cta .message {
+    font-size: 10pt;
+    bottom: 1%; }
+  .band .wrapper {
+    width: 98%;
+    display: block;
+    margin: 30px auto 40px; }
+  .band .wrapper .message {
+    width: 40%;
+    font-size: 12pt; }
+  .band .wrapper .message, .band .wrapper .graphic {
+    width: 98%;
+    display: block;
+    margin: 0 auto; }
+  .band .wrapper .graphic {
+    margin: 10px auto; }
+  .band .wrapper .message h2 {
+    text-align: center;
+    font-size: 24pt; }
+  .band .wrapper .message h2 p {
+    font-size: 21pt;
+    margin-top: 4px; }
+  .band.band2 .wrapper .message h2 {
+    font-size: 24pt; }
+  .band.band2 .wrapper .message h2 p {
+    font-size: 20pt; }
+  .band.band3 .wrapper .message {
+    margin-bottom: 20px; }
+  .band.band3 .wrapper .message h2 {
+    font-size: 22pt; }
+  .services-page .ctas {
+    margin-bottom: 25px; }
+  .services-page .content {
+    width: 98%;
+    border-left: none;
+    padding: 0 15px;
+    box-sizing: border-box; }
+  .services-page .page.wrapper {
+    display: block;
+    width: 98%;
+    margin: 0 auto; }
+  .services-page .in-page-nav {
+    width: 100%;
+    margin-bottom: 25px; }
+  .page.wrapper h1 {
+    font-size: 15pt; }
+  .ctas .ad1 {
+    height: 100%;
+    margin-top: 4%; }
+  .next-steps li a {
+    font-size: 11pt;
+    margin-bottom: 5px; }
+  ul.connect li a {
+    font-size: 22pt; } }

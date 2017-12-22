@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+public/insights/content/data/
+npm-debug.log
+bfg-1.12.16.jar
+config.development.json
+readme.md

@@ -1,0 +1,15 @@
+.services-page .ctas {
+  height: 300px; }
+
+.services-page .in-page-nav {
+  width: 19%; }
+  .services-page .in-page-nav li {
+    margin: 0 0 5px 0; }
+    .services-page .in-page-nav li a {
+      display: block;
+      color: #333; }
+
+.services-page .content {
+  width: 80%;
+  border-left: 1px dotted #333;
+  padding: 0 0 0 30px; }

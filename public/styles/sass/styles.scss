@@ -1,0 +1,20 @@
+
+@import 'globals/reset';
+@import 'globals/fonts';
+@import 'globals/colors';
+@import 'globals/global';
+@import 'globals/header';
+
+//Pages
+@import 'pages/home';
+@import 'pages/services'; 
+@import 'pages/about';
+@import 'pages/clients';
+
+//Effects
+a { transition: all 250ms; font-size: 11pt; text-decoration: none; }
+a:hover { transform: scale(1.1); color: #fff; }
+
+@import 'media-queries/phones'; 
+
+

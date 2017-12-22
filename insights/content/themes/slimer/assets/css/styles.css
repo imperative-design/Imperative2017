@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900");
+body {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+a {
+  transition: all 250ms; }
+
+a:hover {
+  transform: scale(1.1); }
+
+.banner {
+  margin-top: 110px;
+  min-height: 200px;
+  max-height: 300px; }
+
+.post-template .content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 2%;
+  width: 70%; }
+
+.post-template .blog-title {
+  padding: 5px; }
+
+.post-template .post {
+  flex-direction: column; }
+  .post-template .post .post-header {
+    margin: 20px 0 20px 0;
+    line-height: 1; }
+  .post-template .post .post-title {
+    margin: 0 0 7px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    font-size: 24pt; }
+  .post-template .post .links {
+    display: flex;
+    border-top: 1px dotted #777;
+    border-bottom: 1px dotted #777;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0 0 15px 0; }
+    .post-template .post .links a {
+      display: inline-block;
+      margin: 5px 5px 5px 0;
+      text-transform: capitalize; }
+    .post-template .post .links a.status {
+      border-radius: 1px; }
+    .post-template .post .links a.status.development {
+      color: #fff;
+      padding: 0 10px;
+      background: #1dab49; }
+  .post-template .post .post-content a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #5ba4e5; }
+
+.page-template article.post.page {
+  display: initial; }
+
+.active {
+  border-bottom: solid 1px;
+  border-color: #0036bf; }
+
+.flex-box-wrapper {
+  display: flex;
+  flex-direction: row; }
+
+.custom-post-content {
+  width: 40%; }
+  .custom-post-content .hidden-post-tag-cloud {
+    display: none; }
+
+.custom-post-footer div.custom-post-excerpt {
+  font-size: 15pt; }
+
+article.post.tag-quick-tip {
+  flex-direction: column-reverse; }
+  article.post.tag-quick-tip .custom-post-content {
+    width: 100%; }
+
+.custom-post-footer {
+  width: 59%; }
+  .custom-post-footer .read-more {
+    background: #4A4A4A;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: absolute;
+    font-size: 10pt;
+    bottom: 35px;
+    right: 20px;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif; }
+    .custom-post-footer .read-more:hover {
+      background: #242424; }
+  .custom-post-footer div {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 22pt;
+    height: auto;
+    line-height: 1.2; }
+    .custom-post-footer div p {
+      margin: 0;
+      line-height: 0.8; }
+    .custom-post-footer div a {
+      text-decoration: none;
+      text-transform: capitalize; }
+  .custom-post-footer .custom-post-header {
+    margin: 0; }
+    .custom-post-footer .custom-post-header .custom-post-title a {
+      font-size: 13pt; }
+  .custom-post-footer .custom-footer-meta {
+    text-transform: uppercase;
+    font-size: 14pt;
+    color: #0036bf;
+    flex-grow: 1;
+    font-weight: 600;
+    line-height: 1.2; }
+    .custom-post-footer .custom-footer-meta a:only-child {
+      padding: 0; }
+    .custom-post-footer .custom-footer-meta a:first-child {
+      padding: 0; }
+    .custom-post-footer .custom-footer-meta a:last-child {
+      padding: 0; }
+    .custom-post-footer .custom-footer-meta a {
+      color: #0036bf; }
+    .custom-post-footer .custom-footer-meta time {
+      padding: 0;
+      font-size: 14pt; }
+  .custom-post-footer div.custom-post-excerpt {
+    font-size: 15pt;
+    font-weight: 100;
+    margin: 10px 0 0 0; }
+
+.post-image, .tag-cloud {
+  height: auto; }
+
+.post-image p {
+  margin: 0; }
+
+.post-image img {
+  width: 100%; }
+
+.content {
+  width: 95%;
+  margin: 20px 0 0 0;
+  flex-direction: column;
+  display: flex; }
+  .content article {
+    margin: 4rem auto; }
+  .content .post {
+    border: none;
+    margin: 0 0 25px;
+    width: 100%;
+    border-bottom: 1px dotted #999;
+    padding-bottom: 25px;
+    position: relative;
+    word-break: break-word;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: space-between; }
+  .content .post:after {
+    display: none; }
+
+.site-wrapper {
+  display: flex;
+  align-self: center;
+  min-height: 60%;
+  width: 98%;
+  flex-direction: column;
+  align-items: center; }
+
+.blog-sidebar {
+  width: 27%;
+  display: flex; }
+  .blog-sidebar #tag-cloud {
+    width: 100%;
+    font-family: 'Fjalla One';
+    text-transform: uppercase;
+    font-size: 24pt;
+    color: black;
+    margin: 20px 0 0 0; }
+    .blog-sidebar #tag-cloud a.tagCloudTag {
+      display: inline-block;
+      padding: 1.5px;
+      text-decoration: none;
+      color: black;
+      line-height: 1;
+      transition: all 250ms;
+      margin: 0 2px; }
+    .blog-sidebar #tag-cloud a:hover {
+      transform: scale(1.1);
+      border-color: #0036bf; }
+    .blog-sidebar #tag-cloud a.active {
+      color: #0036bf; }
+  .blog-sidebar #custom-tag-meta {
+    background: black; }
+
+h1.post-title {
+  width: 100%; }
+
+body > header {
+  display: flex;
+  position: fixed;
+  background: white;
+  padding: 20px 3% 10px 1%;
+  margin: 0px;
+  z-index: 11;
+  width: 100%;
+  max-width: 1500px;
+  box-sizing: border-box;
+  opacity: 1; }
+  body > header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; }
+    body > header .wrapper .nav-toggle {
+      display: none; }
+  body > header .logo {
+    text-decoration: none;
+    color: #000; }
+    body > header .logo:hover {
+      color: #000; }
+  body > header h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 42pt;
+    text-transform: uppercase;
+    width: 385px;
+    letter-spacing: -2px;
+    line-height: 0.9;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    margin: 0;
+    text-indent: 0px;
+    color: #000; }
+    body > header h1 span:first-child {
+      font-family: 'Fjalla One', sans-serif;
+      color: #0036bf;
+      line-height: 0.9; }
+    body > header h1 span.tagline {
+      color: #000;
+      display: block;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 23pt;
+      line-height: 0.9;
+      text-indent: 0px; }
+  body > header ul.insights-nav {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    z-index: 50;
+    justify-content: space-between;
+    min-width: 285px;
+    list-style: none;
+    margin: 0;
+    line-height: 32px;
+    letter-spacing: normal; }
+    body > header ul.insights-nav li {
+      position: relative;
+      margin: 0 5% 0 0;
+      font-size: 20pt; }
+      body > header ul.insights-nav li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 20pt;
+        font-weight: 100;
+        border-bottom: 1px solid transparent;
+        display: block; }
+        body > header ul.insights-nav li a:last-child {
+          margin-right: 0; }
+        body > header ul.insights-nav li a:hover {
+          color: #000;
+          border-color: #0036bf; }
+      body > header ul.insights-nav li.get_in_touch a {
+        font-size: 12pt;
+        display: inline-block;
+        background: #0036bf;
+        color: #fff;
+        padding: 0 20px;
+        margin: 0; }
+        body > header ul.insights-nav li.get_in_touch a:hover {
+          transform: none;
+          border: none; }
+      body > header ul.insights-nav li.insights-dropdown ul {
+        position: absolute;
+        padding: 0;
+        width: 325px;
+        left: -110px;
+        display: none;
+        list-style: none; }
+        body > header ul.insights-nav li.insights-dropdown ul li:first-child {
+          padding-top: 10px; }
+        body > header ul.insights-nav li.insights-dropdown ul li:last-child a {
+          padding-bottom: 15px; }
+        body > header ul.insights-nav li.insights-dropdown ul li a {
+          font-size: 14pt;
+          background: rgba(255, 255, 255, 0.95);
+          display: block;
+          text-align: center;
+          padding: 7px;
+          box-sizing: border-box; }
+          body > header ul.insights-nav li.insights-dropdown ul li a:hover {
+            border-color: transparent;
+            transform: none;
+            background: #0036bf;
+            color: #fff;
+            font-weight: 400; }
+      body > header ul.insights-nav li.insights-dropdown:hover ul {
+        display: block; }
+
+@media only screen and (max-device-width: 1025px) {
+  .site-wrapper {
+    margin-left: 1%; }
+  .content .post {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0; }
+  .custom-post-footer {
+    position: initial; }
+  .custom-post-content {
+    width: initial; }
+  #tagcloud {
+    padding: 0; } }
+
+@media only screen and (max-device-width: 415px) {
+  .read-more {
+    display: none; }
+  .post-template .content {
+    width: 98%;
+    margin: 0 auto; }
+    .post-template .content .post {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 0 25px;
+      border-bottom: 1px dotted #999;
+      padding-bottom: 20px; }
+  .custom-post-footer {
+    position: initial;
+    width: 100%; }
+    .custom-post-footer div p {
+      line-height: 1.2; }
+    .custom-post-footer .custom-footer-meta {
+      font-size: 10pt; }
+    .custom-post-footer .custom-post-header .custom-post-title a {
+      font-size: 15pt; }
+    .custom-post-footer div.custom-post-excerpt {
+      font-size: 12pt; }
+    .custom-post-footer .custom-post-content {
+      width: initial; }
+  .logo {
+    display: block;
+    text-align: left;
+    margin: 35px auto 20px; }
+    .logo h1 {
+      font-size: 36pt; }
+    .logo .tagline {
+      font-size: 20pt; }
+  .container header .nav-toggle {
+    visibility: visible;
+    font-size: 17pt;
+    position: absolute;
+    top: 15px;
+    right: 20px; }
+  footer {
+    width: 80%; }
+  html, body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; }
+  .site-wrapper {
+    margin: 0 auto;
+    width: 98%;
+    flex-direction: column; }
+  #content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0; }
+  .banner {
+    margin-top: 71px; }
+    .banner img {
+      width: 100%;
+      margin: 80px 0 0 0; }
+  body > header {
+    box-shadow: 0px 2px 1px rgba(51, 51, 51, 0.3); }
+  header h1 {
+    font-size: 22pt;
+    width: 155px; }
+    header h1 span.tagline {
+      font-size: 13pt; }
+  div.wrapper {
+    width: 100%; }
+    div.wrapper a.nav-toggle {
+      display: initial;
+      visibility: visible;
+      font-size: 17pt;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: #0036bf; }
+    div.wrapper ul.insights-nav {
+      position: absolute;
+      width: 100%;
+      display: block;
+      visibility: hidden;
+      top: 150px;
+      left: -34px; }
+      div.wrapper ul.insights-nav li {
+        margin: 0;
+        border-bottom: 1px solid #fff; }
+        div.wrapper ul.insights-nav li:last-child {
+          border-bottom: none; }
+        div.wrapper ul.insights-nav li a {
+          display: block;
+          background: #0036bf;
+          color: #fff;
+          padding: 15px 20px;
+          box-sizing: border-box; }
+  #tag-cloud {
+    display: none;
+    margin: 20px 0 0 0;
+    padding: 0; }
+    #tag-cloud .tagCloudTag {
+      font-size: 12pt !important; }
+  .custom-post-footer .custom-post-header {
+    font-size: 12pt; }
+  .custom-post-footer .custom-footer-meta {
+    font-size: 8pt; }
+  .extra-pagination .pagination {
+    justify-content: center; } }
+
+@media only screen and (max-device-width: 321px) {
+  header h1 {
+    font-size: 32pt;
+    width: 265px; }
+    header h1 span.tagline {
+      font-size: 18pt; }
+  .banner {
+    max-width: 320px; }
+  #content.content {
+    margin-left: 2rem !important; }
+  #tag-cloud {
+    padding: 0 0 0 10px; }
+    #tag-cloud .tagCloudTag {
+      font-size: 10pt !important; }
+  .custom-post-footer .custom-footer-meta {
+    font-size: 7pt; }
+  .custom-post-footer div {
+    font-size: 10pt; } }

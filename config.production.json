@@ -1,0 +1,28 @@
+{
+    "url": "http://imperativedesign.net/insights/",
+    "server": {
+      "port": 2368,
+      "host": "http://imperativedesign.net"
+    },
+    "mail": {
+      "transport": "Direct"
+    },
+    "database": {
+      "pool": {
+        "min": 2,
+        "max": 20
+      }
+    },
+    "logging": {
+      "transports": [
+        "file",
+        "stdout"
+      ]
+    },
+    "process": "local",
+    "paths": {
+      "contentPath": "/app/insights/content",
+      "appRoot": "/app"
+    }
+  }
+  

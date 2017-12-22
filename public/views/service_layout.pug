@@ -1,0 +1,44 @@
+//- service_layout.pug
+html
+  head
+    title Imperative Design | A Full Stop Web Shop
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
+    block styles
+        link(rel="stylesheet", href="/styles/css/styles.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+
+    body.page.services-page(class=sub_page)
+        div.container
+            header
+                .wrapper
+                    a(href="//imperativedesign.net").logo
+                        h1
+                            != '<span>Imperative</span> Design'
+                            span.tagline Elevate your messaging
+                    a.nav-toggle(href="#")
+                        i.fa.fa-bars
+                        
+                    include nav.pug
+            
+        section.ctas
+            .cta
+                block main-cta
+        .page.wrapper 
+            ul.in-page-nav
+                li.web-dev: a(href='/services/website-development') Web Development
+                li.appdev: a(href='/services/application-development') Application Development
+                li.seo: a(href='/services/search-engine-optimization') Search Engine Optimization ( SEO )
+                li.smm: a(href='/services/social-media-marketing') Social Media Marketing
+                li.strategy: a(href='/services/digital-marketing-strategy') Digital Marketing Strategy
+                li.copywriting: a(href='/services/copywriting') Copywriting
+                li.branding: a(href='/services/branding') Brand Creation
+                li.rennovation: a(href='/services/website-rennovation') Website Rennovation
+                li.mentoring: a(href='/services/mentoring') Mentoring
+
+            section.content
+                block page_content
+            
+            block bodyscripts
+                script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+                script(src='/js/global.js')

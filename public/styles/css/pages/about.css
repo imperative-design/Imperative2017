@@ -1,0 +1,8 @@
+.about-page .ctas {
+  min-height: 200px;
+  max-height: 300px; }
+
+.about-page .content {
+  width: 80%;
+  border-left: 1px dotted #333;
+  padding: 0 0 0 30px; }

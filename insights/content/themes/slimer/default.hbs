@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400,300,200,100" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One" >
+    <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />    
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+    {{!--move header and footer out of site-wrapper
+line up article with logo
+add images on posts
+remove flex on titles/meta
+--}}
+</head>
+<header>
+    <div class="wrapper">
+        <a href="/" class="logo">
+            <h1>
+                <span>Imperative</span> Design
+                <span class="tagline">Elevate your messaging</span>
+            </h1>
+        </a>
+        <a class="nav-toggle" href="#">
+            <i class="fa fa-bars"></i>
+        </a>
+        <ul class="insights-nav">
+            <li class="about"> 
+                <a href="/about"> About </a>                            
+            </li>
+            <li class="services insights-dropdown">
+                <a href="/services"> Services </a>
+                <ul>
+                    <li class="webdev"> <a href="/services/website-development"> Web Development </a></li>
+                    <li class="appdev"> <a href="/services/application-development"> Application Development </a></li>
+                    <li class="seo"><a href="/services/search-engine-optimization"> Search Engine Optimization ( SEO )</a></li>
+                    <li class="smm"><a href="/services/social-media-marketing"> Social Media Marketing </a> </li>
+                    <li class="strategy"><a href="/services/digital-marketing-strategy"> Digital Marketing Strategy</a></li>
+                    <li class="copywriting"><a href="/services/copywriting"> Copywriting </a></li>
+                    <li class="branding"><a href="/services/branding"> Brand Creation </a></li>
+                    <li class="rennovation"><a href="/services/website-rennovation"> Website Rennovation </a></li>
+                    <li class="mentoring"><a href="/services/mentoring"> Mentoring</a></li>
+                </ul>
+            </li>
+            <li class="insights active"> <a href="/insights"> Insights </a></li>
+            {{!-- <li class="get_in_touch"><a href="tel:4703583559">Phone</a></li> --}}
+        </ul>
+    </div>
+</header>
+<body class="{{body_class}} nav-closed">
+    <div class="banner">
+        <img src="../../../../img/banners/web_development_627045246.jpg" alt="">
+    </div>
+    
+    <div class="site-wrapper">
+        {{! Everything else gets inserted here }}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+        <script type="text/javascript" src="{{asset "js/tagcloud.js"}}"></script>
+
+        {{{body}}}
+        <aside class="blog-sidebar">
+            <ul id="tag-cloud"></ul>
+        </aside>
+    </div>
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/ga.js"}}"></script>
+</body>
+</html>

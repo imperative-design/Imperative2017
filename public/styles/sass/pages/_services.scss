@@ -1,0 +1,37 @@
+
+.services-page.website-development .web-dev a,
+.services-page.appdev .appdev a,
+.services-page.seo .seo a,
+.services-page.smm .smm a,
+.services-page.strategy .strategy a,
+.services-page.copywriting .copywriting a,
+.services-page.branding .branding a,
+.services-page.mentoring .mentoring a,
+.services-page.web-rennovation .rennovation a
+{ background: $blue; color: #fff; }
+ 
+
+.services-page{
+    .ctas {
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .in-page-nav {
+        width: 20%;
+        max-width: 250px;
+        margin-left: 1%;
+        li {
+            margin: 0;
+            a {
+                display: block;
+                color: #333;
+                padding: 7px;
+            }
+        }
+    }
+    .content {
+        width: 80%;
+        border-left: 1px dotted #333;
+        padding: 0 0 0 30px;
+    }
+}

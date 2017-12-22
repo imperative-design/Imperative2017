@@ -1,0 +1,86 @@
+//- index.pug
+extends layout.pug
+
+block content
+        section.ctas
+            div.ad1.cta.graphic-placeholder
+                img(src='img/ctas/crowd_544460220.jpg')
+                h4.message
+                    != 'What if <span class="highlight">you could choose your customers</span> intead of them choosing you?'
+                    p.action
+                        a(href="/services/search-engine-optimization") Read More
+        //- section.wip WIP: Under construction ... so don't be a hater :p
+
+        section.band.blue.band1
+            div.wrapper
+                h2 Client Case Studies
+                ul.client-cases
+                    li 
+                        a(href="http://imperativedesign.net/insights/duluth-diner-design-development-integrated-marketing-strategy/")
+                            .client-img
+                                .vignette
+                                img(src="../img/clients/duluth_diner.png")
+                        .desc
+                            | Duluth Diner
+                            p Design, Integrated Marketing Strategy
+                    li 
+                        a(href="http://imperativedesign.net/insights/active-care-atlanta-design-seo-content-strategy/")
+                            .client-img
+                                .vignette
+                                img(src="../img/clients/active_care_atlanta.png")
+                        .desc
+                            | Active Care Atlanta
+                            p Design, SEO, Content Strategy
+                    li 
+                        a(href="http://imperativedesign.net/insights/atlas-designs-design-digital-strategy")
+                            .client-img
+                                .vignette
+                                img(src="../img/clients/atlas_designs.png")
+                        .desc
+                            | Atlas Designs
+                            p Design, Digital Strategy
+        section.band.white.band2
+            div.wrapper
+                a.read-more(href="/services/search-engine-optimization")
+                    img.graphic.image(src="../img/ctas/roi_611086620.jpg")                
+                div.message
+                    h2 Follow the money 
+                        span | Is your plan working?
+                    p
+                        | Learn if your marketing dollars are working 
+                        | for you as hard as they can. Are you missing 
+                        | out on valuable marketing verticals that can 
+                        | connect you with a whole new audience?
+                    a.read-more.btn(href="/services/search-engine-optimization") Read More
+            div.wrapper
+                a.read-more(href="/services/digital-marketing-strategy")
+                    img.graphic.image(src="../img/ctas/new_heights_117147764.jpg")
+                div.message
+                    h2 Reach New Heights 
+                        span | Learn new strategies
+                    p
+                        | The way we connect with customers has
+                        | fundamentally shifted over the last few years
+                        | and so have the strategies needed.
+                    a.read-more.btn(href="/services/digital-marketing-strategy") Read More
+
+        section#contact.band.blue.band3
+            div.wrapper
+                div.message
+                    .next-step-ctas
+                        h4 You had me at hello
+                        p Now what's next?
+                        ul.next-steps
+                            li.btn: a(href="/insights/getting-started/"): h2 Get Started
+                            li.btn.contact: a(href="tel:4703583559"): h2 give us a call
+                            li.social-icons
+                    .quick-contact
+                        h4 drop us a line
+                        p.success-msg Thanks for for dropping us a line! We'll be in touch soon.
+                        form
+                            input(type="text", placeholder="first name", required)
+                            input(type="text", placeholder="last name")
+                            input(type="email", placeholder="email", required)
+                            input(type="phone", placeholder="phone", required)
+                            textarea(placeholder="Reason for writing", rows="7", required)
+                            input(type="submit")
