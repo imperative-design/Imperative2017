@@ -1,0 +1,19 @@
+{
+    "default_locale": "en",
+    "description": "A one stop web shop",
+    "icons": {
+        "48": "icon.png",
+        "96": "icon.png"
+    },
+    "theme": {
+        "colors": {
+            "accentcolor": "#0036bf",
+            "textcolor": "#000",
+            "frame" : [71, 105, 91],
+            "toolbar" : [207, 221, 192]
+        }
+    },
+    "manifest_version": 2,
+    "name": "Imperative Design",
+    "version": "0.1"
+}
