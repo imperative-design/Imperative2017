@@ -65,31 +65,31 @@ let env_config = {
 
 
 // //Init Ghost in a subdirectory
-ghost(env_config).then((ghostServer) => {
-	app.use('/insights', ghostServer.rootApp);
+// ghost(env_config).then((ghostServer) => {
+// 	app.use('/insights', ghostServer.rootApp);
 
-	if(process.env.NODE_ENV == "production"){	
-		let paths = ghostServer.config.get('paths');
-		paths.contentPath = "/app/insights/content"
-		ghostServer.config.set('paths', paths);
-	}
+// 	if(process.env.NODE_ENV == "production"){	
+// 		let paths = ghostServer.config.get('paths');
+// 		paths.contentPath = "/app/insights/content"
+// 		ghostServer.config.set('paths', paths);
+// 	}
 
-	if(process.env.NODE_ENV == "development"){
-		console.log('==============================');
-		console.log('working in local');
-		console.log('==============================');
+// 	if(process.env.NODE_ENV == "development"){
+// 		console.log('==============================');
+// 		console.log('working in local');
+// 		console.log('==============================');
 
-		let paths = ghostServer.config.get('paths');
-		paths.contentPath = __dirname + '/insights/content'
-		ghostServer.config.set('paths', paths);
+// 		let paths = ghostServer.config.get('paths');
+// 		paths.contentPath = __dirname + '/insights/content'
+// 		ghostServer.config.set('paths', paths);
 
-		console.log('==============================');
-		console.log(paths);
-		console.log('==============================');
-	}
+// 		console.log('==============================');
+// 		console.log(paths);
+// 		console.log('==============================');
+// 	}
 
-	ghostServer.start(app);
-});
+// 	ghostServer.start(app);
+// });
 
 //If you want to use view engines
 app.set('views', __dirname + '/public/views');
