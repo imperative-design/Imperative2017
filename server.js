@@ -8,7 +8,7 @@
 var process 		= require('process');
 var ghost 			= require('ghost');
 var path 			= require('path');
-var utils 			= require('./node_modules/ghost/core/server/utils');
+// var utils 			= require('./node_modules/ghost/core/server/utils');
 var express     	= require('express');
 var bodyParser 		= require('body-parser');
 var path        	= require('path');
@@ -68,13 +68,27 @@ let env_config = {
 ghost(env_config).then((ghostServer) => {
 	app.use('/insights', ghostServer.rootApp);
 
-	if(process.env == "PRODUCTION"){	
+	if(process.env.NODE_ENV == "production"){	
 		let paths = ghostServer.config.get('paths');
 		paths.contentPath = "/app/insights/content"
 		ghostServer.config.set('paths', paths);
 	}
 
-    ghostServer.start(app);
+	if(process.env.NODE_ENV == "development"){
+		console.log('==============================');
+		console.log('working in local');
+		console.log('==============================');
+
+		let paths = ghostServer.config.get('paths');
+		paths.contentPath = __dirname + '/insights/content'
+		ghostServer.config.set('paths', paths);
+
+		console.log('==============================');
+		console.log(paths);
+		console.log('==============================');
+	}
+
+	ghostServer.start(app);
 });
 
 //If you want to use view engines

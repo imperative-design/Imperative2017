@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "start": "clear; node server",
-    "startdevserver": "clear; DEBUG=ghost:* NODE_ENV=development nodemon server",
+    "startdevserver": "clear; DEBUG=ghost:* DEBUG=knex:* NODE_ENV=development nodemon server",
     "blogdev": "node-sass -w insights/content/themes/slimer/assets/sass -o insights/content/themes/slimer/assets/css/",
     "dev": "node-sass -w public/styles/sass -o public/styles/css/ & browser-sync start -p 'localhost:5000' --files 'public/styles/css'",
     "deploy": "clear; git add . && git commit -m 'heroku deploy' && git push && git push heroku",
@@ -19,7 +19,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.2",
-    "ghost": "^1.18.0",
+    "ghost": "git+https://github.com/GeminiLegend/ghostForBlog.git",
     "ghost-cli": "^1.3.0",
     "knex": "^0.14.1",
     "knex-migrator": "^3.0.7",

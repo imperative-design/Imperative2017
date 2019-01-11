@@ -16,6 +16,8 @@ a:hover {
   margin-top: 110px;
   min-height: 200px;
   max-height: 300px; }
+  .banner img {
+    width: 100%; }
 
 .post-template .content {
   display: flex;
@@ -59,8 +61,20 @@ a:hover {
     text-decoration: underline;
     color: #5ba4e5; }
 
+.post-template #tag-cloud {
+  display: none; }
+
+.page-template .content {
+  width: 95%; }
+
 .page-template article.post.page {
   display: initial; }
+
+.home-template .site-wrapper {
+  flex-direction: initial; }
+
+.tag-template .site-wrapper {
+  flex-direction: initial; }
 
 .active {
   border-bottom: solid 1px;
@@ -148,7 +162,7 @@ article.post.tag-quick-tip {
   width: 100%; }
 
 .content {
-  width: 95%;
+  width: 65%;
   margin: 20px 0 0 0;
   flex-direction: column;
   display: flex; }
@@ -178,7 +192,8 @@ article.post.tag-quick-tip {
 
 .blog-sidebar {
   width: 27%;
-  display: flex; }
+  display: flex;
+  align-self: baseline; }
   .blog-sidebar #tag-cloud {
     width: 100%;
     font-family: 'Fjalla One';
