@@ -59,7 +59,7 @@ let env_config = {
 };
 
 
-
+ 
 //console.log(`Debug Info: App is running in  ${process.env.NODE_ENV} mode on port ${process.env.PORT}`);
 //console.log(`===== prod db config is a ${typeof env_config.database} with a host of ${env_config.database.connection.host} =======`);
 
