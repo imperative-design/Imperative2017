@@ -1,7 +1,7 @@
 {{!< default}}
 
 {{! Everything inside the #author tags pulls data from the author }}
-{{#author}}
+{{#primary_author}}
     <section class="author-profile inner">
         {{#if feature_image}}
         <figure class="author-image">
@@ -18,7 +18,7 @@
             <span class="author-stats"><i class="icon-stats"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
         </div>
     </section>
-{{/author}}
+{{#primary_author}}
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">
