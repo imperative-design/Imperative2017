@@ -1,0 +1,49 @@
+version: "3"
+services:
+  web:
+    environment:
+      - IS_DOCKER=true
+      - NODE_ENV=production
+    image: imperative/web:0.1
+    # depends_on:
+    #   - blog
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/var/www/site
+    networks:
+      - imperativedesign
+
+  blog:
+    environment:
+      - IS_DOCKER=true
+      - NODE_ENV=production
+      # - DEBUG=*
+    image: imperative/blog:0.1
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3001:3001"
+    links:
+      - blog
+    volumes:
+      - ./insights:/var/www/insights
+    networks:
+      - imperativedesign
+networks:
+  imperativedesign:
+    driver: bridge

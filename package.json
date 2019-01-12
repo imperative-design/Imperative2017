@@ -2,9 +2,6 @@
   "name": "imperativedesign",
   "version": "1.0.0",
   "description": "Imperative Design | A full stop web shop",
-  "engines": {
-    "node": "^6.9.0"
-  },
   "main": "server.js",
   "scripts": {
     "start": "clear; node server",
@@ -19,10 +16,6 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.2",
-    "ghost": "git+https://github.com/GeminiLegend/ghostForBlog.git",
-    "ghost-cli": "^1.3.0",
-    "knex": "^0.14.1",
-    "knex-migrator": "^3.0.7",
     "mandrill-api": "^1.0.45",
     "node-sass": "^4.5.2",
     "pug": "^2.0.0-beta11",
