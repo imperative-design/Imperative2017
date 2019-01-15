@@ -1,0 +1,66 @@
+#!/bin/bash
+
+echo "What app do you wish to deploy? (site, blog)"
+read APP
+
+echo "What environment are you deploying to? (dev or prod)"
+read BUILDENV
+
+if [ ${BUILDENV} = "prod" ]; then
+    echo "Deploy to AWS (yes/no)"
+    read DEPLOY
+fi
+
+echo building the application for ${BUILDENV}
+
+#When building for prod the **50 ports are used. 3050 and 4250.
+if [ ${BUILDENV} = "prod" ]; then
+    if [ "$?" = "0" ]; then
+    echo authenticating
+    eval $(aws ecr get-login --no-include-email --region us-east-2)
+    echo Running server webpack for $APP
+    webpack --config ./apps/$APP/webpack.config.js --mode=production
+
+    echo Building docker image for prod
+    make build APP_NAME=$APP ENV=prod --always-make
+        if [ "$?" = "0" ]; then
+        echo Build complete, now tagging the Docker image.
+        make tag-remoteversion APP_NAME=$APP
+            if [ "$?" = "0" ]; then
+                # dangling_images=`docker images -f "dangling=true" -q`
+                # docker rmi $dangling_images
+                if [ ${DEPLOY} = "yes" ]; then
+                echo Image has been tagged now pushing it to the AWS Repository
+                make publish-version APP_NAME=$APP
+                else
+                echo Skipping deploy
+                exit 1
+                fi
+            else
+            echo Error tagging image
+            exit 1
+            fi
+        else
+        echo Error building the docker image
+        exit 1
+        fi
+    else
+    echo ng build failed
+    exit 1
+    fi
+fi
+
+#When building for dev everything uses the **00's ports. 3000 and 4200
+if [ ${BUILDENV} = "dev" ]; then
+  if [ "$?" = "0" ]; then
+    echo Running backend webpack for $APP
+    # webpack --mode=development --config ./apps/$APP/webpack.config.js
+
+    echo Building docker image for dev
+    make build APP_NAME=$APP ENV=dev --always-make
+
+    else
+        echo ng build failed
+        exit 1
+    fi
+fi

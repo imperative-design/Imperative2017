@@ -4,7 +4,7 @@ services:
     environment:
       - IS_DOCKER=true
       - NODE_ENV=production
-    image: imperative/web:0.1
+    image: imperative/site:0.1
     # depends_on:
     #   - blog
     deploy:
@@ -37,11 +37,9 @@ services:
       restart_policy:
         condition: on-failure
     ports:
-      - "3001:3001"
-    links:
-      - blog
-    volumes:
-      - ./insights:/var/www/insights
+      - "4200:4200"
+    # volumes:
+    #   - ./:/var/www/insights
     networks:
       - imperativedesign
 networks:
