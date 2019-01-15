@@ -27,7 +27,7 @@ services:
       - IS_DOCKER=true
       - NODE_ENV=production
       # - DEBUG=*
-    image: imperative/blog:0.1
+    image: ghost
     deploy:
       replicas: 1
       resources:
@@ -37,9 +37,7 @@ services:
       restart_policy:
         condition: on-failure
     ports:
-      - "4200:4200"
-    # volumes:
-    #   - ./:/var/www/insights
+      - "4200:2368"
     networks:
       - imperativedesign
 networks:
