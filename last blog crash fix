@@ -1,0 +1,3 @@
+update ghost with custom edits "ghost": "git+https://github.com/GeminiLegend/ghostForBlog.git", https://github.com/tgriesser/knex/issues/2570
+
+Set database__pool__max=8 so it doesn't max out clearDB connections
