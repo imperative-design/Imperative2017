@@ -23,24 +23,24 @@ services:
       - imperativedesign
 
   blog:
-    # environment:
-      # - IS_DOCKER=${IS_DOCKER}
-      # - NODE_ENV=${NODE_ENV}
-      # - CLEARDB_DATABASE_URL=${CLEARDB_DATABASE_URL}
-      # - database__client=${database__client}
-      # - database__connection__database=${database__connection__database}
-      # - database__connection__host=${database__connection__host}
-      # - database__connection__password=${database__connection__password}
-      # - database__connection__user=${database__connection__user}
-      # - database__pool__min=${database__pool__min}
-      # - database__pool__max=${database__pool__max}
-      # - max_user_connections=${max_user_connections}
-      # # - HEROKU_POSTGRESQL_BL  UE_URL=${HEROKU_POSTGRESQL_BLUE_URL}
-      # - MANDRILL_APIKEY=${MANDRILL_APIKEY}
-      # - MANDRILL_USERNAME=${MANDRILL_USERNAME}
-      # - NODE_MODULES_CACHE=${NODE_MODULES_CACHE}
-      # - NODE_VERBOSE=${NODE_VERBOSE}
-      # - url=${url}
+    environment:
+      - IS_DOCKER=${IS_DOCKER}
+      - NODE_ENV=${NODE_ENV}
+      - CLEARDB_DATABASE_URL=${CLEARDB_DATABASE_URL}
+      - database__client=${database__client}
+      - database__connection__database=${database__connection__database}
+      - database__connection__host=${database__connection__host}
+      - database__connection__password=${database__connection__password}
+      - database__connection__user=${database__connection__user}
+      - database__pool__min=${database__pool__min}
+      - database__pool__max=${database__pool__max}
+      - max_user_connections=${max_user_connections}
+      # - HEROKU_POSTGRESQL_BL  UE_URL=${HEROKU_POSTGRESQL_BLUE_URL}
+      - MANDRILL_APIKEY=${MANDRILL_APIKEY}
+      - MANDRILL_USERNAME=${MANDRILL_USERNAME}
+      - NODE_MODULES_CACHE=${NODE_MODULES_CACHE}
+      - NODE_VERBOSE=${NODE_VERBOSE}
+      - url=${url}
     image: ghost
     deploy:
       replicas: 1
