@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Imperative Design | A full stop web shop",
   "main": "server.js",
+  "engines": {
+    "node": "^6.9.0"
+  },
   "scripts": {
     "start": "clear; node server",
     "startdevserver": "clear; DEBUG=ghost:* NODE_ENV=development nodemon server",
