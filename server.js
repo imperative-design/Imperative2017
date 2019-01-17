@@ -16,19 +16,19 @@ var path        	= require('path');
 var app         	= express();
 var mandrill 		= require('mandrill-api/mandrill');
 
-// app.set('database', {
-// 	"client": "mysql",
-// 	"connection": {
-// 		"user": process.env.MYSQL_USER,
-// 		"password": process.env.MYSQL_PASSWORD,
-// 		"host": process.env.MYSQL_HOST,
-// 		"database": process.env.MYSQL_DB,
-// 	},
-// 	"pool": {
-// 		"min": 2,
-// 		"max": 9
-// 	}
-// });
+app.set('database', {
+	"client": "mysql",
+	"connection": {
+		"user": process.env.MYSQL_USER,
+		"password": process.env.MYSQL_PASSWORD,
+		"host": process.env.MYSQL_HOST,
+		"database": process.env.MYSQL_DB,
+	},
+	"pool": {
+		"min": 2,
+		"max": 9
+	}
+});
 
 //Middleware Configs
 app.use(express.static(__dirname + '/public'));
@@ -53,7 +53,7 @@ let env_config = {
 		},
 		"pool": {
 			"min": 2,
-			"max": 8
+			"max": 9
 		}
 	}
 };
@@ -65,31 +65,31 @@ console.log(`Debug Info: App is running in  ${process.env.NODE_ENV} mode on port
 
 
 //Init Ghost in a subdirectory
-// ghost(env_config).then((ghostServer) => {
-// 	app.use('/insights', ghostServer.rootApp);
+ghost(env_config).then((ghostServer) => {
+	app.use('/insights', ghostServer.rootApp);
 
-// 	if(process.env.NODE_ENV == "production"){	
-// 		let paths = ghostServer.config.get('paths');
-// 		paths.contentPath = "/app/insights/content"
-// 		ghostServer.config.set('paths', paths);
-// 	}
+	if(process.env.NODE_ENV == "production"){	
+		let paths = ghostServer.config.get('paths');
+		paths.contentPath = "/app/insights/content"
+		ghostServer.config.set('paths', paths);
+	}
 
-// 	if(process.env.NODE_ENV == "development"){
-// 		console.log('==============================');
-// 		console.log('working in local');
-// 		console.log('==============================');
+	if(process.env.NODE_ENV == "development"){
+		console.log('==============================');
+		console.log('working in local');
+		console.log('==============================');
 
-// 		let paths = ghostServer.config.get('paths');
-// 		paths.contentPath = __dirname + '/insights/content'
-// 		ghostServer.config.set('paths', paths);
+		let paths = ghostServer.config.get('paths');
+		paths.contentPath = __dirname + '/insights/content'
+		ghostServer.config.set('paths', paths);
 
-// 		console.log('==============================');
-// 		console.log(paths);
-// 		console.log('==============================');
-// 	}
+		console.log('==============================');
+		console.log(paths);
+		console.log('==============================');
+	}
 
-// 	ghostServer.start(app);
-// });
+	ghostServer.start(app);
+});
 
 //If you want to use view engines
 app.set('views', __dirname + '/public/views');
