@@ -187,7 +187,6 @@ article.post.tag-quick-tip {
   align-self: center;
   min-height: 60%;
   width: 98%;
-  flex-direction: column;
   align-items: center; }
 
 .blog-sidebar {

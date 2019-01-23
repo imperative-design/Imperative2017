@@ -29,6 +29,7 @@
     "rxjs": "^5.4.1"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "browser-sync": "^2.26.3"
   }
 }
