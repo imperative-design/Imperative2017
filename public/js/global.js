@@ -158,14 +158,16 @@ $('document').ready(function(){
 	    {
 	      breakpoint: 768,
 	      settings: {
-	        // arrows: false,
+            arrows: false,
+            dots: false,
 	        slidesToShow: 2
 	      }
 	    },
 	    {
 	      breakpoint: 480,
 	      settings: {
-	        // arrows: false,
+            arrows: false,
+            dots: false,
 	        slidesToShow: 1
 	      }
 	    }

@@ -410,8 +410,7 @@ and (max-device-width: 1025px){
     }
 }
 
-@media only screen 
-and (max-device-width : 415px){
+@media only screen and (max-device-width : 415px){
     .read-more{
         display: none;
     }

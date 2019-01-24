@@ -488,6 +488,8 @@ header {
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+68&0+0,1+67 */
       background: radial-gradient(ellipse at center, transparent 0%, black 85%);
       transition: opacity 0.5s ease-out; }
+  .client-cases .slick-list {
+    padding-left: 2vw; }
 
 .band .wrapper .next-steps li.btn {
   margin: 0 0 15px; }
@@ -617,7 +619,9 @@ a:hover {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100%; }
+      width: 100%;
+      margin-right: 0;
+      list-style: none; }
       .home .client-cases li .client-img {
         width: 100%;
         margin: 0; }
