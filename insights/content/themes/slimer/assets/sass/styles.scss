@@ -395,6 +395,16 @@ body > header {
     align-items: center;
     margin: 0 0 25px;
 
+    .status.link {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Open Sans';
+        padding: 5px 10px;
+        background: #009bcd;
+        margin: 0 0 0 2vw;
+        display: inline-block;
+    }
+
     .status.development {
         text-decoration: none;
         color: #fff;
