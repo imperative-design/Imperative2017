@@ -30,7 +30,6 @@ let calculateFontSize = function(tagCount, tagsArray){
 let createTagCloud = function(){
     $.get(ghost.url.api('posts', {include: 'tags'}))
         .done(function (data){
-            debugger;
             console.log('tagcloud here');
             let host = $(location).attr('host');
 

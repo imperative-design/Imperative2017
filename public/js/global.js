@@ -96,9 +96,6 @@ function bindCtaAnimations(sel){
         
         //Raw numbers
         let header_height     = $('header').height();
-        console.log(IdAnimations);
-        console.log(IdAnimations.count);
-        debugger;
         let activation_point  = $current_cta.offset().top;
         let middle_threshold  = 150;
         
@@ -151,4 +148,27 @@ function bindCtaAnimations(sel){
 //Kickoff jQuery
 $('document').ready(function(){
     bindEvents();
+    $('.client-cases').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        // appendArrows: '.case-studies',
+        dots: true,
+		responsive: [
+	    {
+	      breakpoint: 768,
+	      settings: {
+	        // arrows: false,
+	        slidesToShow: 2
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        // arrows: false,
+	        slidesToShow: 1
+	      }
+	    }
+	  ]
+	});
 });
