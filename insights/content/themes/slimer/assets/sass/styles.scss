@@ -403,6 +403,7 @@ body > header {
         background: #009bcd;
         margin: 0 0 0 2vw;
         display: inline-block;
+        &:first-child { margin-left: 0; }
     }
 
     .status.development {

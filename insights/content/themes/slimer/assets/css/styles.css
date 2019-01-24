@@ -343,6 +343,8 @@ body > header {
     background: #009bcd;
     margin: 0 0 0 2vw;
     display: inline-block; }
+    .links .link:first-child {
+      margin-left: 0; }
   .links .status.development {
     text-decoration: none;
     color: #fff;
