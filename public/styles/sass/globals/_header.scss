@@ -102,6 +102,18 @@ header {
     }
 }
 
+footer#footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: unset;
+    p{
+        display: inline;
+        margin: 0;
+        padding: 3vh 3vw;
+        color: white;
+    }
+}
 //Active Nav State
 // .services-page .nav li.services > a, 
 // .about-page .nav li.about > a,

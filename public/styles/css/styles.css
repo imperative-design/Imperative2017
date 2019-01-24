@@ -290,6 +290,17 @@ header {
           transform: none;
           border: none; }
 
+footer#footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: unset; }
+  footer#footer p {
+    display: inline;
+    margin: 0;
+    padding: 3vh 3vw;
+    color: white; }
+
 .band {
   overflow: hidden; }
   .band .wrapper {
