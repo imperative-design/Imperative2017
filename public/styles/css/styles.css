@@ -65,7 +65,8 @@ font-family: 'Permanent Marker', cursive;
   clear: both; }
 
 p {
-  margin: 0 0 15px; }
+  margin: 0 0 15px;
+  line-height: 1.5; }
 
 em {
   font-style: italic;

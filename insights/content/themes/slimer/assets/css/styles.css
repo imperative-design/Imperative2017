@@ -12,6 +12,9 @@ a {
 a:hover {
   transform: scale(1.1); }
 
+p {
+  line-height: 1.5; }
+
 .banner {
   margin-top: 110px;
   min-height: 150px;
