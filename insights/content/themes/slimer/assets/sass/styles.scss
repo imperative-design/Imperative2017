@@ -7,7 +7,7 @@ body{
 }
 a { transition: all 250ms; }
 a:hover { transform: scale(1.1);}
-
+p { line-height: 1.5; }
 
 .banner{
     margin-top: 110px;
@@ -417,8 +417,7 @@ body > header {
     } 
 }
 
-@media only screen
-and (max-device-width: 1025px){
+@media only screen and (max-device-width: 1025px){
     .site-wrapper{
         margin-left: 1%;
     }
@@ -442,6 +441,11 @@ and (max-device-width: 1025px){
 }
 
 @media only screen and (max-device-width : 415px){
+    .home-template #content {
+        width: 98%;
+        margin: 0 auto;
+    }
+
     .read-more{
         display: none;
     }
@@ -569,9 +573,7 @@ and (max-device-width: 1025px){
             }
         }
     }
-    
     #tag-cloud{
-        display: none;
         margin: 20px 0 0 0;
         padding: 0;
         .tagCloudTag{ font-size: 12pt !important; }
@@ -587,6 +589,10 @@ and (max-device-width: 1025px){
     
     .extra-pagination .pagination {
         justify-content: center;
+    }
+    
+    .home-template aside.blog-sidebar {
+        display: none;
     }
 }
 

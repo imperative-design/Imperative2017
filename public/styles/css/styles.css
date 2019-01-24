@@ -65,7 +65,8 @@ font-family: 'Permanent Marker', cursive;
   clear: both; }
 
 p {
-  margin: 0 0 15px; }
+  margin: 0 0 15px;
+  line-height: 1.5; }
 
 em {
   font-style: italic;
@@ -614,7 +615,8 @@ a:hover {
             box-sizing: border-box; }
   .home .client-cases {
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    height: 285px; }
     .home .client-cases li {
       display: flex;
       flex-direction: column;
@@ -624,7 +626,8 @@ a:hover {
       list-style: none; }
       .home .client-cases li .client-img {
         width: 100%;
-        margin: 0; }
+        margin: 0;
+        max-width: initial; }
       .home .client-cases li .desc {
         font-size: 14pt;
         margin: 5px 0 15px;
@@ -663,6 +666,10 @@ a:hover {
       padding: 5px 0; }
       .band .wrapper .next-steps li.btn a h2 {
         margin: 0; }
+    .band .wrapper.band1 {
+      padding: 0; }
+      .band .wrapper.band1 .wrapper h2 {
+        text-align: center; }
   .band.band2 .wrapper {
     padding: 0;
     margin: 0 auto 55px; }

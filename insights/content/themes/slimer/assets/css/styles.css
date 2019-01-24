@@ -12,6 +12,9 @@ a {
 a:hover {
   transform: scale(1.1); }
 
+p {
+  line-height: 1.5; }
+
 .banner {
   margin-top: 110px;
   min-height: 150px;
@@ -371,6 +374,9 @@ body > header {
     padding: 0; } }
 
 @media only screen and (max-device-width: 415px) {
+  .home-template #content {
+    width: 98%;
+    margin: 0 auto; }
   .read-more {
     display: none; }
   .post-template .content {
@@ -468,7 +474,6 @@ body > header {
           padding: 15px 20px;
           box-sizing: border-box; }
   #tag-cloud {
-    display: none;
     margin: 20px 0 0 0;
     padding: 0; }
     #tag-cloud .tagCloudTag {
@@ -478,7 +483,9 @@ body > header {
   .custom-post-footer .custom-footer-meta {
     font-size: 8pt; }
   .extra-pagination .pagination {
-    justify-content: center; } }
+    justify-content: center; }
+  .home-template aside.blog-sidebar {
+    display: none; } }
 
 @media only screen and (max-device-width: 321px) {
   header h1 {
