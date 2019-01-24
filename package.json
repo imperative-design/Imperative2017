@@ -24,13 +24,13 @@
     "knex": "^0.14.1",
     "knex-migrator": "^3.0.7",
     "mandrill-api": "^1.0.45",
-    "node-sass": "^4.5.2",
     "pug": "^2.0.0-beta11",
     "rxjs": "^5.4.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.11.0"
   }
 }

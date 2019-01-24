@@ -25,7 +25,7 @@ and (max-device-width : 415px){
           .logo {
               display: block;
               text-align: left;
-              margin: 35px auto 20px;
+              // margin: 35px auto 20px;
               h1 {
                   font-size: 36pt;
                   letter-spacing: -2px;
@@ -209,7 +209,8 @@ and (max-device-width : 415px){
       display: block;
       text-align: left;
       text-indent: 20px;
-      margin: 35px auto 20px; }
+      // margin: 35px auto 20px; }
+    }
       header .logo h1 {
         font-size: 27pt;
         letter-spacing: -2px; }
@@ -302,4 +303,3 @@ and (max-device-width : 415px){
     ul.connect li a {
         font-size: 22pt;
     }
-}
