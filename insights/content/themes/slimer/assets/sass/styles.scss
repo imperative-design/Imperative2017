@@ -385,6 +385,21 @@ body > header {
         }
     }
 }
+.links {
+    display: flex;
+    align-items: center;
+    margin: 0 0 25px;
+
+    .status.development {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Open Sans';
+        padding: 5px 10px;
+        background: #1e9e1e;
+        margin: 0 0 0 2vw;
+        display: inline-block;
+    } 
+}
 
 @media only screen
 and (max-device-width: 1025px){
@@ -443,9 +458,10 @@ and (max-device-width: 1025px){
     .logo{
         display: block;
         text-align: left;
-        margin: 35px auto 20px;
+        margin: 35px 0 20px;
         h1{
             font-size: 36pt;
+            
         }
         .tagline{
             font-size: 20pt;

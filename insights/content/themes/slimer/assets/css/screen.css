@@ -920,7 +920,7 @@ body:not(.post-template) .post.quick-tip header {
   width: 100%; }
 
 body:not(.post-template) .post.quick-tip .post-title {
-  font-size: 3.6rem;
+  font-size: 4vh;
   width: 85%;
   float: left; }
 
@@ -1566,7 +1566,7 @@ body:not(.post-template) .post-title {
   .post {
     font-size: 0.95em; }
   body:not(.post-template) .post-title {
-    font-size: 3.2rem; }
+    font-size: 4vh; }
   hr {
     margin: 2.4em 0; }
   ol, ul {
