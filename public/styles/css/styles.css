@@ -290,12 +290,6 @@ header {
           transform: none;
           border: none; }
 
-.services-page .nav li.services > a,
-.about-page .nav li.about > a,
-.insights-page .nav li.insights > a {
-  color: #000;
-  border-color: #0036bf; }
-
 .band {
   overflow: hidden; }
   .band .wrapper {
@@ -565,6 +559,9 @@ a:hover {
 @media only screen and (max-device-width: 415px) {
   .container {
     overflow: hidden; }
+    .container a:hover {
+      transform: scale(1);
+      color: #fff; }
     .container header {
       display: flex;
       position: fixed;
@@ -572,17 +569,16 @@ a:hover {
       z-index: 20;
       margin-top: 0;
       background: #fff;
-      box-shadow: 0px 1px 1px #bbb;
       box-sizing: border-box; }
       .container header .wrapper {
-        width: 90%;
+        width: 100vw;
         display: flex;
         justify-content: space-between;
         align-items: center; }
       .container header .logo {
         display: block;
         text-align: left;
-        margin: 35px auto 20px; }
+        margin-left: 1vw; }
         .container header .logo h1 {
           font-size: 36pt;
           letter-spacing: -2px; }
@@ -607,6 +603,8 @@ a:hover {
         .container header ul.nav li {
           margin: 0;
           border-bottom: 1px solid #fff; }
+          .container header ul.nav li ul {
+            display: none !important; }
           .container header ul.nav li a {
             display: block;
             background: #0036bf;
@@ -616,7 +614,8 @@ a:hover {
   .home .client-cases {
     flex-direction: column;
     justify-content: space-between;
-    height: 285px; }
+    height: 285px;
+    margin: 0%; }
     .home .client-cases li {
       display: flex;
       flex-direction: column;
@@ -627,13 +626,13 @@ a:hover {
       .home .client-cases li .client-img {
         width: 100%;
         margin: 0;
-        max-width: initial; }
+        max-width: 75vw; }
       .home .client-cases li .desc {
         font-size: 14pt;
         margin: 5px 0 15px;
         max-width: 275px; }
   .home .ctas {
-    margin-top: 150px;
+    margin-top: 15vh;
     height: auto;
     min-height: 200px; }
   .home .ctas .ad1 {
@@ -650,6 +649,10 @@ a:hover {
     width: 98%;
     display: block;
     margin: 30px auto 40px; }
+    .band .wrapper.case-studies {
+      display: flex;
+      align-items: center;
+      margin: 2vh auto; }
     .band .wrapper .message, .band .wrapper .graphic {
       width: 98%;
       display: block;
@@ -670,6 +673,8 @@ a:hover {
       padding: 0; }
       .band .wrapper.band1 .wrapper h2 {
         text-align: center; }
+    .band .wrapper div.message p {
+      text-align: center; }
   .band.band2 .wrapper {
     padding: 0;
     margin: 0 auto 55px; }
@@ -724,8 +729,7 @@ a:hover {
     .band .quick-contact.active {
       bottom: 30%; }
   .about-page .ctas, .services-page .ctas {
-    height: 200px;
-    margin-top: 150px; }
+    height: 200px; }
     .about-page .ctas .cta img, .services-page .ctas .cta img {
       height: 100%;
       width: initial;
@@ -738,16 +742,14 @@ a:hover {
     z-index: 20;
     margin-top: 0;
     display: inline-block;
-    background: #fff;
-    box-shadow: 0px 1px 1px #bbb; }
+    background: #fff; }
   header .wrapper {
     width: 100%;
     display: block; }
   header .logo {
     display: block;
     text-align: left;
-    text-indent: 20px;
-    margin: 35px auto 20px; }
+    text-indent: 20px; }
   header .logo h1 {
     font-size: 27pt;
     letter-spacing: -2px; }
@@ -776,7 +778,6 @@ a:hover {
     padding: 2px 4px;
     box-sizing: border-box; }
   .home .ctas {
-    margin-top: 110px;
     height: auto;
     height: 140px; }
   .home .ctas .ad1 {
