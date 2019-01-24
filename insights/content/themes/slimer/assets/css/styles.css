@@ -374,6 +374,9 @@ body > header {
     padding: 0; } }
 
 @media only screen and (max-device-width: 415px) {
+  .home-template #content {
+    width: 98%;
+    margin: 0 auto; }
   .read-more {
     display: none; }
   .post-template .content {

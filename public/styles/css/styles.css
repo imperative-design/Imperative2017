@@ -625,7 +625,8 @@ a:hover {
       list-style: none; }
       .home .client-cases li .client-img {
         width: 100%;
-        margin: 0; }
+        margin: 0;
+        max-width: initial; }
       .home .client-cases li .desc {
         font-size: 14pt;
         margin: 5px 0 15px;
@@ -664,6 +665,8 @@ a:hover {
       padding: 5px 0; }
       .band .wrapper .next-steps li.btn a h2 {
         margin: 0; }
+    .band .wrapper.band1 {
+      padding: 0; }
   .band.band2 .wrapper {
     padding: 0;
     margin: 0 auto 55px; }

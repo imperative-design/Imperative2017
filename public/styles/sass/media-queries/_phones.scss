@@ -75,7 +75,7 @@ and (max-device-width : 415px){
         width: 100%;
         margin-right: 0;
         list-style: none;
-        .client-img { width: 100%; margin: 0; }
+        .client-img { width: 100%; margin: 0; max-width: initial; }
         .desc {
           font-size: 14pt;
           margin: 5px 0 15px;
@@ -118,6 +118,7 @@ and (max-device-width : 415px){
               padding: 5px 0;
               h2 { margin: 0; }
             }
+            &.band1 { padding: 0; }
         }
         
         &.band2 .wrapper {

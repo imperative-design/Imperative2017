@@ -417,8 +417,7 @@ body > header {
     } 
 }
 
-@media only screen
-and (max-device-width: 1025px){
+@media only screen and (max-device-width: 1025px){
     .site-wrapper{
         margin-left: 1%;
     }
@@ -442,6 +441,11 @@ and (max-device-width: 1025px){
 }
 
 @media only screen and (max-device-width : 415px){
+    .home-template #content {
+        width: 98%;
+        margin: 0 auto;
+    }
+
     .read-more{
         display: none;
     }
