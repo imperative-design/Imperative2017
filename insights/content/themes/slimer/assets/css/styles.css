@@ -14,7 +14,7 @@ a:hover {
 
 .banner {
   margin-top: 110px;
-  min-height: 200px;
+  min-height: 150px;
   max-height: 300px; }
   .banner img {
     width: 100%; }
@@ -163,11 +163,13 @@ article.post.tag-quick-tip {
 
 .content {
   width: 65%;
-  margin: 20px 0 0 0;
+  margin: 0 0 0 0;
   flex-direction: column;
   display: flex; }
   .content article {
     margin: 4rem auto; }
+    .content article header {
+      margin: 0 0 3vh; }
   .content .post {
     border: none;
     margin: 0 0 25px;
@@ -350,7 +352,7 @@ body > header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0; }
+    margin: 5px 0 0 0; }
   .custom-post-footer {
     position: initial; }
   .custom-post-content {
@@ -387,7 +389,8 @@ body > header {
   .logo {
     display: block;
     text-align: left;
-    margin: 35px 0 20px; }
+    margin: 35px 0 20px;
+    padding: 0 0 0 4vw; }
     .logo h1 {
       font-size: 36pt; }
     .logo .tagline {
