@@ -468,7 +468,6 @@ body > header {
           padding: 15px 20px;
           box-sizing: border-box; }
   #tag-cloud {
-    display: none;
     margin: 20px 0 0 0;
     padding: 0; }
     #tag-cloud .tagCloudTag {
@@ -478,7 +477,9 @@ body > header {
   .custom-post-footer .custom-footer-meta {
     font-size: 8pt; }
   .extra-pagination .pagination {
-    justify-content: center; } }
+    justify-content: center; }
+  .home-template aside.blog-sidebar {
+    display: none; } }
 
 @media only screen and (max-device-width: 321px) {
   header h1 {

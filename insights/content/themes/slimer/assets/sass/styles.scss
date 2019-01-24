@@ -569,9 +569,7 @@ and (max-device-width: 1025px){
             }
         }
     }
-    
     #tag-cloud{
-        display: none;
         margin: 20px 0 0 0;
         padding: 0;
         .tagCloudTag{ font-size: 12pt !important; }
@@ -587,6 +585,10 @@ and (max-device-width: 1025px){
     
     .extra-pagination .pagination {
         justify-content: center;
+    }
+    
+    .home-template aside.blog-sidebar {
+        display: none;
     }
 }
 
