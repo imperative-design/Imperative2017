@@ -4,58 +4,37 @@ extends layout.pug
 block content
         section.ctas
             div.ad1.cta.graphic-placeholder
-                img(src='img/ctas/crowd_544460220.jpg')
-                h4.message
-                    != 'What if <span class="highlight">you could choose your customers</span> intead of them choosing you?'
-                    p.action
+                img(src='img/homepage/banner-pic.png')
+                div.banner-text-wrapper
+                    h2.message WHAT IF
+                    h3.message YOU COULD CHOOSE YOU CUSTOMERS
+                    h4.message intead of them choosing you
+                    //- != 'What if <span class="highlight">you could choose your customers</span> intead of them choosing you?'
+                    div.action
                         a(href="/services/search-engine-optimization") Read More
         //- section.wip WIP: Under construction ... so don't be a hater :p
 
-        section.band.blue.band1
-            div.wrapper.case-studies
-                h2 Client Case Studies
-                ul.client-cases
-                    li 
-                        a(href="http://imperativedesign.net/insights/duluth-diner-design-development-integrated-marketing-strategy/")
-                            .client-img
-                                .vignette
-                                img(src="../img/clients/duluth_diner.png")
-                        .desc
-                            | Duluth Diner
-                            p Design / Development, Integrated Marketing Strategy
-                    li 
-                        a(href="http://imperativedesign.net/insights/active-care-atlanta-design-seo-content-strategy/")
-                            .client-img
-                                .vignette
-                                img(src="../img/clients/active_care_atlanta.png")
-                        .desc
-                            | Active Care Atlanta
-                            p Design / Development,, SEO, Content Strategy
-                    li 
-                        a(href="http://imperativedesign.net/insights/atlas-designs-design-digital-strategy")
-                            .client-img
-                                .vignette
-                                img(src="../img/clients/atlas_designs.png")
-                        .desc
-                            | Atlas Designs
-                            p Design / Development, Digital Strategy
-                    li 
-                        a(href="http://imperativedesign.net/insights/4gc-construction/")
-                            .client-img
-                                .vignette
-                                img(src="../img/clients/4gc.png")
-                        .desc
-                            | 4GC Construction
-                            p Design / Development
-                    li 
-                        a(href="http://imperativedesign.net/insights/green-fern-tree-service/")
-                            .client-img
-                                .vignette
-                                img(src="../img/clients/greenfern.png")
-                        .desc
-                            | Green Fern Tree Service
-                            p Design, SEO
-                //- .slider-nav
+        section.our-services
+            h3 OUR SERVICES
+            div.services-wrapper
+                div.service 
+                    p Web Development
+                div.service 
+                    p App Development
+                div.service 
+                    p Search Engine Optimization
+                div.service 
+                    p Social Media Marketing
+                div.service 
+                    p Digital Marketing Strategy
+                div.service 
+                    p Content Creation
+                div.service 
+                    p Brand Creation
+                div.service 
+                    p Website Renovation
+                div.service 
+                    p Mentoring
         section.band.white.band2
             div.wrapper
                 a.read-more(href="/services/search-engine-optimization")

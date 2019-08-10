@@ -124,6 +124,7 @@ article.post.tag-quick-tip{
 }
 
 .custom-post-footer {
+    text-align: center;
 	width: 59%;
     .read-more {
         background: #4A4A4A;
@@ -478,8 +479,8 @@ body > header {
     .logo{
         display: block;
         text-align: left;
-        margin: 35px 0 20px;
-        padding: 0 0 0 4vw;
+        margin-left: 1vw;
+        // padding: 0 0 0 4vw;
         h1{
             font-size: 36pt;
             
@@ -529,7 +530,7 @@ body > header {
     }
     
     body > header {
-        box-shadow: 0px 2px 1px rgba(51, 51, 51, .3);
+        // box-shadow: 0px 2px 1px rgba(51, 51, 51, .3);
     }
 
     header h1{
@@ -547,7 +548,7 @@ body > header {
             visibility: visible;
             font-size: 17pt;
             position: absolute;
-            top: 15px;
+            top: 11px;
             right: 20px;
             color: #0036bf;
         }

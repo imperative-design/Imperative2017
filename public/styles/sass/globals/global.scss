@@ -17,6 +17,44 @@ strong { font-weight: 500; }
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    .infoBar {
+        position: fixed;
+        margin: 0px;
+        z-index: 12;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        p { 
+        font-family: 'Maven Pro', sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        height: 13vh;
+        align-items: center;
+        }
+        .phone:before {
+            content: '';
+            background:url('../../img/Icons/top_nav_icons/telephone.png');
+            background-size:cover;
+                position:absolute;
+            width:20px;
+            height:20px;
+            margin-left:-20px;
+        }
+        .email:before {
+            content: '';
+            background:url('../../img/Icons/top_nav_icons/email.png');
+            background-size:cover;
+                position:absolute;
+            width:20px;
+            height:20px;
+            margin-left:-2%;
+        }
+    }
 }
 
 .wrapper {
@@ -70,34 +108,45 @@ strong { font-weight: 500; }
 
     .cta {
         img { width: 100%; }
-        .message {
+        .banner-text-wrapper {
             position: absolute;
-            z-index: 10;
-            right: -110%;
-            bottom: 30%;
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            box-sizing: border-box;
-            color: #fff;
-            font-size: 21pt;
-            transition: right 500ms ease-in-out;
-
-            .highlight {
-                font-family: 'Fjalla One', sans-serif;
-                text-transform: uppercase;
-                background: #333;
+            width: 100%;
+            top: 29%;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            flex-direction: column;
+            h2 {font-size: 60pt;}
+            h3 {font-size: 40pt;}
+            h4 {font-size: 34pt;}
+            .message {
+                z-index: 10;
+                bottom: 30%;
+                padding: 2vh;
+                box-sizing: border-box;
                 color: #fff;
-                padding: 5px 10px;
+    
+                .highlight {
+                    font-family: 'Fjalla One', sans-serif;
+                    text-transform: uppercase;
+                    background: #333;
+                    color: #fff;
+                    padding: 5px 10px;
+                }
+    
             }
-
             .action {
-                margin: 5px 5px 0 0;
+                margin: 0;
+                padding: 3vh 7.5vw;
+                background-color: #3eb5a9;
+                color: white;
+                cursor: pointer;
                 a { 
                     float: right; 
                     color: #eee; 
                     text-decoration: none; 
-                    font-size: 11pt;
+                    font-size: 20pt;
+                    font-family: 'Fjalla One', sans-serif;
                 }
             }
         }
