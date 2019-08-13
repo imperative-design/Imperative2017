@@ -30,29 +30,62 @@ strong { font-weight: 500; }
         font-family: 'Maven Pro', sans-serif;
         color: white;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         width: 100%;
         margin: 0;
-        height: 13vh;
+        height: 7vh;
         align-items: center;
         }
         .phone:before {
             content: '';
             background:url('../../img/Icons/top_nav_icons/telephone.png');
-            background-size:cover;
-                position:absolute;
-            width:20px;
-            height:20px;
-            margin-left:-20px;
+            background-size: contain;
+            background-size: contain;
+            position: absolute;
+            width: 1.2vw;
+            height: 18px;
+            margin-left: -1.5%;
+            margin-top: 0.3%;
         }
         .email:before {
             content: '';
-            background:url('../../img/Icons/top_nav_icons/email.png');
-            background-size:cover;
-                position:absolute;
-            width:20px;
-            height:20px;
-            margin-left:-2%;
+            background: url('../../img/Icons/top_nav_icons/email.png');
+            background-size: contain;
+            position: absolute;
+            width: 1.2vw;
+            height: 11px;
+            margin-left: -1.5%;
+            margin-top: 0.5%;
+        }
+        .twitter:before {
+            content: '';
+            background:url('../../img/Icons/top_nav_icons/twitter.png');
+            background-size:contain;
+            position:absolute;
+            width: 1.2vw;
+            height: 14px;
+            margin-left: -1.5%;
+            margin-top: -0.3%;
+        }
+        .instagram:before {
+            content: '';
+            background:url('../../img/Icons/top_nav_icons/instagram.png');
+            background-size:contain;
+            position:absolute;
+            width: 1.2vw;
+            height: 18px;
+            margin-left: -1.5%;
+            margin-top: -0.3%;
+        }
+        .facebook:before {
+            content: '';
+            background:url('../../img/Icons/top_nav_icons/facebook.png');
+            background-size:contain;
+            position:absolute;
+            width: 0.65vw;
+            height: 18px;
+            margin-left: -1.5%;
+            margin-top: -0.5%;
         }
     }
 }
@@ -111,7 +144,7 @@ strong { font-weight: 500; }
         .banner-text-wrapper {
             position: absolute;
             width: 100%;
-            top: 29%;
+            top: 19%;
             display: flex;
             align-items: center;
             /* justify-content: center; */
@@ -122,7 +155,7 @@ strong { font-weight: 500; }
             .message {
                 z-index: 10;
                 bottom: 30%;
-                padding: 2vh;
+                padding: 1vh;
                 box-sizing: border-box;
                 color: #fff;
     
@@ -136,8 +169,8 @@ strong { font-weight: 500; }
     
             }
             .action {
-                margin: 0;
-                padding: 3vh 7.5vw;
+                margin: 3vh 0 0 0;
+                padding: 2vh 6.5vw;
                 background-color: #3eb5a9;
                 color: white;
                 cursor: pointer;

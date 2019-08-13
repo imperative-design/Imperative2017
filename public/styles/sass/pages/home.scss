@@ -147,7 +147,7 @@
 } 
 
 .home .ctas { 
-    margin: 34vh 0 0 0;
+    margin: 20vh 0 0 0;
     .ad1 {
         img { 
             position: relative;
@@ -176,20 +176,125 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        .service{
+        .service {
             width: 27%;
-            display: inline-block;
-            text-align: center;
-            height: 35vh;
+            display: flex;
+            /* text-align: center; */
+            height: 30vh;
             box-sizing: border-box;
             margin: 3vh 1vw;
             box-shadow: 0 0 20px #e0e0e0;
+            justify-content: center;
+            i:after{
+                
+            }
+            i#webDevelopment:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/web-programming.png');
+                background-size:contain;
+                width: 0.7vw;
+                height: 17px;
+                margin-left: 3%;
+                margin-top: 3%;
+                position: absolute;
+            }
+            i#appDevelopment:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/application.png');
+                background-size:contain;
+                width: 10vw;
+                height: 10vh;
+                margin-left: 3%;
+                margin-top: 3%;
+                position: absolute;
+            }
+            i#SEO:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/seo.png');
+                background-size:contain;
+                width: 0.7vw;
+                height: 17px;
+                margin-left: 3%;
+                margin-top: 3%;
+                position: absolute;
+            }
+            i#SMM:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/social-media.png');
+                background-size:contain;
+                width: 0.7vw;
+                height: 17px;
+                margin-left: 3%;
+                margin-top: 3%;
+                position: absolute;
+            }
+            i#DMS:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/strategy.png');
+                background-size:contain;
+                width: 0.7vw;
+                height: 17px;
+                margin-left: 3%;
+                margin-top: 3%;
+                position: absolute;
+            }
+            i#contentCreation:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/copyright.png');
+                background-size:contain;
+                width: 0.7vw;
+                height: 17px;
+                margin-left: 3%;
+                margin-top: 3%;
+                position: absolute;
+            }
+            i#brandCreation:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/branding.png');
+                background-size:contain;
+                width: 0.7vw;
+                height: 17px;
+                margin-left: 3%;
+                margin-top: 3%;
+                position: absolute;
+            }
+            i#websiteRenovation:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/domain.png');
+                background-size:contain;
+                width: 0.7vw;
+                height: 17px;
+                margin-left: 3%;
+                margin-top: 3%;
+                position: absolute;
+            }
+            i#mentoring:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/business.png');
+                background-size:contain;
+                width: 0.7vw;
+                height: 17px;
+                margin-left: 3%;
+                margin-top: 3%;
+                position: absolute;
+            }
             p {
                 font-family: 'Maven Pro', sans-serif;
                 font-size: 18pt;
-                top: 55%;
+                top: 60%;
                 position: relative;
                 margin: 0;
+                text-indent: -5%;
+            }
+            p:after {
+                content: '';
+                background:url('../../img/Icons/services_icons/right-arrow.png');
+                background-size:contain;
+                position:absolute;
+                width: 0.7vw;
+                height: 17px;
+                margin-left: 6%;
+                margin-top: 6%;
             }
         }
     }
