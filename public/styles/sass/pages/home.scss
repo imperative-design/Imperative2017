@@ -184,9 +184,12 @@
             box-sizing: border-box;
             margin: 3vh 1vw;
             box-shadow: 0 0 20px #e0e0e0;
-            justify-content: center;
-            i:after{
-                
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            padding: 3vh 1vw;
+            img {
+                height: 30%;
             }
             i#webDevelopment:after {
                 content: '';
@@ -282,7 +285,7 @@
                 font-family: 'Maven Pro', sans-serif;
                 font-size: 18pt;
                 top: 60%;
-                position: relative;
+                // position: relative;
                 margin: 0;
                 text-indent: -5%;
             }
@@ -293,8 +296,8 @@
                 position:absolute;
                 width: 0.7vw;
                 height: 17px;
-                margin-left: 6%;
-                margin-top: 6%;
+                margin-left: 0.9%;
+                margin-top: 0.75%;
             }
         }
     }
