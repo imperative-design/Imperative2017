@@ -42,6 +42,7 @@
         }
     }
 
+
     &.band1 {
         .wrapper {
             margin: 10px auto 0;
@@ -145,6 +146,14 @@
         .success-msg { display: none; }
     }
 } 
+
+section.grey {
+    background: #f8f8f8;
+    #grey-wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
 
 .home .ctas { 
     margin: 20vh 0 0 0;

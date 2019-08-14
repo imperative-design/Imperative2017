@@ -76,6 +76,10 @@ em {
 strong {
   font-weight: 500; }
 
+.half-inline-block {
+  width: 50%;
+  display: inline-block; }
+
 .container {
   max-width: 1500px;
   width: 100%;
@@ -500,6 +504,12 @@ footer#footer {
           cursor: pointer; }
     .band .quick-contact .success-msg {
       display: none; }
+
+section.grey {
+  background: #f8f8f8; }
+  section.grey #grey-wrapper {
+    width: 100%;
+    margin: 0 auto; }
 
 .home .ctas {
   margin: 20vh 0 0 0; }
