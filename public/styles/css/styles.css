@@ -535,7 +535,10 @@ section.grey {
     flex-direction: column;
     justify-content: center; }
     section.grey .message h2 {
+      margin-bottom: 2vw;
       font-size: 32pt; }
+    section.grey .message p {
+      margin-bottom: 2vw; }
     section.grey .message span {
       font-weight: 500; }
     section.grey .message .read-more {

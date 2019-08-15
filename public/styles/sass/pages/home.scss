@@ -165,8 +165,10 @@ section.grey {
         flex-direction: column;
         justify-content: center;
         h2 {
+            margin-bottom: 2vw;
             font-size: 32pt;
         }
+        p{margin-bottom: 2vw;}
         span {
             font-weight: 500;
         }
