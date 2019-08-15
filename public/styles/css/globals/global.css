@@ -3,6 +3,12 @@
   display: table;
   clear: both; }
 
+.z2 {
+  z-index: 2; }
+
+.z3 {
+  z-index: 3; }
+
 p {
   margin: 0 0 15px;
   line-height: 1.5; }
@@ -15,7 +21,7 @@ strong {
   font-weight: 500; }
 
 .half-inline-block {
-  width: 50%;
+  width: 47%;
   display: inline-block; }
 
 .container {
@@ -115,12 +121,19 @@ strong {
   min-height: 250px; }
 
 .graphic.image {
-  max-width: 40%;
-  max-height: 250px;
-  margin: 0 5% 0 0;
-  transition: all 500ms ease-in-out; }
+  max-width: 70%;
+  max-height: 500px;
+  transition: all 500ms ease-in-out;
+  left: 15%;
+  position: relative;
+  top: -2.5vw; }
   .graphic.image.active {
     filter: grayscale(0); }
+  .graphic.image#dots {
+    width: 76%;
+    max-width: unset;
+    top: -41vw;
+    left: 11.1%; }
 
 .ctas {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */

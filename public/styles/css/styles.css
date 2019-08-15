@@ -65,6 +65,12 @@ font-family: 'Permanent Marker', cursive;
   display: table;
   clear: both; }
 
+.z2 {
+  z-index: 2; }
+
+.z3 {
+  z-index: 3; }
+
 p {
   margin: 0 0 15px;
   line-height: 1.5; }
@@ -77,7 +83,7 @@ strong {
   font-weight: 500; }
 
 .half-inline-block {
-  width: 50%;
+  width: 47%;
   display: inline-block; }
 
 .container {
@@ -177,12 +183,19 @@ strong {
   min-height: 250px; }
 
 .graphic.image {
-  max-width: 40%;
-  max-height: 250px;
-  margin: 0 5% 0 0;
-  transition: all 500ms ease-in-out; }
+  max-width: 70%;
+  max-height: 500px;
+  transition: all 500ms ease-in-out;
+  left: 15%;
+  position: relative;
+  top: -2.5vw; }
   .graphic.image.active {
     filter: grayscale(0); }
+  .graphic.image#dots {
+    width: 76%;
+    max-width: unset;
+    top: -41vw;
+    left: 11.1%; }
 
 .ctas {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
@@ -506,10 +519,35 @@ footer#footer {
       display: none; }
 
 section.grey {
-  background: #f8f8f8; }
+  background: #f8f8f8;
+  margin-top: 10%;
+  max-height: 530px; }
+  section.grey div {
+    height: 530px; }
   section.grey #grey-wrapper {
     width: 100%;
     margin: 0 auto; }
+  section.grey #cta2-text-wrapper {
+    position: absolute; }
+  section.grey .message {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    section.grey .message h2 {
+      font-size: 32pt; }
+    section.grey .message span {
+      font-weight: 500; }
+    section.grey .message .read-more {
+      display: inline-block;
+      width: 15vw;
+      height: 3.5vw;
+      background: #3eb5a9;
+      color: white;
+      text-align: center;
+      font-size: 18pt;
+      font-weight: 400;
+      line-height: 3.5vw; }
 
 .home .ctas {
   margin: 20vh 0 0 0; }
@@ -517,7 +555,8 @@ section.grey {
     position: relative;
     width: 100%;
     filter: grayscale(1);
-    transition: all 500ms ease-in-out; }
+    transition: all 500ms ease-in-out;
+    background: white; }
   .home .ctas .ad1.active img {
     filter: grayscale(0); }
 

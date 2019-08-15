@@ -149,9 +149,38 @@
 
 section.grey {
     background: #f8f8f8;
+    margin-top: 10%;
+    max-height: 530px;
+    div {height: 530px;}
     #grey-wrapper {
         width: 100%;
         margin: 0 auto;
+    }
+    #cta2-text-wrapper {
+        position: absolute;
+    }
+    .message {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+            font-size: 32pt;
+        }
+        span {
+            font-weight: 500;
+        }
+        .read-more{
+            display: inline-block;
+            width: 15vw;
+            height: 3.5vw;
+            background: #3eb5a9;
+            color: white;
+            text-align: center;
+            font-size: 18pt;
+            font-weight: 400;
+            line-height: 3.5vw;
+        }
     }
 }
 
@@ -163,6 +192,7 @@ section.grey {
             width: 100%;
             filter: grayscale(1);
             transition: all 500ms ease-in-out;
+            background: white;
         }
         &.active img { filter: grayscale(0); }
     }
