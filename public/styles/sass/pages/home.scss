@@ -186,6 +186,37 @@ section.grey {
     }
 }
 
+#case-studies{
+    height: 60vw;
+    h3 {
+        font-size: 36pt;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 11vw;
+        margin-bottom: 4vw;
+    }
+    .case-studies-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 7%;
+        justify-content: center;
+        div {
+            // padding-bottom: 10px;
+        }
+        .case-overlay{
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(
+                to right, 
+                rgba(48, 110, 107, 0.7), rgba(14, 16, 50, 0.7)
+              );
+        }
+    }
+}
+
 .home .ctas { 
     margin: 20vh 0 0 0;
     .ad1 {

@@ -24,6 +24,21 @@ strong {
   width: 47%;
   display: inline-block; }
 
+.red-background {
+  background: red; }
+
+.half-h-case {
+  height: 47.8%; }
+
+.third-h-case {
+  height: 30.9%; }
+
+.half-w {
+  width: 49%; }
+
+.case-margin {
+  margin-bottom: 2%; }
+
 .container {
   max-width: 1500px;
   width: 100%;
