@@ -93,7 +93,7 @@ strong {
   height: 47.8%; }
 
 .third-h-case {
-  height: 30.9%; }
+  height: 30.5%; }
 
 .half-w {
   width: 49%; }
@@ -576,7 +576,7 @@ section.grey {
     margin-top: 11vw;
     margin-bottom: 4vw; }
   #case-studies .case-studies-wrapper {
-    height: 100%;
+    height: 69%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -596,6 +596,37 @@ section.grey {
       -o-transform: translate(0px, 73%);
       -webkit-transform: translate(0px, 73%);
       transform: translate(0px, 73%); }
+    #case-studies .case-studies-wrapper div.third-h-case.case-study:hover .case-overlay {
+      -moz-transform: translate(0px, 60%);
+      -ms-transform: translate(0px, 60%);
+      -o-transform: translate(0px, 60%);
+      -webkit-transform: translate(0px, 60%);
+      transform: translate(0px, 60%); }
+
+#testimonials-wrapper {
+  margin-top: 10vw;
+  height: 33vw; }
+  #testimonials-wrapper #testimonials-bg-img {
+    background: url("../../img/homepage/testimonials-bg.png");
+    background-size: cover;
+    height: 30vw; }
+  #testimonials-wrapper h3 {
+    font-size: 36pt;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    top: -22vw; }
+  #testimonials-wrapper #testimonials {
+    position: relative;
+    height: 17vw;
+    top: -18vw;
+    display: flex;
+    justify-content: center; }
+    #testimonials-wrapper #testimonials div {
+      height: 100%;
+      display: inline-block;
+      width: 40%;
+      margin: 0 0.5vw 0.5vw 0; }
 
 .home .ctas {
   margin: 20vh 0 0 0; }
