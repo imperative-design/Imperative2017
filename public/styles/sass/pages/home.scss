@@ -188,12 +188,47 @@ section.grey {
 
 #case-studies{
     height: 60vw;
-    h3 {
+    h3#case-studies-title {
         font-size: 36pt;
         text-align: center;
         font-weight: 500;
         margin-top: 11vw;
         margin-bottom: 4vw;
+        display: block;
+    }
+    .case-study-text {
+        position: relative;
+        top: -7.5vw;
+        padding: 0% 0 0 5%;
+        color: white;
+    }
+    p.case-study-text {
+        display: block;
+        font-size: 18px;
+        width: 60%;
+        line-height: 1.3;
+    }
+    h3.case-study-text {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .case-studies-wrapper{
+        div.case-study:hover a{
+            opacity: 1;
+        }
+    }
+    a {
+        opacity: 0;
+        transition: opacity 0.65s ease-in-out;
+        img {
+            position: relative;
+            top: -12.5vw;
+            left: 36vw;
+            height: 15px;
+            width: 30px;
+            border: solid 2px white;
+            padding: 18px 10px;
+        }
     }
     .case-studies-wrapper {
         height: 69%;
@@ -214,11 +249,11 @@ section.grey {
             transition: .65s
         }
         div.case-study:hover .case-overlay{
-            -moz-transform: translate(0px, 73%);
-            -ms-transform: translate(0px, 73%);
-            -o-transform: translate(0px, 73%);
-            -webkit-transform: translate(0px, 73%);
-            transform: translate(0px, 73%)
+            -moz-transform: translate(0px, 55%);
+            -ms-transform: translate(0px, 55%);
+            -o-transform: translate(0px, 55%);
+            -webkit-transform: translate(0px, 55%);
+            transform: translate(0px, 55%)
         } 
         div.third-h-case.case-study:hover .case-overlay{
             -moz-transform: translate(0px, 60%);
@@ -228,7 +263,7 @@ section.grey {
             transform: translate(0px, 60%)
         } 
     }
-}
+}   
 
 #testimonials-wrapper {
     margin-top: 10vw;
