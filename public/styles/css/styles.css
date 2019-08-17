@@ -567,6 +567,12 @@ section.grey {
       font-weight: 400;
       line-height: 3.5vw; }
 
+section h3.section-title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 36pt;
+  text-align: center;
+  font-weight: 500; }
+
 #case-studies {
   height: 60vw; }
   #case-studies h3#case-studies-title {
@@ -649,11 +655,148 @@ section.grey {
     top: -18vw;
     display: flex;
     justify-content: center; }
-    #testimonials-wrapper #testimonials div {
+    #testimonials-wrapper #testimonials div.testimonial-wrapper {
+      background: white;
+      color: #696969;
+      box-shadow: 0 0 20px #e0e0e0;
       height: 100%;
-      display: inline-block;
+      display: flex;
       width: 40%;
-      margin: 0 0.5vw 0.5vw 0; }
+      margin: 0 1.5vw 0.5vw 1.5vw; }
+      #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-image-wrapper {
+        width: 33.33%;
+        height: 100%; }
+        #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-image-wrapper img.portrait {
+          height: 4.5vw;
+          width: 4.5vw;
+          z-index: 2;
+          position: relative;
+          top: 35%;
+          left: 30%;
+          border-radius: 700px; }
+        #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-image-wrapper img.dots {
+          width: 100%;
+          height: 100%;
+          top: -4.55vw;
+          bottom: 0;
+          position: relative;
+          z-index: 1; }
+      #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper {
+        width: 66.65%;
+        padding: 2vw 1.6vw 0.8vw 0; }
+        #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper img {
+          height: 1.9vw;
+          position: relative;
+          top: 1.2vw;
+          right: 3vw;
+          display: block; }
+        #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper .name {
+          font-weight: 500;
+          text-transform: uppercase; }
+
+#blog-posts {
+  margin-top: 8vw; }
+  #blog-posts .posts-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 7vw;
+    width: 100%; }
+    #blog-posts .posts-wrapper .post {
+      width: 80%;
+      max-height: 25vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5vw;
+      color: black; }
+      #blog-posts .posts-wrapper .post img {
+        width: 40%; }
+      #blog-posts .posts-wrapper .post div.post-content {
+        width: 57%; }
+        #blog-posts .posts-wrapper .post div.post-content h4 {
+          font-size: 24px;
+          font-family: 'Fjalla One', sans-serif;
+          font-weight: 500;
+          display: inline-block;
+          margin-bottom: 1.4vw; }
+        #blog-posts .posts-wrapper .post div.post-content span {
+          font-size: 24px;
+          font-family: 'Maven Pro', sans-serif;
+          font-weight: 300;
+          display: inline-block;
+          position: relative;
+          top: -0.1vw;
+          margin-left: 0.5vw; }
+        #blog-posts .posts-wrapper .post div.post-content p {
+          font-family: 'Maven Pro', sans-serif;
+          font-size: 20px;
+          margin-bottom: 1.5vw; }
+        #blog-posts .posts-wrapper .post div.post-content a {
+          display: inline-block;
+          font-family: 'Fjalla One', sans-serif;
+          width: 15vw;
+          height: 3.5vw;
+          background: black;
+          color: white;
+          text-align: center;
+          font-size: 18pt;
+          font-weight: 400;
+          line-height: 3.5vw; }
+
+#contact-area {
+  z-index: 4;
+  height: 40vw;
+  margin: 2vw 0 0 0;
+  background: url("../../img/homepage/jacek.jpg");
+  background-size: cover; }
+  #contact-area div.contact-shade {
+    background: linear-gradient(to right, rgba(48, 110, 107, 0.7), rgba(14, 16, 50, 0.7));
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    padding: 4vw 7vw 4vw 7vw;
+    box-sizing: border-box; }
+  #contact-area div.cta-wrapper {
+    width: 45%;
+    height: 100%;
+    display: inline-block;
+    color: white; }
+    #contact-area div.cta-wrapper h4 {
+      font-size: 30px;
+      font-family: 'Fjalla One', sans-serif;
+      margin-bottom: 1vw; }
+    #contact-area div.cta-wrapper h5 {
+      font-size: 26px;
+      font-family: 'Maven Pro', sans-serif;
+      margin-bottom: 1.5vw; }
+    #contact-area div.cta-wrapper a {
+      margin-bottom: 1.5vw;
+      display: inline-block;
+      font-family: 'Fjalla One', sans-serif;
+      width: 75%;
+      height: 6vw;
+      background: white;
+      color: black;
+      text-align: center;
+      font-size: 30pt;
+      font-weight: 400;
+      line-height: 6vw; }
+  #contact-area div.form-wrapper {
+    width: 55%;
+    height: 100%;
+    display: inline-block;
+    color: white; }
+    #contact-area div.form-wrapper h4 {
+      font-size: 30px;
+      font-family: 'Fjalla One', sans-serif;
+      margin-bottom: 1.5vw; }
+    #contact-area div.form-wrapper form input {
+      width: 50%; }
+    #contact-area div.form-wrapper form textarea {
+      width: 100%; }
+    #contact-area div.form-wrapper .success-msg {
+      display: none; }
 
 .home .ctas {
   margin: 20vh 0 0 0; }

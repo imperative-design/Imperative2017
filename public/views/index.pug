@@ -67,7 +67,7 @@ block content
                         | look for what opportunities you may be missing, and help you craft and execute your plan.
                     a.read-more.btn(href="/services/search-engine-optimization") READ MORE
         section#case-studies
-            h3#case-studies-title CLIENT CASE STUDIES
+            h3#case-studies-title.section-title CLIENT CASE STUDIES
             div.case-studies-wrapper
                 div.case-study.red-background.half-h-case.half-w.case-margin.overflow-hidden
                     div.case-overlay
@@ -79,33 +79,94 @@ block content
                 //- div.half-h-case.half-w.case-overlay
                 div.case-study.red-background.half-h-case.half-w.overflow-hidden
                     div.case-overlay
-                    h3
-                    p
+                    h3.case-study-text DULUTH DINER
+                    p.case-study-text(href="") Design / Development, Integrated Marketing Strategy
+                    a(href="/")
+                        img(src='../img/Icons/down-arrow-white.png')
 
                 //- div.third-h-case.half-w.case-overlay.case-margin
                 div.case-study.red-background.third-h-case.half-w.case-margin.overflow-hidden
                     div.case-overlay
-                    h3
-                    p
+                    h3.case-study-text DULUTH DINER
+                    p.case-study-text(href="") Design / Development, Integrated Marketing Strategy
+                    a(href="/")
+                        img(src='../img/Icons/down-arrow-white.png')
 
                 //- div.third-h-case.half-w.case-overlay.case-margin
                 div.case-study.red-background.third-h-case.half-w.case-margin.overflow-hidden
                     div.case-overlay
-                    h3
-                    p
+                    h3.case-study-text DULUTH DINER
+                    p.case-study-text(href="") Design / Development, Integrated Marketing Strategy
+                    a(href="/")
+                        img(src='../img/Icons/down-arrow-white.png')
 
                 //- div.third-h-case.half-w.case-overlay
                 div.case-study.red-background.third-h-case.half-w.overflow-hidden
                     div.case-overlay
-                    h3
-                    p
+                    h3.case-study-text DULUTH DINER
+                    p.case-study-text(href="") Design / Development, Integrated Marketing Strategy
+                    a(href="/")
+                        img(src='../img/Icons/down-arrow-white.png')
 
         section#testimonials-wrapper
             div#testimonials-bg-img
-            h3 CLIENT TESTIMONIALS
+            h3.section-title CLIENT TESTIMONIALS
             div#testimonials
-                div.red-background
-                div.red-background
+                div.testimonial-wrapper
+                    div.testimonial-image-wrapper
+                        img.portrait(src="../img/homepage/marius.jpg", alt="")
+                        img.dots(src="../img/homepage/worn-dots-testimonials.png", alt="")
+                    div.testimonial-text-wrapper
+                        img(src="../img/Icons/left-quote-testimonials.png", alt="")
+                        p Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                        p.name - John Doe, Los Angeles
+                div.testimonial-wrapper
+                    div.testimonial-image-wrapper
+                        img.portrait(src="../img/homepage/marius.jpg", alt="")
+                        img.dots(src="../img/homepage/worn-dots-testimonials.png", alt="")
+                    div.testimonial-text-wrapper
+                        img(src="../img/Icons/left-quote-testimonials.png", alt="")
+                        p Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                        p.name - John Doe, Los Angeles
+        
+        section#blog-posts
+            h3.section-title CHECK OUT OUR LATEST BLOG POSTS
+            div.posts-wrapper
+                div.post
+                    img(src="../img/homepage/adel.jpg", alt="")
+                    div.post-content
+                        h4 FOLLOW THE MONEY 
+                        span Is your plan working?
+                        p 
+                            | Learn if blah Learn if blah Learn if blah Learn if blah Learn if blah Learn if blah
+                            | Learn if blah Learn if blah Learn if blah Learn if blah Learn if blah Learn if blah
+                            | Learn if blah Learn if blah Learn if blah Learn if blah Learn if blah Learn if blah
+                        a.read-more.btn(href="/services/search-engine-optimization") READ MORE
+
+                div.post
+                    img(src="../img/homepage/adel.jpg", alt="")
+                    div.post-content
+                        h4 REACH NEW HEIGHTS
+                        span Learn new strategies 
+                        p Learn if blah Learn if blah Learn if blah Learn if blah Learn if blah Learn if blah
+                        a.read-more.btn(href="/services/search-engine-optimization") READ MORE
+        section#contact-area
+            div.contact-shade
+                div.cta-wrapper
+                    h4 YOU HAD ME AT HELLO
+                    h5 NOW WHAT'S NEXT?
+                    a(href="/insights/getting-started/") Get Started
+                    a(href="tel:4703583559") Give us a call
+                div.form-wrapper
+                    h4 DROP US A LINE
+                    p.success-msg Thanks for for dropping us a line! We'll be in touch soon.
+                    form
+                        input(type="text", placeholder="first name", required)
+                        input(type="text", placeholder="last name")
+                        input(type="email", placeholder="email", required)
+                        input(type="phone", placeholder="phone", required)
+                        textarea(placeholder="Reason for writing", rows="7", required)
+                        input(type="submit")
         //- section#contact.band.blue.band3
         //-     div.wrapper
         //-         div.message
