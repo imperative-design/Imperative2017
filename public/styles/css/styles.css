@@ -261,7 +261,6 @@ footer#footer {
 header {
   position: fixed;
   background: rgba(255, 255, 255, 0.9);
-  padding: 0 0 2.5vh;
   margin: 0px;
   z-index: 11;
   width: 100%;
@@ -276,9 +275,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    justify-content: space-between;
     width: 90%;
-    margin: 1.5vh auto 0; }
+    margin: 3vh auto;
+    box-sizing: border-box; }
   header .logo {
     text-decoration: none;
     color: #000;
