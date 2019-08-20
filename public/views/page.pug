@@ -30,5 +30,25 @@ html
         .page.wrapper 
             section.content
                 block page_content
-                
+        //- Load Facebook SDK for JavaScript
+        div#fb-root
+        script.
+            window.fbAsyncInit = function() {
+                FB.init({
+                    xfbml            : true,
+                    version          : "v4.0"
+                });
+            };
+
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+        //Your customer chat code
+        div.fb-customerchat(attribution="setup_tool", page_id="163143773718123", theme_color="#0036bf", logged_in_greeting="Hey thanks for getting in touch. What can we do for you?", logged_out_greeting="Hey thanks for getting in touch. What can we do for you?")
+             
     block bodyscripts
