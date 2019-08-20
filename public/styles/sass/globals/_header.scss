@@ -2,10 +2,11 @@
 header {
     position: fixed;
     background: rgba(255,255,255, .9);
-    padding: 0 0 3vh;
+    padding: 0 0 2.5vh;
     margin: 0px;
     z-index: 11;
     width: 100%;
+    min-height: 198px;
     // max-width: 1500px;
     box-sizing: border-box;
     opacity: 1;

@@ -259,10 +259,11 @@ footer#footer {
 header {
   position: fixed;
   background: rgba(255, 255, 255, 0.9);
-  padding: 0 0 3vh;
+  padding: 0 0 2.5vh;
   margin: 0px;
   z-index: 11;
   width: 100%;
+  min-height: 198px;
   box-sizing: border-box;
   opacity: 1;
   border-bottom: 1px solid #fff;
@@ -901,7 +902,7 @@ section h3.section-title:after {
     font-weight: 400; }
 
 .home .ctas {
-  margin: 11% 0 0 0; }
+  margin: 198px 0 0 0; }
   .home .ctas .ad1 img {
     position: relative;
     width: 100%;
