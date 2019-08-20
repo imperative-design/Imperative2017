@@ -289,7 +289,7 @@ header {
     font-family: 'Fjalla One', sans-serif;
     font-size: 3.88vw;
     text-transform: uppercase;
-    width: 345px;
+    width: 26vw;
     letter-spacing: -4px;
     line-height: 0.9; }
     header h1 span:first-child {
@@ -307,7 +307,8 @@ header {
     font-weight: 100;
     z-index: 50;
     justify-content: space-between;
-    min-width: 285px; }
+    min-width: 285px;
+    width: 19.7vw; }
     header ul.nav li {
       position: relative; }
       header ul.nav li a {
@@ -358,6 +359,18 @@ header {
         header ul.nav li.get_in_touch a:hover {
           transform: none;
           border: none; }
+
+@media only screen and (max-device-width: 1439px) and (min-device-width: 1023px) {
+  header.group {
+    min-height: 150px; }
+  .home section.ctas {
+    margin: 150px 0 0 0; } }
+
+@media only screen and (max-device-width: 1921px) and (min-device-width: 1441px) {
+  header.group {
+    min-height: 198px; }
+  .home section.ctas {
+    margin: 227px 0 0 0; } }
 
 .container {
   width: 100%;
