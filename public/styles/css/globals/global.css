@@ -40,7 +40,6 @@ strong {
   margin-bottom: 2%; }
 
 .container {
-  max-width: 1500px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -53,62 +52,49 @@ strong {
     box-sizing: border-box;
     background-color: black;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center;
+    height: 8vh; }
     .container .infoBar p {
-      font-family: 'Maven Pro', sans-serif;
       color: white;
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      margin: 0;
-      height: 7vh;
-      align-items: center; }
-    .container .infoBar .phone:before {
-      content: '';
+      margin: 0 6.5vw 0 0.5vw;
+      font-weight: 500;
+      font-family: 'Maven Pro', sans-serif;
+      font-size: 18px; }
+    .container .infoBar .phone {
+      margin-left: 40%; }
+    .container .infoBar .phone {
       background: url("../../img/Icons/top_nav_icons/telephone.png");
       background-size: contain;
-      background-size: contain;
-      position: absolute;
       width: 1.2vw;
-      height: 18px;
-      margin-left: -1.5%;
-      margin-top: 0.3%; }
-    .container .infoBar .email:before {
-      content: '';
+      height: 2.3vh;
+      background-repeat: no-repeat; }
+    .container .infoBar .email {
       background: url("../../img/Icons/top_nav_icons/email.png");
       background-size: contain;
-      position: absolute;
       width: 1.2vw;
-      height: 11px;
-      margin-left: -1.5%;
-      margin-top: 0.5%; }
-    .container .infoBar .twitter:before {
-      content: '';
+      height: 1.4vh;
+      background-repeat: no-repeat; }
+    .container .infoBar .twitter {
       background: url("../../img/Icons/top_nav_icons/twitter.png");
       background-size: contain;
-      position: absolute;
       width: 1.2vw;
-      height: 14px;
-      margin-left: -1.5%;
-      margin-top: -0.3%; }
-    .container .infoBar .instagram:before {
-      content: '';
-      background: url("../../img/Icons/top_nav_icons/instagram.png");
-      background-size: contain;
-      position: absolute;
-      width: 1.2vw;
-      height: 18px;
-      margin-left: -1.5%;
-      margin-top: -0.3%; }
-    .container .infoBar .facebook:before {
-      content: '';
+      height: 1.6vh;
+      background-repeat: no-repeat;
+      margin-right: 1vw; }
+    .container .infoBar .facebook {
       background: url("../../img/Icons/top_nav_icons/facebook.png");
       background-size: contain;
-      position: absolute;
       width: 0.65vw;
-      height: 18px;
-      margin-left: -1.5%;
-      margin-top: -0.5%; }
+      height: 1.8vh;
+      background-repeat: no-repeat;
+      margin-right: 1vw; }
+    .container .infoBar .instagram {
+      background: url("../../img/Icons/top_nav_icons/instagram.png");
+      background-size: contain;
+      width: 1.2vw;
+      height: 2vh;
+      background-repeat: no-repeat; }
 
 .wrapper {
   width: 100%;
@@ -147,38 +133,36 @@ strong {
   .graphic.image#dots {
     width: 76%;
     max-width: unset;
-    top: -41vw;
+    top: -113%;
     left: 11.1%; }
 
 .ctas {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
-  background: #787878;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #787878 0%, #333333 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #787878 0%, #333333 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #787878 0%, #333333 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#787878', endColorstr='#333333',GradientType=1 );
-  /* IE6-9 */
   position: relative;
   overflow: hidden;
-  margin: 115px auto 50px; }
-  .ctas .cta img {
-    width: 100%; }
+  margin: 115px auto 50px;
+  height: 90vh;
+  background: white; }
   .ctas .cta .banner-text-wrapper {
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 19%;
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    flex-direction: column; }
+    flex-direction: column;
+    height: 95%;
+    background: url("../../img/homepage/banner-pic.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
     .ctas .cta .banner-text-wrapper h2 {
-      font-size: 60pt; }
+      font-size: 60pt;
+      margin-top: 10vh;
+      font-weight: 500; }
     .ctas .cta .banner-text-wrapper h3 {
-      font-size: 40pt; }
+      font-size: 40pt;
+      font-weight: 500; }
     .ctas .cta .banner-text-wrapper h4 {
       font-size: 34pt; }
     .ctas .cta .banner-text-wrapper .message {
@@ -205,6 +189,19 @@ strong {
         text-decoration: none;
         font-size: 20pt;
         font-family: 'Fjalla One', sans-serif; }
+    .ctas .cta .banner-text-wrapper .arrow-cta {
+      position: absolute;
+      bottom: 12%;
+      width: 4vw;
+      height: 4vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      box-shadow: 0 0 10px #7e7e7e; }
+      .ctas .cta .banner-text-wrapper .arrow-cta img {
+        height: 1.5vw;
+        width: 0.65vw; }
   .ctas .cta.active .message {
     right: 1%; }
   .ctas #flare {

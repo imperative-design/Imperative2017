@@ -4,7 +4,7 @@ extends layout.pug
 block content
         section.ctas
             div.ad1.cta.graphic-placeholder
-                img(src='img/homepage/banner-pic.png')
+                //- img(src='img/homepage/banner-pic.png')
                 div.banner-text-wrapper
                     h2.message WHAT IF
                     h3.message YOU COULD CHOOSE YOU CUSTOMERS
@@ -12,46 +12,49 @@ block content
                     //- != 'What if <span class="highlight">you could choose your customers</span> intead of them choosing you?'
                     div.action
                         a(href="/services/search-engine-optimization") Read More
+                    div.arrow-cta
+                        img(src='../img/Icons/down-arrow.png')
+                    
         //- section.wip WIP: Under construction ... so don't be a hater :p
 
         section.our-services
-            h3 OUR SERVICES
+            h3.section-title OUR SERVICES
             div.services-wrapper
                 div.service
                     img(src='../img/Icons/services_icons/web-programming.png')
-                    p Web Development
+                    a(href="/services/website-development") Web Development
                 div.service 
                     img(src='../img/Icons/services_icons/application.png')
                     //- i#appDevelopment
-                    p App Development
+                    a(href="/services/application-development") App Development
                 div.service 
                     img(src='../img/Icons/services_icons/seo.png')
                     //- i#SEO
-                    p Search Engine Optimization
+                    a(href="/services/search-engine-optimization") Search Engine Optimization
                 div.service 
                     img(src='../img/Icons/services_icons/social-media.png')
                     //- i#SMM
-                    p Social Media Marketing
+                    a(href="/services/social-media-marketing") Social Media Marketing
                 div.service 
                     img(src='../img/Icons/services_icons/strategy.png')
                     //- i#DMS
-                    p Digital Marketing Strategy
+                    a(href="/services/digital-marketing-strategy") Digital Marketing Strategy
                 div.service 
                     img(src='../img/Icons/services_icons/copyright.png')
                     //- i#contentCreation
-                    p Content Creation
+                    a(href="/services/copywriting") Content Creation
                 div.service 
                     img(src='../img/Icons/services_icons/branding.png')
                     //- i#brandCreation
-                    p Brand Creation
+                    a(href="/services/branding") Brand Creation
                 div.service 
                     img(src='../img/Icons/services_icons/domain.png')
                     //- i#websiteRenovation
-                    p Website Renovation
+                    a(href="/services/website-rennovation") Website Renovation
                 div.service 
                     img(src='../img/Icons/services_icons/business.png')
                     //- i#mentoring
-                    p Mentoring
+                    a(href="/services/mentoring") Mentoring
         section.grey
             div.half-inline-block#cta2-image-wrapper
                 img.graphic.image.z3(src="../img/homepage/austin-distel-cropped.jpg")                
@@ -69,43 +72,43 @@ block content
         section#case-studies
             h3#case-studies-title.section-title CLIENT CASE STUDIES
             div.case-studies-wrapper
-                div.case-study.red-background.half-h-case.half-w.case-margin.overflow-hidden
+                div.case-study.duluth-background.half-h-case.half-w.case-margin.overflow-hidden
                     div.case-overlay
                     h3.case-study-text DULUTH DINER
-                    p.case-study-text(href="") Design / Development, Integrated Marketing Strategy
-                    a(href="/")
+                    p.case-study-text Design / Development, Integrated Marketing Strategy
+                    a(href="/insights/duluth-diner-design-development-integrated-marketing-strategy/")
                         img(src='../img/Icons/down-arrow-white.png')
 
                 //- div.half-h-case.half-w.case-overlay
-                div.case-study.red-background.half-h-case.half-w.overflow-hidden
+                div.case-study.active-care-background.half-h-case.half-w.overflow-hidden
                     div.case-overlay
-                    h3.case-study-text DULUTH DINER
-                    p.case-study-text(href="") Design / Development, Integrated Marketing Strategy
-                    a(href="/")
+                    h3.case-study-text ACTIVE CARE ATLANTA
+                    p.case-study-text Design / Development, SEO, Content Strategy
+                    a(href="/insights/active-care-atlanta-design-seo-content-strategy/")
                         img(src='../img/Icons/down-arrow-white.png')
 
                 //- div.third-h-case.half-w.case-overlay.case-margin
-                div.case-study.red-background.third-h-case.half-w.case-margin.overflow-hidden
+                div.case-study.atlas-background.third-h-case.half-w.case-margin.overflow-hidden
                     div.case-overlay
-                    h3.case-study-text DULUTH DINER
-                    p.case-study-text(href="") Design / Development, Integrated Marketing Strategy
-                    a(href="/")
+                    h3.case-study-text ATLAS DESIGNS
+                    p.case-study-text Design / Development, Digital Strategy
+                    a(href="/insights/atlas-designs-design-digital-strategy/")
                         img(src='../img/Icons/down-arrow-white.png')
 
                 //- div.third-h-case.half-w.case-overlay.case-margin
-                div.case-study.red-background.third-h-case.half-w.case-margin.overflow-hidden
+                div.case-study.four-gc-background.third-h-case.half-w.case-margin.overflow-hidden
                     div.case-overlay
-                    h3.case-study-text DULUTH DINER
-                    p.case-study-text(href="") Design / Development, Integrated Marketing Strategy
-                    a(href="/")
+                    h3.case-study-text 4GC CONSTRUCTION
+                    p.case-study-text Design / Development
+                    a(href="/insights/4gc-construction/")
                         img(src='../img/Icons/down-arrow-white.png')
 
                 //- div.third-h-case.half-w.case-overlay
-                div.case-study.red-background.third-h-case.half-w.overflow-hidden
+                div.case-study.green-fern-background.third-h-case.half-w.overflow-hidden
                     div.case-overlay
-                    h3.case-study-text DULUTH DINER
-                    p.case-study-text(href="") Design / Development, Integrated Marketing Strategy
-                    a(href="/")
+                    h3.case-study-text GREEN FERN TREE SERVICE
+                    p.case-study-text Design, SEO
+                    a(href="/insights/green-fern-tree-service/")
                         img(src='../img/Icons/down-arrow-white.png')
 
         section#testimonials-wrapper
@@ -161,12 +164,14 @@ block content
                     h4 DROP US A LINE
                     p.success-msg Thanks for for dropping us a line! We'll be in touch soon.
                     form
-                        input(type="text", placeholder="first name", required)
+                        input.margin-right(type="text", placeholder="first name", required)
                         input(type="text", placeholder="last name")
-                        input(type="email", placeholder="email", required)
+                        input.margin-right(type="email", placeholder="email", required)
                         input(type="phone", placeholder="phone", required)
                         textarea(placeholder="Reason for writing", rows="7", required)
-                        input(type="submit")
+                        input.submit(type="submit")
+            section#copyright
+                p &copy; Copyright 2019. IMPERATIVE DESIGN. All Rights Reserved.
         //- section#contact.band.blue.band3
         //-     div.wrapper
         //-         div.message

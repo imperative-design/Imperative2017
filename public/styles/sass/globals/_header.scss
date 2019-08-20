@@ -6,7 +6,7 @@ header {
     margin: 0px;
     z-index: 11;
     width: 100%;
-    max-width: 1500px;
+    // max-width: 1500px;
     box-sizing: border-box;
     opacity: 1;
     .nav-toggle { visibility: hidden; }
@@ -51,12 +51,14 @@ header {
             position: relative;
 
             a { 
-                text-decoration: none; 
-                color: #333; 
-                font-size: 20pt;
+                text-decoration: none;
+                color: #333;
+                font-size: 18pt;
                 font-weight: 100;
                 border-bottom: 1px solid transparent;
                 display: block;
+                font-family: 'Fjalla One', sans-serif;
+                text-transform: uppercase;
                 &:last-child { margin-right: 0; }
                 &:hover { color: #000; border-color: $blue; }
             }
