@@ -39,63 +39,6 @@ strong {
 .case-margin {
   margin-bottom: 2%; }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; }
-  .container .infoBar {
-    position: fixed;
-    margin: 0px;
-    z-index: 12;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8vh; }
-    .container .infoBar p {
-      color: white;
-      margin: 0 6.5vw 0 0.5vw;
-      font-weight: 500;
-      font-family: 'Maven Pro', sans-serif;
-      font-size: 18px; }
-    .container .infoBar .phone {
-      margin-left: 40%; }
-    .container .infoBar .phone {
-      background: url("../../img/Icons/top_nav_icons/telephone.png");
-      background-size: contain;
-      width: 1.2vw;
-      height: 2.3vh;
-      background-repeat: no-repeat; }
-    .container .infoBar .email {
-      background: url("../../img/Icons/top_nav_icons/email.png");
-      background-size: contain;
-      width: 1.2vw;
-      height: 1.4vh;
-      background-repeat: no-repeat; }
-    .container .infoBar .twitter {
-      background: url("../../img/Icons/top_nav_icons/twitter.png");
-      background-size: contain;
-      width: 1.2vw;
-      height: 1.6vh;
-      background-repeat: no-repeat;
-      margin-right: 1vw; }
-    .container .infoBar .facebook {
-      background: url("../../img/Icons/top_nav_icons/facebook.png");
-      background-size: contain;
-      width: 0.65vw;
-      height: 1.8vh;
-      background-repeat: no-repeat;
-      margin-right: 1vw; }
-    .container .infoBar .instagram {
-      background: url("../../img/Icons/top_nav_icons/instagram.png");
-      background-size: contain;
-      width: 1.2vw;
-      height: 2vh;
-      background-repeat: no-repeat; }
-
 .wrapper {
   width: 100%;
   margin: 0 auto; }
@@ -241,3 +184,14 @@ strong {
 :-moz-placeholder {
   /* Firefox 18- */
   color: #fff; }
+
+footer#footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: unset; }
+  footer#footer p {
+    display: inline;
+    margin: 0;
+    padding: 3vh 3vw;
+    color: white; }
