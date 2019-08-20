@@ -93,7 +93,7 @@ strong {
   height: 47.8%; }
 
 .third-h-case {
-  height: 30.5%; }
+  height: 31.2%; }
 
 .half-w {
   width: 49%; }
@@ -193,10 +193,12 @@ strong {
   .graphic.image.active {
     filter: grayscale(0); }
   .graphic.image#dots {
-    width: 76%;
-    max-width: unset;
-    top: -113%;
-    left: 11.1%; }
+    width: 35vw;
+    max-width: 500px;
+    top: -6vw;
+    /* bottom: 1vh; */
+    left: 8vw;
+    position: absolute; }
 
 .ctas {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
@@ -219,14 +221,14 @@ strong {
     background-repeat: no-repeat;
     background-position: center; }
     .ctas .cta .banner-text-wrapper h2 {
-      font-size: 60pt;
+      font-size: 5.55vw;
       margin-top: 10vh;
       font-weight: 500; }
     .ctas .cta .banner-text-wrapper h3 {
-      font-size: 40pt;
+      font-size: 3.705vw;
       font-weight: 500; }
     .ctas .cta .banner-text-wrapper h4 {
-      font-size: 34pt; }
+      font-size: 3.15vw; }
     .ctas .cta .banner-text-wrapper .message {
       z-index: 10;
       bottom: 30%;
@@ -249,7 +251,7 @@ strong {
         float: right;
         color: #eee;
         text-decoration: none;
-        font-size: 20pt;
+        font-size: 1.85vw;
         font-family: 'Fjalla One', sans-serif; }
     .ctas .cta .banner-text-wrapper .arrow-cta {
       position: absolute;
@@ -326,7 +328,7 @@ header {
       color: #000; }
   header h1 {
     font-family: 'Fjalla One', sans-serif;
-    font-size: 42pt;
+    font-size: 3.88vw;
     text-transform: uppercase;
     width: 345px;
     letter-spacing: -4px;
@@ -338,7 +340,7 @@ header {
     header h1 span.tagline {
       display: block;
       font-family: 'Permanent Marker', cursive;
-      font-size: 23pt;
+      font-size: 2.15vw;
       line-height: 0.9; }
   header ul.nav {
     display: flex;
@@ -352,7 +354,7 @@ header {
       header ul.nav li a {
         text-decoration: none;
         color: #333;
-        font-size: 18pt;
+        font-size: 1.65vw;
         font-weight: 100;
         border-bottom: 1px solid transparent;
         display: block;
@@ -362,7 +364,7 @@ header {
           margin-right: 0; }
         header ul.nav li a:hover {
           color: #000;
-          border-color: #0036bf; }
+          border-color: #3eb5a9; }
       header ul.nav li.dropdown ul {
         position: absolute;
         width: 325px;
@@ -373,7 +375,7 @@ header {
         header ul.nav li.dropdown ul li:last-child a {
           padding-bottom: 15px; }
         header ul.nav li.dropdown ul li a {
-          font-size: 14pt;
+          font-size: 1.3vw;
           background: rgba(255, 255, 255, 0.95);
           display: block;
           text-align: center;
@@ -382,7 +384,7 @@ header {
           header ul.nav li.dropdown ul li a:hover {
             border-color: transparent;
             transform: none;
-            background: #0036bf;
+            background: #3eb5a9;
             color: #fff;
             font-weight: 400; }
       header ul.nav li.dropdown:hover ul {
@@ -420,7 +422,7 @@ footer#footer {
     .band .wrapper .message {
       position: relative;
       width: 60%;
-      font-size: 18pt;
+      font-size: 1.65vw;
       margin-right: 10%; }
       .band .wrapper .message p {
         font-weight: 100; }
@@ -534,7 +536,8 @@ footer#footer {
 section.grey {
   background: #f8f8f8;
   margin-top: 10%;
-  max-height: 530px; }
+  max-height: 530px;
+  position: relative; }
   section.grey div {
     height: 530px; }
   section.grey #grey-wrapper {
@@ -549,9 +552,10 @@ section.grey {
     justify-content: center; }
     section.grey .message h2 {
       margin-bottom: 2vw;
-      font-size: 32pt; }
+      font-size: 2.95vw; }
     section.grey .message p {
-      margin-bottom: 2vw; }
+      margin-bottom: 2vw;
+      font-size: 1.12vw; }
     section.grey .message span {
       font-weight: 500; }
     section.grey .message .read-more {
@@ -561,21 +565,20 @@ section.grey {
       background: #3eb5a9;
       color: white;
       text-align: center;
-      font-size: 18pt;
+      font-size: 1.65vw;
       font-weight: 400;
       line-height: 3.5vw;
       font-family: 'Fjalla One', sans-serif; }
 
 section h3.section-title {
   font-family: 'Fjalla One', sans-serif;
-  font-size: 36pt;
+  font-size: 3.35vw;
   text-align: center;
   font-weight: 500; }
 
 #case-studies {
   height: 60vw; }
   #case-studies h3#case-studies-title {
-    font-size: 36pt;
     text-align: center;
     font-weight: 500;
     margin-top: 11vw;
@@ -583,30 +586,35 @@ section h3.section-title {
     display: block; }
   #case-studies .case-study-text {
     position: relative;
-    top: -7.5vw;
+    top: -6.5vw;
     padding: 0% 0 0 5%;
     color: white; }
   #case-studies p.case-study-text {
     display: block;
-    font-size: 18px;
+    font-size: 1.25vw;
     width: 55%;
-    line-height: 1.3; }
+    line-height: 1.3;
+    position: absolute;
+    bottom: 0;
+    top: unset; }
   #case-studies h3.case-study-text {
-    font-size: 24px;
+    font-size: 1.65vw;
     font-weight: 500; }
   #case-studies .case-studies-wrapper div.case-study:hover a {
     opacity: 1; }
-  #case-studies a {
+  #case-studies a img {
     opacity: 0;
-    transition: opacity 0.65s ease-in-out; }
-    #case-studies a img {
-      position: relative;
-      top: -12.5vw;
-      left: 36vw;
-      height: 15px;
-      width: 30px;
-      border: solid 2px white;
-      padding: 18px 10px; }
+    transition: opacity 0.65s ease-in-out;
+    position: absolute;
+    bottom: 1.5vw;
+    left: 36vw;
+    height: 1.05vw;
+    width: 2.1vw;
+    border: solid 2px white;
+    /* padding: 18px 10px; */
+    padding: 1.25vw 0.7vw; }
+  #case-studies a:hover {
+    transform: unset; }
   #case-studies .case-studies-wrapper {
     height: 69%;
     display: flex;
@@ -615,6 +623,14 @@ section h3.section-title {
     align-items: center;
     padding: 0 7%;
     justify-content: center; }
+    #case-studies .case-studies-wrapper .case-link-wrapper {
+      position: unset;
+      opacity: unset;
+      width: 49%; }
+      #case-studies .case-studies-wrapper .case-link-wrapper .case-study {
+        width: 100%; }
+    #case-studies .case-studies-wrapper .case-study {
+      position: relative; }
     #case-studies .case-studies-wrapper .duluth-background {
       background: url("../../img/clients/duluth_diner.png");
       background-size: cover; }
@@ -649,27 +665,32 @@ section h3.section-title {
       -o-transform: translate(0px, 60%);
       -webkit-transform: translate(0px, 60%);
       transform: translate(0px, 60%); }
+    #case-studies .case-studies-wrapper div.case-study:hover img {
+      opacity: unset; }
     #case-studies .case-studies-wrapper div.third-h-case p.case-study-text {
       display: block;
-      font-size: 14px;
+      font-size: 0.97vw;
       width: 60%;
-      line-height: 1.3; }
+      line-height: 1.3;
+      position: absolute;
+      top: unset;
+      bottom: 0; }
     #case-studies .case-studies-wrapper div.third-h-case h3.case-study-text {
-      font-size: 20px;
+      font-size: 1.39vw;
       font-weight: 500; }
     #case-studies .case-studies-wrapper div.third-h-case .case-study-text {
       position: relative;
-      top: -8vh;
+      top: -4.3vw;
       padding: 0% 0 0 5%;
       color: white; }
-    #case-studies .case-studies-wrapper div.third-h-case a img {
-      position: relative;
-      top: -8vw;
+    #case-studies .case-studies-wrapper div.third-h-case img {
+      position: absolute;
+      bottom: 1.1vw;
       left: 36vw;
-      height: 8px;
-      width: 24px;
-      border: solid 2px white;
-      padding: 14px 6px; }
+      height: 0.556vw;
+      width: 1.67vw;
+      border: solid 0.14vw white;
+      padding: 0.97vw 0.42vw; }
 
 section h3.section-title:after {
   background: none repeat scroll 0 0 #3eb5a9;
@@ -683,13 +704,13 @@ section h3.section-title:after {
 
 @media only screen and (max-device-width: 1921px) and (min-device-width: 1441px) {
   #case-studies .case-study-text {
-    top: -4.5vw; }
-  #case-studies a img {
-    top: -8vw; }
+    top: -6vw; }
   #case-studies .case-studies-wrapper div.third-h-case.case-study .case-study-text {
-    top: -6vh; }
+    top: -6.5vh; }
+  #case-studies .case-studies-wrapper div.third-h-case.case-study p.case-study-text {
+    top: unset; }
   #case-studies .case-studies-wrapper div.third-h-case.case-study a img {
-    top: -6.2vw; } }
+    top: -1vw; } }
 
 #testimonials-wrapper {
   margin-top: 10vw;
@@ -699,7 +720,6 @@ section h3.section-title:after {
     background-size: cover;
     height: 30vw; }
   #testimonials-wrapper h3 {
-    font-size: 36pt;
     text-align: center;
     font-weight: 500;
     position: relative;
@@ -748,6 +768,8 @@ section h3.section-title:after {
         #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper .name {
           font-weight: 500;
           text-transform: uppercase; }
+        #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper p {
+          font-size: 1.113vw; }
 
 #blog-posts {
   margin-top: 8vw; }
@@ -758,7 +780,7 @@ section h3.section-title:after {
     box-sizing: border-box;
     width: 100%; }
     #blog-posts .posts-wrapper .post {
-      width: 80%;
+      width: 100%;
       max-height: 25vw;
       display: flex;
       justify-content: space-between;
@@ -770,13 +792,13 @@ section h3.section-title:after {
       #blog-posts .posts-wrapper .post div.post-content {
         width: 57%; }
         #blog-posts .posts-wrapper .post div.post-content h4 {
-          font-size: 24px;
+          font-size: 1.65vw;
           font-family: 'Fjalla One', sans-serif;
           font-weight: 500;
           display: inline-block;
           margin-bottom: 1.4vw; }
         #blog-posts .posts-wrapper .post div.post-content span {
-          font-size: 24px;
+          font-size: 1.65vw;
           font-family: 'Maven Pro', sans-serif;
           font-weight: 300;
           display: inline-block;
@@ -785,7 +807,7 @@ section h3.section-title:after {
           margin-left: 0.5vw; }
         #blog-posts .posts-wrapper .post div.post-content p {
           font-family: 'Maven Pro', sans-serif;
-          font-size: 20px;
+          font-size: 1.39vw;
           margin-bottom: 1.5vw; }
         #blog-posts .posts-wrapper .post div.post-content a {
           display: inline-block;
@@ -795,7 +817,7 @@ section h3.section-title:after {
           background: black;
           color: white;
           text-align: center;
-          font-size: 18pt;
+          font-size: 1.65vw;
           font-weight: 400;
           line-height: 3.5vw; }
 
@@ -819,11 +841,11 @@ section h3.section-title:after {
     display: inline-block;
     color: white; }
     #contact-area div.cta-wrapper h4 {
-      font-size: 30px;
+      font-size: 2.09vw;
       font-family: 'Fjalla One', sans-serif;
       margin-bottom: 1vw; }
     #contact-area div.cta-wrapper h5 {
-      font-size: 26px;
+      font-size: 1.81vw;
       font-family: 'Maven Pro', sans-serif;
       margin-bottom: 1.5vw; }
     #contact-area div.cta-wrapper a {
@@ -835,7 +857,7 @@ section h3.section-title:after {
       background: white;
       color: black;
       text-align: center;
-      font-size: 36px;
+      font-size: 2.5vw;
       font-weight: 400;
       line-height: 6vw;
       text-transform: uppercase; }
@@ -845,7 +867,7 @@ section h3.section-title:after {
     display: inline-block;
     color: white; }
     #contact-area div.form-wrapper h4 {
-      font-size: 30px;
+      font-size: 2.09vw;
       font-family: 'Fjalla One', sans-serif;
       margin-bottom: 1.5vw; }
     #contact-area div.form-wrapper form .margin-right {
@@ -857,7 +879,7 @@ section h3.section-title:after {
       width: 46%;
       background: transparent;
       padding: 1vw;
-      font-size: 18px;
+      font-size: 1.25vw;
       margin-bottom: 2vw;
       border: 1px solid white;
       color: white; }
@@ -865,7 +887,7 @@ section h3.section-title:after {
       width: 100%;
       background: transparent;
       padding: 1vw;
-      font-size: 18px;
+      font-size: 1.25vw;
       margin-bottom: 2vw;
       border: 1px solid white;
       color: white; }
@@ -876,7 +898,7 @@ section h3.section-title:after {
       background: #3eb5a9;
       color: white;
       text-align: center;
-      font-size: 18pt;
+      font-size: 1.65vw;
       font-weight: 400;
       font-family: 'Fjalla One', sans-serif;
       margin: 0;
@@ -1021,8 +1043,9 @@ section h3.section-title:after {
         position: absolute; }
       .our-services .services-wrapper .service a {
         font-family: 'Maven Pro', sans-serif;
-        font-size: 18pt;
+        font-size: 1.65vw;
         top: 60%;
+        text-align: center;
         margin: 0;
         text-indent: -5%;
         line-height: 1.5;

@@ -31,7 +31,7 @@ strong {
   height: 47.8%; }
 
 .third-h-case {
-  height: 30.5%; }
+  height: 31.2%; }
 
 .half-w {
   width: 49%; }
@@ -131,10 +131,12 @@ strong {
   .graphic.image.active {
     filter: grayscale(0); }
   .graphic.image#dots {
-    width: 76%;
-    max-width: unset;
-    top: -113%;
-    left: 11.1%; }
+    width: 35vw;
+    max-width: 500px;
+    top: -6vw;
+    /* bottom: 1vh; */
+    left: 8vw;
+    position: absolute; }
 
 .ctas {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
@@ -157,14 +159,14 @@ strong {
     background-repeat: no-repeat;
     background-position: center; }
     .ctas .cta .banner-text-wrapper h2 {
-      font-size: 60pt;
+      font-size: 5.55vw;
       margin-top: 10vh;
       font-weight: 500; }
     .ctas .cta .banner-text-wrapper h3 {
-      font-size: 40pt;
+      font-size: 3.705vw;
       font-weight: 500; }
     .ctas .cta .banner-text-wrapper h4 {
-      font-size: 34pt; }
+      font-size: 3.15vw; }
     .ctas .cta .banner-text-wrapper .message {
       z-index: 10;
       bottom: 30%;
@@ -187,7 +189,7 @@ strong {
         float: right;
         color: #eee;
         text-decoration: none;
-        font-size: 20pt;
+        font-size: 1.85vw;
         font-family: 'Fjalla One', sans-serif; }
     .ctas .cta .banner-text-wrapper .arrow-cta {
       position: absolute;
