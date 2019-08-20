@@ -14,23 +14,7 @@ html
         link(rel="stylesheet", href="/scripts/slick-carousel/slick/slick-theme.css")
     body.page(class=active_page)
         div.container
-            div.infoBar 
-                div.phone
-                p 954-555-5555 
-                div.email
-                p imperativedesign@gmail.com
-                div.twitter
-                div.facebook
-                div.instagram
-            header.group
-                .wrapper
-                    a(href="//imperativedesign.net").logo
-                        h1
-                            != '<span>Imperative</span> Design'
-                            span.tagline Elevate your messaging
-                    a.nav-toggle(href="#")
-                        i.fa.fa-bars
-                    include nav.pug      
+            include header    
             block content
 
             block bodyscripts

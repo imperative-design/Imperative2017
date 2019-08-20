@@ -101,63 +101,6 @@ strong {
 .case-margin {
   margin-bottom: 2%; }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; }
-  .container .infoBar {
-    position: fixed;
-    margin: 0px;
-    z-index: 12;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8vh; }
-    .container .infoBar p {
-      color: white;
-      margin: 0 6.5vw 0 0.5vw;
-      font-weight: 500;
-      font-family: 'Maven Pro', sans-serif;
-      font-size: 18px; }
-    .container .infoBar .phone {
-      margin-left: 40%; }
-    .container .infoBar .phone {
-      background: url("../../img/Icons/top_nav_icons/telephone.png");
-      background-size: contain;
-      width: 1.2vw;
-      height: 2.3vh;
-      background-repeat: no-repeat; }
-    .container .infoBar .email {
-      background: url("../../img/Icons/top_nav_icons/email.png");
-      background-size: contain;
-      width: 1.2vw;
-      height: 1.4vh;
-      background-repeat: no-repeat; }
-    .container .infoBar .twitter {
-      background: url("../../img/Icons/top_nav_icons/twitter.png");
-      background-size: contain;
-      width: 1.2vw;
-      height: 1.6vh;
-      background-repeat: no-repeat;
-      margin-right: 1vw; }
-    .container .infoBar .facebook {
-      background: url("../../img/Icons/top_nav_icons/facebook.png");
-      background-size: contain;
-      width: 0.65vw;
-      height: 1.8vh;
-      background-repeat: no-repeat;
-      margin-right: 1vw; }
-    .container .infoBar .instagram {
-      background: url("../../img/Icons/top_nav_icons/instagram.png");
-      background-size: contain;
-      width: 1.2vw;
-      height: 2vh;
-      background-repeat: no-repeat; }
-
 .wrapper {
   width: 100%;
   margin: 0 auto; }
@@ -304,15 +247,29 @@ strong {
   /* Firefox 18- */
   color: #fff; }
 
+footer#footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: unset; }
+  footer#footer p {
+    display: inline;
+    margin: 0;
+    padding: 3vh 3vw;
+    color: white; }
+
 header {
   position: fixed;
-  background: white;
-  padding: 10vh 7% 2vh 7%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0 0 2.5vh;
   margin: 0px;
   z-index: 11;
   width: 100%;
+  min-height: 198px;
   box-sizing: border-box;
-  opacity: 1; }
+  opacity: 1;
+  border-bottom: 1px solid #fff;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3); }
   header .nav-toggle {
     visibility: hidden; }
   header .wrapper {
@@ -320,10 +277,12 @@ header {
     align-items: center;
     justify-content: space-between;
     justify-content: space-between;
-    width: 100%; }
+    width: 90%;
+    margin: 1.5vh auto 0; }
   header .logo {
     text-decoration: none;
-    color: #000; }
+    color: #000;
+    margin: 10px 0 0px; }
     header .logo:hover {
       color: #000; }
   header h1 {
@@ -400,16 +359,62 @@ header {
           transform: none;
           border: none; }
 
-footer#footer {
+.container {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: unset; }
-  footer#footer p {
-    display: inline;
-    margin: 0;
-    padding: 3vh 3vw;
-    color: white; }
+  flex-direction: column; }
+  .container .infoBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+    padding: .7vh 1vw .7vh;
+    z-index: 12;
+    box-sizing: border-box;
+    background-color: black; }
+    .container .infoBar p {
+      color: white;
+      margin: 0 6.5vw 0 0.5vw;
+      font-weight: 500;
+      font-family: 'Maven Pro', sans-serif;
+      font-size: 18px; }
+    .container .infoBar .links {
+      display: flex; }
+      .container .infoBar .links li {
+        margin: 0 1vw 0 0; }
+        .container .infoBar .links li a {
+          display: block;
+          color: #fff;
+          font-size: 1.2vw; }
+    .container .infoBar .review-us {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 17%;
+      min-width: 280px;
+      margin-left: 2.5%;
+      color: #fff; }
+      .container .infoBar .review-us span {
+        margin: 0 2% 0 0;
+        text-transform: uppercase;
+        font-size: 2vw; }
+      .container .infoBar .review-us ul {
+        display: flex;
+        flex-direction: column;
+        min-width: 95px; }
+        .container .infoBar .review-us ul li.google {
+          border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
+          .container .infoBar .review-us ul li.google a:hover {
+            background: #fc524f; }
+        .container .infoBar .review-us ul li.next-door a:hover {
+          background: #00B246; }
+        .container .infoBar .review-us ul li a {
+          display: block;
+          padding: 5px 5%;
+          color: #fff;
+          text-transform: capitalize; }
 
 .band {
   overflow: hidden; }
@@ -919,7 +924,7 @@ section h3.section-title:after {
     font-weight: 400; }
 
 .home .ctas {
-  margin: 10% 0 0 0; }
+  margin: 198px 0 0 0; }
   .home .ctas .ad1 img {
     position: relative;
     width: 100%;
