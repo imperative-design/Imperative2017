@@ -1,26 +1,30 @@
 
 header {
     position: fixed;
-    background: white;
-    padding: 10vh 7% 2vh 7%;
+    background: rgba(255,255,255, .9);
+    padding: 0 0 3vh;
     margin: 0px;
     z-index: 11;
     width: 100%;
     // max-width: 1500px;
     box-sizing: border-box;
     opacity: 1;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0px 0px 1px rgba(0,0,0,.3);
     .nav-toggle { visibility: hidden; }
     .wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
         justify-content: space-between;
-        width: 100%;
+        width: 90%;
+        margin: 1.5vh auto 0;
     }
 
     .logo { 
         text-decoration: none; 
         color: #000;
+        margin: 10px 0 0px;
         &:hover { color: #000; }
     }
     h1 {
@@ -111,8 +115,7 @@ header {
     display: flex;
     flex-direction: column;
 
-    .infoBar {
-        position: fixed;
+    .infoBar {  
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -179,45 +182,6 @@ header {
                 
                 }
             }
-        }
-
-        .phone {
-            // margin-left: 40%;
-            // background:url('../../img/Icons/top_nav_icons/telephone.png');
-            // background-size: contain;
-            // background-repeat: no-repeat;
-            // width: 1.2vw;
-            // height: 2.3vh;
-        }
-        .email {
-            // background: url('../../img/Icons/top_nav_icons/email.png');
-            // background-size: contain;
-            // background-repeat: no-repeat;
-            // width: 1.2vw;
-            // height: 1.4vh;
-        }
-        .twitter {
-            // background:url('../../img/Icons/top_nav_icons/twitter.png');
-            // background-size:contain;
-            // background-repeat: no-repeat;
-            // width: 1.2vw;
-            // height: 1.6vh;
-            // margin-right: 1vw;
-        }
-        .facebook {
-            // background:url('../../img/Icons/top_nav_icons/facebook.png');
-            // background-size:contain;
-            // background-repeat: no-repeat;
-            // width: 0.65vw;
-            // height: 1.8vh;
-            // margin-right: 1vw;
-        }
-        .instagram {
-            // background:url('../../img/Icons/top_nav_icons/instagram.png');
-            // background-size:contain;
-            // background-repeat: no-repeat;
-            // width: 1.2vw;
-            // height: 2vh;
         }
     }
 }
