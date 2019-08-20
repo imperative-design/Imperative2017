@@ -6,7 +6,7 @@ function bindEvents(){
 
     if(typeof Rx !== 'undefined') bindCtaAnimations('.cta, .graphic.image');
 
-    let form = document.querySelector('.quick-contact form');
+    let form = document.querySelector('form.quick-contact');
     Rx.Observable.fromEvent(form, 'submit').subscribe(evt => {
         evt.preventDefault();
         
