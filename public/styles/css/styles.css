@@ -1297,10 +1297,47 @@ a:hover {
     section.grey div .message a.read-more {
       font-size: 1.8vw;
       line-height: 3.8vw; }
-  section#testimonials-wrapper #testimonials .testimonial-wrapper {
-    width: 80%; }
-  section#testimonials-wrapper #testimonials .testimonial-wrapper:last-child {
-    display: none; }
+  section#case-studies .case-studies-wrapper {
+    flex-direction: unset;
+    flex-wrap: unset;
+    align-items: unset;
+    justify-content: unset; }
+    section#case-studies .case-studies-wrapper .case-link-wrapper {
+      width: 100%;
+      height: 100%; }
+      section#case-studies .case-studies-wrapper .case-link-wrapper .case-study {
+        width: 100%;
+        height: 100%; }
+        section#case-studies .case-studies-wrapper .case-link-wrapper .case-study h3.case-study-text {
+          font-size: 3vw;
+          font-weight: 500;
+          top: -10vw; }
+        section#case-studies .case-studies-wrapper .case-link-wrapper .case-study p {
+          font-size: 1.8vw; }
+  section#testimonials-wrapper #testimonials {
+    display: block;
+    justify-content: unset;
+    width: 89%;
+    margin: 0 auto; }
+    section#testimonials-wrapper #testimonials .testimonial-wrapper {
+      width: 80%;
+      margin: 0; }
+      section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper {
+        width: 23.33%; }
+        section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper img.portrait {
+          height: 7.5vw;
+          width: 7.5vw;
+          top: 30%; }
+      section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-text-wrapper {
+        width: 76.65%; }
+        section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-text-wrapper img {
+          height: 3vw;
+          top: 1.8vw;
+          right: 4.5vw; }
+        section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-text-wrapper p {
+          font-size: 1.5vw; }
+    section#testimonials-wrapper #testimonials .testimonial-wrapper:last-child {
+      display: none; }
   section#blog-posts {
     margin-top: 15vw; }
     section#blog-posts .posts-wrapper {
@@ -1326,6 +1363,7 @@ a:hover {
   section#contact-area {
     height: unset; }
     section#contact-area div.contact-shade {
+      padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;
       align-items: center; }
       section#contact-area div.contact-shade div.cta-wrapper {
@@ -1341,7 +1379,8 @@ a:hover {
           width: 60%;
           max-width: 220px; }
       section#contact-area div.contact-shade div.form-wrapper {
-        width: 99%; }
+        width: 99%;
+        margin-top: 1vh; }
         section#contact-area div.contact-shade div.form-wrapper h4 {
           text-align: center; }
         section#contact-area div.contact-shade div.form-wrapper form {

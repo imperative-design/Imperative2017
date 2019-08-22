@@ -3,6 +3,7 @@ function bindEvents(){
     $('a.nav-toggle').on('click', toggleNav);
     $('.show-contact').on('click', toggleQuickContact);
     //$('.quick-contact .close').on('click', retractQuickContact);
+    initProductGallery();
 
     if(typeof Rx !== 'undefined') bindCtaAnimations('.cta, .graphic.image');
 
@@ -31,6 +32,43 @@ function bindEvents(){
 function toggleSuccessMsg(formSelector, successMsgSelector){
     $(formSelector).fadeOut(200, function(){
         $(successMsgSelector).fadeIn(200);
+    });
+}
+
+function initProductGallery(){
+    // const $gallery = $('.gallery');
+    // if ($gallery.length < 1 || $('.slick-slide').length > 0) { return };
+    if ($('.case-studies-wrapper').width() > 450) { console.log('ignore slick on case studies'); return;}
+    // return;
+
+    // $('.product-gallery').slick({
+    //     arrows: true,
+    //     dots: false,
+    //     fade: false,
+    //     asNavFor: '.product-gallery-nav',
+    //     centerMode: true,
+    //     variableWidth: true,
+    //     infinite: true,
+    //     adaptiveHeight: true
+    // });
+
+    // debugger;
+    $('.case-studies-wrapper').slick({
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        centerMode: false,
+        adaptiveHeight: false,
+    });
+
+    $('#testimonials').slick({
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        centerMode: false,
+        adaptiveHeight: false,
     });
 }
 
