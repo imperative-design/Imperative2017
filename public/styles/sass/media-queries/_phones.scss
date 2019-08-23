@@ -202,7 +202,12 @@ and (max-device-width : 415px){
             display: block;
             margin: 0;
           }
-          span { font-size: 2.5vw; margin-left: unset; }
+          span { 
+            font-size: 2.5vw; 
+            margin-left: unset; 
+            top: 0;
+            margin-bottom: 1vw;
+          }
           p { font-size: 1.65vw; }
         }
       }

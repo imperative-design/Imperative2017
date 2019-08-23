@@ -812,7 +812,7 @@ section h3.section-title:after {
           font-size: 1.65vw;
           font-family: 'Fjalla One', sans-serif;
           font-weight: 500;
-          display: inline-block;
+          display: block;
           margin-bottom: 1.4vw; }
         #blog-posts .posts-wrapper .post div.post-content span {
           font-size: 1.65vw;
@@ -820,8 +820,7 @@ section h3.section-title:after {
           font-weight: 300;
           display: inline-block;
           position: relative;
-          top: -0.1vw;
-          margin-left: 0.5vw; }
+          top: -1vw; }
         #blog-posts .posts-wrapper .post div.post-content p {
           font-family: 'Maven Pro', sans-serif;
           font-size: 1.39vw;
@@ -1357,7 +1356,9 @@ a:hover {
             margin: 0; }
           section#blog-posts .posts-wrapper .post .post-content span {
             font-size: 2.5vw;
-            margin-left: unset; }
+            margin-left: unset;
+            top: 0;
+            margin-bottom: 1vw; }
           section#blog-posts .posts-wrapper .post .post-content p {
             font-size: 1.65vw; }
   section#contact-area {
