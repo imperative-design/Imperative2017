@@ -1258,7 +1258,7 @@ a:hover {
             padding: 15px 20px;
             box-sizing: border-box; }
   .home .ctas {
-    margin-top: 9vh;
+    margin-top: 17vw;
     height: auto; }
     .home .ctas .banner-text-wrapper {
       min-height: 350px; }
@@ -1511,12 +1511,19 @@ a:hover {
     .band .quick-contact.active {
       bottom: 30%; }
   .about-page .ctas, .services-page .ctas {
-    height: 200px; }
+    height: 200px;
+    margin-top: 17vw; }
     .about-page .ctas .cta img, .services-page .ctas .cta img {
       height: 100%;
       width: initial;
       margin-left: -500px; } }
 
 @media only screen and (max-device-width: 321px) {
+  header .logo {
+    margin-top: 1.5vw; }
   .home .ctas .banner-text-wrapper {
-    min-height: 300px; } }
+    min-height: 300px; }
+  .services-page .ctas {
+    margin-top: 16vw; }
+  .about-page .ctas, .services-page .ctas {
+    margin-top: 16vw; } }

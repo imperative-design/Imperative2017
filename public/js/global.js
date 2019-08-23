@@ -8,25 +8,27 @@ function bindEvents(){
     if(typeof Rx !== 'undefined') bindCtaAnimations('.cta, .graphic.image');
 
     let form = document.querySelector('form.quick-contact');
-    Rx.Observable.fromEvent(form, 'submit').subscribe(evt => {
-        evt.preventDefault();
-        
-        //https://stackoverflow.com/questions/2600343/why-does-document-queryselectorall-return-a-staticnodelist-rather-than-a-real-ar
-        //querySelectorAll returns a nodelist instead of an array, use the spread operator to convert it to an arry
-        let formData = [...evt.target.querySelectorAll('input, textarea')]
-            .reduce((formData, current_field) => {
-                let name = current_field.getAttribute('placeholder');
-                if(name === null) return formData;
-                formData[name] = current_field.value.trim();
-                return formData;
-        }, {});
-        
-        Rx.Observable.ajax.post('/contact', formData)
-        .subscribe( resp => {
-            console.log(resp);
-            if(resp.status === 200 && resp.response[0].status == 'sent') toggleSuccessMsg('.quick-contact form', '.quick-contact .success-msg');
+    if (typeof Rx !== 'undefined' && form != null) {
+        Rx.Observable.fromEvent(form, 'submit').subscribe(evt => {
+            evt.preventDefault();
+            
+            //https://stackoverflow.com/questions/2600343/why-does-document-queryselectorall-return-a-staticnodelist-rather-than-a-real-ar
+            //querySelectorAll returns a nodelist instead of an array, use the spread operator to convert it to an arry
+            let formData = [...evt.target.querySelectorAll('input, textarea')]
+                .reduce((formData, current_field) => {
+                    let name = current_field.getAttribute('placeholder');
+                    if(name === null) return formData;
+                    formData[name] = current_field.value.trim();
+                    return formData;
+            }, {});
+            
+            Rx.Observable.ajax.post('/contact', formData)
+            .subscribe( resp => {
+                console.log(resp);
+                if(resp.status === 200 && resp.response[0].status == 'sent') toggleSuccessMsg('.quick-contact form', '.quick-contact .success-msg');
+            });
         });
-    });
+    }
 }
 
 function toggleSuccessMsg(formSelector, successMsgSelector){
@@ -38,21 +40,11 @@ function toggleSuccessMsg(formSelector, successMsgSelector){
 function initProductGallery(){
     // const $gallery = $('.gallery');
     // if ($gallery.length < 1 || $('.slick-slide').length > 0) { return };
+
+    if ($('.case-studies-wrapper').length <= 0) { return }
+    if ($('#testimonials').length <= 0) { return }
     if ($('.case-studies-wrapper').width() > 450) { console.log('ignore slick on case studies'); return;}
-    // return;
 
-    // $('.product-gallery').slick({
-    //     arrows: true,
-    //     dots: false,
-    //     fade: false,
-    //     asNavFor: '.product-gallery-nav',
-    //     centerMode: true,
-    //     variableWidth: true,
-    //     infinite: true,
-    //     adaptiveHeight: true
-    // });
-
-    // debugger;
     $('.case-studies-wrapper').slick({
         arrows: false,
         slidesToShow: 1,
@@ -186,6 +178,7 @@ function bindCtaAnimations(sel){
 //Kickoff jQuery
 $('document').ready(function(){
     bindEvents();
+    if ($('.client-cases').length <= 0) { return }
     $('.client-cases').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
