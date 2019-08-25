@@ -1286,8 +1286,10 @@ a:hover {
             display: block;
             background: #0036bf;
             color: #fff;
-            padding: 15px 20px;
-            box-sizing: border-box; }
+            padding: 2vh 0;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 4vw; }
   .home .ctas {
     margin-top: 103px;
     height: auto; }

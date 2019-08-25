@@ -92,8 +92,10 @@ and (max-device-width : 415px){
                     display: block;
                     background: $blue;
                     color: #fff;
-                    padding: 15px 20px;
+                    padding: 2vh 0;
                     box-sizing: border-box;
+                    text-align: center;
+                    font-size: 4vw;
                 }
             }
         }
