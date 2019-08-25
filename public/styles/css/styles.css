@@ -1237,7 +1237,7 @@ a:hover {
         padding: .7vh 2vw .7vh; }
         .container header .infoBar .review-us {
           min-width: unset;
-          width: 52vw; }
+          width: 55%; }
           .container header .infoBar .review-us span {
             font-size: 3vw; }
           .container header .infoBar .review-us ul {
