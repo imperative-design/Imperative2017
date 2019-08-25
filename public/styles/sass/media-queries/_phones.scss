@@ -2,7 +2,7 @@
 //Larger Phones
 @media only screen 
 and (max-device-width : 415px){ 
-  
+  section h3.section-title { font-size: 6vw; }
   section h3.section-title:after {
     bottom: -5px;
   }
@@ -16,17 +16,25 @@ and (max-device-width : 415px){
     header {
         min-height: 50px;
 
-        .wrapper { margin: 1vh auto; }
+        .wrapper { 
+          margin: 1vh auto;
+          justify-content: center;
+        }
         .infoBar {
+          justify-content: space-between;
+          padding: .7vh 2vw .7vh;
           .review-us {
             min-width: unset;
-            width: 30vw;
+            width: 52vw;
+            span {
+                font-size: 3vw;
+            }
             ul {
               flex-direction: row;
               min-width: unset;
               li {
                 a {
-                  font-size: 1.5vw;
+                  font-size: 3vw;
                 }
               }
               .google {
@@ -42,18 +50,26 @@ and (max-device-width : 415px){
           ul.links {
             li {
               margin: 0 3vw 0 0;
-              a{ font-size: 2vw;}
+              a{ font-size: 3vw;}
             }
           }
         }
 
         .logo {
-            h1 {letter-spacing: -1px;}
+            h1 {
+              letter-spacing: -1px;
+              font-size: 7vw;
+              width: auto;
+              span.tagline { font-size: 3.8vw; }
+            }
         }
 
         .nav-toggle { 
             visibility: visible;
             font-size: 4.5vw;
+            position: absolute;
+            right: 4vw;
+            color: $blue;
             &:hover { color: $blue; transform: scale(1); }
         }
 
@@ -84,12 +100,14 @@ and (max-device-width : 415px){
     }
   }
   .home .ctas { 
-    margin-top: 17vw;
+    margin-top: 103px;
     height: auto;
     .banner-text-wrapper {
       min-height: 350px;
       .action {
         padding: 2vw 6.5vw;
+        font-size: 5vw;
+        margin: 2vh 0 0 0;
       }
       .arrow-cta {
         width: 6vw;
@@ -108,9 +126,9 @@ and (max-device-width : 415px){
   section.our-services {
     margin-top: 8vw;
     .services-wrapper{
+      flex-direction: column;
       div.service{
-        height: 30vw;
-        width: 43%;
+        width: 90%;
         img {
           height: 45%;
         }
@@ -127,19 +145,54 @@ and (max-device-width : 415px){
   }
 
   section.grey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: unset;
+
+    & div#cta2-text-wrapper {
+      position: initial;
+    }
     div {
-      height: 170px;
-      .message{
-        h2 {
-          font-size: 3.55vw;
+      position: relative;
+      height: auto;
+      min-height: 280px;
+      width: 95%;
+      &#cta2-image-wrapper{
+        img:nth-child(2) { 
+          position: absolute; 
+          left: 30%;
         }
-        p { font-size: 1.40vw; }
-        a.read-more { font-size: 1.8vw; line-height: 3.8vw; }
+      }
+
+      .message{
+        margin: 0 auto;
+        h2 {
+          font-size: 4.5vw;
+          text-align: center;
+          span {
+            display: inline;
+          }
+        }
+        p { font-size: 3.5vw; }
+        a.read-more { 
+          font-size: 4vw;
+          line-height: 3.8vw;
+          display: block;
+          width: auto;
+          height: auto;
+          padding: 2vh 0;
+          margin: 1vh 0;
+        }
       }
     }
   }
 
   section#case-studies {
+    h3#case-studies-title {
+      font-size: 4.5vw;
+    }
+
     .case-studies-wrapper {
       flex-direction: unset;
       flex-wrap: unset;
@@ -165,6 +218,9 @@ and (max-device-width : 415px){
   }
 
   section#testimonials-wrapper {
+    h3 {
+      font-size: 4.5vw;
+    }
     #testimonials {
       display: block;
       justify-content: unset;
@@ -173,6 +229,7 @@ and (max-device-width : 415px){
       .testimonial-wrapper {
         width: 80%;
         margin: 0;
+        
         .testimonial-image-wrapper {
           width: 23.33%;
           img.portrait {
@@ -185,8 +242,9 @@ and (max-device-width : 415px){
           width: 76.65%;
           img {
             height: 3vw;
-            top: 1.8vw;
-            right: 4.5vw;
+            top: 10px;
+            right: 0;
+            left: -20px;
           }
           p{
             font-size: 1.5vw;
@@ -197,10 +255,17 @@ and (max-device-width : 415px){
         display: none;
       }
     }
+    .slick-dots li { 
+      margin: 0; 
+      &.slick-active button:before {
+        opacity: 1;
+        color: #0036bf;
+      }
+    }
   }
 
   section#blog-posts {
-    margin-top: 15vw;
+    // margin-top: 15vw;
     .posts-wrapper {
       padding: 5vw 7vw;
       // flex-direction: row;
@@ -208,7 +273,7 @@ and (max-device-width : 415px){
       .post {
         flex-direction: column;
         max-height: unset;
-        margin-bottom: 3vw;
+        margin-bottom: 3vh;
         img { 
           width: 100%;
           margin-bottom: 3vw;
@@ -216,17 +281,32 @@ and (max-device-width : 415px){
         .post-content { 
           width: 100%;
           h4 {
-            font-size: 2.5vw;
+            font-size: 4.5vw;
+            color: #333;
             display: block;
-            margin: 0;
+            margin: 0 0 5px;
+            line-height: 1.4;
           }
+
           span { 
-            font-size: 2.5vw; 
+            font-size: 3vh; 
             margin-left: unset; 
             top: 0;
-            margin-bottom: 1vw;
+            margin-bottom: 1vh;
           }
-          p { font-size: 1.65vw; }
+
+          p { 
+            font-size: 2vh; 
+          }
+
+          a {
+            height: unset;
+            width: unset;
+            line-height: unset;
+            display: block;
+            font-size: 4vw;
+            padding: 1vh 0;
+          }
         }
       }
     }
@@ -243,13 +323,25 @@ and (max-device-width : 415px){
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 0 1vh;
         h4 {
           font-size: 3.5vw;
         }
         h5 { font-size: 3vw;}
-        a { width: 60%; max-width: 220px;}
+
+        a { 
+          display: block;
+          width: 100%;
+          height: auto;
+          font-size: 2vh;
+          padding: 1vh 0;
+
+        }
+
       }
-      div.form-wrapper {
+
+      .form-wrapper {
+        h3.section-title { margin: 0 0 2vh; }
         h4 { text-align: center; }
         width: 99%;
         margin-top: 1vh;
@@ -258,10 +350,15 @@ and (max-device-width : 415px){
           flex-direction: column;
           align-items: center;
           input {
+            padding: 1vh 3vw;
             margin: 0vw 0 2vw 0;
             width: 100%;
+            font-size: 2vh;
           }
-          input.submit { width:40%; }
+
+          input.submit {
+            height: auto;
+          }
         }
       }
     }

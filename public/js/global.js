@@ -49,7 +49,7 @@ function initProductGallery(){
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false,
+        dots: true,
         centerMode: false,
         adaptiveHeight: false,
     });
@@ -58,7 +58,7 @@ function initProductGallery(){
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false,
+        dots: true,
         centerMode: false,
         adaptiveHeight: false,
     });

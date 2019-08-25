@@ -168,6 +168,9 @@ section.grey {
         h2 {
             margin-bottom: 2vw;
             font-size: 2.95vw;
+            span {
+                display: block;
+            }
         }
         p{
             margin-bottom: 2vw;
@@ -379,7 +382,7 @@ and (min-device-width : 1441px){
 
 #testimonials-wrapper {
     margin-top: 10vw;
-    height: 33vw;
+    // height: 33vw;
     #testimonials-bg-img {
         background:url("../../img/homepage/testimonials-bg.png");
         background-size: cover;
@@ -393,7 +396,7 @@ and (min-device-width : 1441px){
     }
     #testimonials {
         position: relative;
-        height: 17vw;
+        // height: 17vw;
         top: -18vw;
         display: flex;
         justify-content: center;
@@ -407,7 +410,10 @@ and (min-device-width : 1441px){
             margin: 0 1.5vw 0.5vw 1.5vw;
             .testimonial-image-wrapper {
                 width: 33.33%;
-                height: 100%;
+                background: url(../../../img/homepage/worn-dots-testimonials.png);
+                background-position: bottom left;
+                background-size: 70%;
+                background-repeat: no-repeat;
                 img.portrait {
                     height: 4.5vw;
                     width: 4.5vw;
@@ -428,12 +434,15 @@ and (min-device-width : 1441px){
             }
             .testimonial-text-wrapper {
                 width: 66.65%;
-                padding: 2vw 1.6vw 0.8vw 0;
+                padding: 2vh 1.6vw 0.8vh 0;
+                position: relative;
                 img{
                     height: 1.9vw;
-                    position: relative;
+                    // position: relative;
+                    position: absolute;
                     top: 1.2vw;
-                    right: 3vw;
+                    // right: 3vw;
+                    left: -60px;
                     display: block;
                 }
                 .name {
@@ -531,11 +540,17 @@ and (min-device-width : 1441px){
         height: 100%;
         display: inline-block;
         color: white;
+
+        .section-title {
+            margin: 0 0 1.4vh;
+        }
+
         h4 {
             font-size: 2.09vw;
             font-family: 'Fjalla One', sans-serif;
             margin-bottom: 1vw
         }
+        
         h5 {
             font-size: 1.81vw;
             font-family: 'Maven Pro', sans-serif;
@@ -556,7 +571,7 @@ and (min-device-width : 1441px){
             text-transform: uppercase;
         }
     }
-    div.form-wrapper {
+    .form-wrapper {
         width: 55%;
         height: 100%;
         display: inline-block;
