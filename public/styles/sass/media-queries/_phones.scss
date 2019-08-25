@@ -19,7 +19,26 @@ and (max-device-width : 415px){
         .wrapper { margin: 1vh auto; }
         .infoBar {
           .review-us {
-            display: none;
+            min-width: unset;
+            width: 30vw;
+            // display: none;
+            ul {
+              flex-direction: row;
+              min-width: unset;
+              li {
+                a {
+                  font-size: 1.5vw;
+                }
+              }
+              .google {
+                padding-right: 0.5vw;
+                border-right: 1px dotted rgba(255, 255, 255, 0.5);
+                border-bottom: none;
+              }
+              .next-door {
+                margin-left: 0.5vw;
+              }
+            }
           }
           ul.links {
             li {

@@ -1226,7 +1226,19 @@ a:hover {
       .container header .wrapper {
         margin: 1vh auto; }
       .container header .infoBar .review-us {
-        display: none; }
+        min-width: unset;
+        width: 30vw; }
+        .container header .infoBar .review-us ul {
+          flex-direction: row;
+          min-width: unset; }
+          .container header .infoBar .review-us ul li a {
+            font-size: 1.5vw; }
+          .container header .infoBar .review-us ul .google {
+            padding-right: 0.5vw;
+            border-right: 1px dotted rgba(255, 255, 255, 0.5);
+            border-bottom: none; }
+          .container header .infoBar .review-us ul .next-door {
+            margin-left: 0.5vw; }
       .container header .infoBar ul.links li {
         margin: 0 3vw 0 0; }
         .container header .infoBar ul.links li a {
