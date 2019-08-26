@@ -135,11 +135,13 @@ and (max-device-width : 415px){
           height: 45%;
         }
         a {
-          font-size: 2.8vw;
+          font-size: 5vw;
         }
         a:after {
-          width: 2vw;
-          height: 2.5vw;
+          width: 4vw;
+          height: 4.5vw;
+          margin-top: 2%;
+          margin-left: 2%;
         }
       }
       div.service:last-child{width: 88%;}
@@ -518,6 +520,7 @@ and (max-device-width : 415px){
     }
   }
   .home .ctas { 
+    margin-top: 75px;
     .banner-text-wrapper { min-height: 300px; }
   }
   .services-page .ctas {

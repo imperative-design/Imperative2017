@@ -1317,10 +1317,12 @@ a:hover {
         section.our-services .services-wrapper div.service img {
           height: 45%; }
         section.our-services .services-wrapper div.service a {
-          font-size: 2.8vw; }
+          font-size: 5vw; }
         section.our-services .services-wrapper div.service a:after {
-          width: 2vw;
-          height: 2.5vw; }
+          width: 4vw;
+          height: 4.5vw;
+          margin-top: 2%;
+          margin-left: 2%; }
       section.our-services .services-wrapper div.service:last-child {
         width: 88%; }
   section.grey {
@@ -1605,8 +1607,10 @@ a:hover {
 @media only screen and (max-device-width: 321px) {
   header .logo {
     margin-top: 1.5vw; }
-  .home .ctas .banner-text-wrapper {
-    min-height: 300px; }
+  .home .ctas {
+    margin-top: 75px; }
+    .home .ctas .banner-text-wrapper {
+      min-height: 300px; }
   .services-page .ctas {
     margin-top: 16vw; }
   .about-page .ctas, .services-page .ctas {
