@@ -102,7 +102,7 @@ and (max-device-width : 415px){
     }
   }
   .home .ctas { 
-    margin-top: 103px;
+    margin-top: 101px;
     height: auto;
     .banner-text-wrapper {
       min-height: 350px;
@@ -160,7 +160,7 @@ and (max-device-width : 415px){
     }
     div {
       position: relative;
-      height: auto;
+      height: 320px;
       min-height: 280px;
       width: 95%;
       &#cta2-image-wrapper{
@@ -234,6 +234,7 @@ and (max-device-width : 415px){
       .testimonial-wrapper {
         width: 80%;
         margin: 0;
+        max-height: 80px;
         
         .testimonial-image-wrapper {
           width: 23.33%;
@@ -320,6 +321,7 @@ and (max-device-width : 415px){
   section#contact-area {
     height: unset;
     div.contact-shade{
+      max-height: 590px;
       padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;
       align-items: center;
@@ -329,6 +331,7 @@ and (max-device-width : 415px){
         flex-direction: column;
         align-items: center;
         margin: 0 0 1vh;
+        max-height: 150px;
         h4 {
           font-size: 3.5vw;
         }
@@ -346,6 +349,7 @@ and (max-device-width : 415px){
       }
 
       .form-wrapper {
+        // max-height: 330px;
         h3.section-title { margin: 0 0 2vh; }
         h4 { text-align: center; }
         width: 99%;
@@ -359,8 +363,13 @@ and (max-device-width : 415px){
             margin: 0vw 0 2vw 0;
             width: 100%;
             font-size: 2vh;
+            -webkit-appearance: none;
+            border-radius: 0;
           }
-
+          textarea {
+            font-size: 2vh;
+            border-radius: 0;
+          }
           input.submit {
             height: auto;
           }
@@ -374,6 +383,7 @@ and (max-device-width : 415px){
       background: #222222;
       color: white;
       height: 5vw;
+      max-height: 25px;
       p { font-size: 2vw; }
     }
   }

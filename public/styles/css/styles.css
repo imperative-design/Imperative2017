@@ -1296,7 +1296,7 @@ a:hover {
             text-align: center;
             font-size: 4vw; }
   .home .ctas {
-    margin-top: 103px;
+    margin-top: 101px;
     height: auto; }
     .home .ctas .banner-text-wrapper {
       min-height: 350px;
@@ -1340,7 +1340,7 @@ a:hover {
       position: initial; }
     section.grey div {
       position: relative;
-      height: auto;
+      height: 320px;
       min-height: 280px;
       width: 95%; }
       section.grey div#cta2-image-wrapper img:nth-child(2) {
@@ -1391,7 +1391,8 @@ a:hover {
     margin: 0 auto; }
     section#testimonials-wrapper #testimonials .testimonial-wrapper {
       width: 80%;
-      margin: 0; }
+      margin: 0;
+      max-height: 80px; }
       section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper {
         width: 23.33%; }
         section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper img.portrait {
@@ -1448,6 +1449,7 @@ a:hover {
   section#contact-area {
     height: unset; }
     section#contact-area div.contact-shade {
+      max-height: 590px;
       padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;
       align-items: center; }
@@ -1456,7 +1458,8 @@ a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 0 1vh; }
+        margin: 0 0 1vh;
+        max-height: 150px; }
         section#contact-area div.contact-shade div.cta-wrapper h4 {
           font-size: 3.5vw; }
         section#contact-area div.contact-shade div.cta-wrapper h5 {
@@ -1482,7 +1485,12 @@ a:hover {
             padding: 1vh 3vw;
             margin: 0vw 0 2vw 0;
             width: 100%;
-            font-size: 2vh; }
+            font-size: 2vh;
+            -webkit-appearance: none;
+            border-radius: 0; }
+          section#contact-area div.contact-shade .form-wrapper form textarea {
+            font-size: 2vh;
+            border-radius: 0; }
           section#contact-area div.contact-shade .form-wrapper form input.submit {
             height: auto; }
     section#contact-area #copyright {
@@ -1491,7 +1499,8 @@ a:hover {
       align-items: center;
       background: #222222;
       color: white;
-      height: 5vw; }
+      height: 5vw;
+      max-height: 25px; }
       section#contact-area #copyright p {
         font-size: 2vw; }
   h3.section-title {
