@@ -24,14 +24,14 @@ and (max-device-width : 415px){
           justify-content: space-between;
           padding: .7vh 2vw .7vh;
           .review-us {
-            min-width: unset;
+            min-width: 225px;
             width: 55%;
             span {
                 font-size: 3vw;
             }
             ul {
               flex-direction: row;
-              min-width: unset;
+              min-width: 145px;
               li {
                 a {
                   font-size: 3vw;
