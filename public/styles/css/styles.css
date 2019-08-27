@@ -590,7 +590,6 @@ section.grey {
 section h3.section-title {
   font-family: 'Fjalla One', sans-serif;
   font-size: 3.35vw;
-  text-align: center;
   font-weight: 500; }
 
 #case-studies {
@@ -792,6 +791,8 @@ section h3.section-title:after {
 
 #blog-posts {
   margin-top: 8vw; }
+  #blog-posts h3 {
+    text-align: center; }
   #blog-posts .posts-wrapper {
     display: flex;
     flex-direction: column;
@@ -845,6 +846,8 @@ section h3.section-title:after {
   margin: 2vw 0 0 0;
   background: url("../../img/homepage/jacek.jpg");
   background-size: cover; }
+  #contact-area .section-title:after {
+    display: none; }
   #contact-area div.contact-shade {
     background: linear-gradient(to right, rgba(54, 88, 108, 0.9), rgba(14, 16, 50, 0.9));
     height: 100%;
@@ -886,8 +889,7 @@ section h3.section-title:after {
     height: 100%;
     display: inline-block;
     color: white; }
-    #contact-area .form-wrapper h4 {
-      font-size: 2.09vw;
+    #contact-area .form-wrapper h3 {
       font-family: 'Fjalla One', sans-serif;
       margin-bottom: 1.5vw; }
     #contact-area .form-wrapper form .margin-right {
@@ -1488,6 +1490,11 @@ a:hover {
       height: 5vw; }
       section#contact-area #copyright p {
         font-size: 2vw; }
+  h3.section-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.35vw;
+    text-align: center;
+    font-weight: 500; }
   .home .client-cases {
     flex-direction: column;
     justify-content: space-between;

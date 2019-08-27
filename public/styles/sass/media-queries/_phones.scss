@@ -377,6 +377,13 @@ and (max-device-width : 415px){
     }
   }
 
+  h3.section-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.35vw;
+    text-align: center;
+    font-weight: 500;
+  }
+
     .home .client-cases {
       flex-direction: column;
       justify-content: space-between;
