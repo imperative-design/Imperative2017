@@ -1296,7 +1296,8 @@ a:hover {
     margin-top: 103px;
     height: auto; }
     .home .ctas .banner-text-wrapper {
-      min-height: 350px; }
+      min-height: 350px;
+      height: unset; }
       .home .ctas .banner-text-wrapper .action {
         padding: 2vw 6.5vw;
         font-size: 5vw;

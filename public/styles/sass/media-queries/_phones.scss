@@ -106,6 +106,7 @@ and (max-device-width : 415px){
     height: auto;
     .banner-text-wrapper {
       min-height: 350px;
+      height: unset;
       .action {
         padding: 2vw 6.5vw;
         font-size: 5vw;
