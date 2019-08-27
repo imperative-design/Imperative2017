@@ -1236,7 +1236,7 @@ a:hover {
         justify-content: space-between;
         padding: .7vh 2vw .7vh; }
         .container header .infoBar .review-us {
-          min-width: unset;
+          min-width: 225px;
           width: 55%; }
           .container header .infoBar .review-us span {
             font-size: 3vw; }
