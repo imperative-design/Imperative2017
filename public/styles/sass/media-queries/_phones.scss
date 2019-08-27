@@ -31,7 +31,7 @@ and (max-device-width : 415px){
             }
             ul {
               flex-direction: row;
-              min-width: unset;
+              min-width: 145px;
               li {
                 a {
                   font-size: 3vw;

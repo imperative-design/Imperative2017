@@ -1245,7 +1245,7 @@ a:hover {
             font-size: 3vw; }
           .container header .infoBar .review-us ul {
             flex-direction: row;
-            min-width: unset; }
+            min-width: 145px; }
             .container header .infoBar .review-us ul li a {
               font-size: 3vw; }
             .container header .infoBar .review-us ul .google {
