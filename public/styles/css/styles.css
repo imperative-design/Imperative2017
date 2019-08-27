@@ -60,6 +60,9 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Fjalla One', sans-serif;
 font-family: 'Permanent Marker', cursive;
 */
+* {
+  box-sizing: border-box; }
+
 .group:after {
   content: "";
   display: table;
