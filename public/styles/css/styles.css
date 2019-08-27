@@ -1240,20 +1240,23 @@ a:hover {
         padding: .7vh 2vw .7vh; }
         .container header .infoBar .review-us {
           min-width: 225px;
-          width: 55%; }
+          width: 55%;
+          margin-left: 10px; }
           .container header .infoBar .review-us span {
-            font-size: 3vw; }
+            font-size: 3vw;
+            margin: 0 10px 0 0; }
           .container header .infoBar .review-us ul {
             flex-direction: row;
             min-width: 145px; }
             .container header .infoBar .review-us ul li a {
-              font-size: 3vw; }
+              font-size: 3vw;
+              padding: 5px; }
             .container header .infoBar .review-us ul .google {
-              padding-right: 0.5vw;
+              padding-right: 5px;
               border-right: 1px dotted rgba(255, 255, 255, 0.5);
               border-bottom: none; }
             .container header .infoBar .review-us ul .next-door {
-              margin-left: 0.5vw; }
+              margin-left: 5px; }
         .container header .infoBar ul.links li {
           margin: 0 3vw 0 0; }
           .container header .infoBar ul.links li a {

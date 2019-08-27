@@ -26,8 +26,10 @@ and (max-device-width : 415px){
           .review-us {
             min-width: 225px;
             width: 55%;
+            margin-left: 10px;
             span {
                 font-size: 3vw;
+                margin: 0 10px 0 0;
             }
             ul {
               flex-direction: row;
@@ -35,15 +37,16 @@ and (max-device-width : 415px){
               li {
                 a {
                   font-size: 3vw;
+                  padding: 5px;
                 }
               }
               .google {
-                padding-right: 0.5vw;
+                padding-right: 5px;
                 border-right: 1px dotted rgba(255, 255, 255, 0.5);
                 border-bottom: none;
               }
               .next-door {
-                margin-left: 0.5vw;
+                margin-left: 5px;
               }
             }
           }
