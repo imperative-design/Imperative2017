@@ -15,6 +15,11 @@
     .ctas {
         min-height: 200px;
         max-height: 300px;
+        .cta {
+            img {
+                width: 100%;
+            }
+        }
     }
     .in-page-nav {
         width: 20%;
