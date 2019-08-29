@@ -364,27 +364,8 @@ section {
     }
 }
 
-@media only screen 
-and (max-device-width : 1921px)
-and (min-device-width : 1441px){
-    #case-studies {
-        .case-study-text {top: -6vw;}
-        // a { img { top: -2vw; } }
-        .case-studies-wrapper {
-            div.third-h-case.case-study {
-                .case-study-text { top: -6.5vh; }
-                p.case-study-text { top: unset; }
-                a img { top: -1vw; }
-            }
-        }
-    }
-    .services-page .ctas {
-        margin-top: 250px;
-    }
-}
-
 #testimonials-wrapper {
-    margin-top: 10vw;
+    margin-top: 5vw;
     // height: 33vw;
     #testimonials-bg-img {
         background:url("../../img/homepage/testimonials-bg.png");

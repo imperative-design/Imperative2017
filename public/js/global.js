@@ -1,4 +1,43 @@
 
+
+function init(){
+    bindEvents();
+
+    compensateHeaderHeight()
+
+    if ($('.client-cases').length <= 0) { return }
+    $('.client-cases').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        // appendArrows: '.case-studies',
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    dots: false,
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    dots: false,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+}
+
+function compensateHeaderHeight(){
+    const ctaHeight = String($('header').outerHeight()) + 'px';
+    $('.ctas:first').css('marginTop', ctaHeight);
+}
+
 function bindEvents(){
     $('a.nav-toggle').on('click', toggleNav);
     $('.show-contact').on('click', toggleQuickContact);
@@ -183,32 +222,6 @@ function bindCtaAnimations(sel){
 }
 
 //Kickoff jQuery
-$('document').ready(function(){
-    bindEvents();
-    if ($('.client-cases').length <= 0) { return }
-    $('.client-cases').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        focusOnSelect: true,
-        // appendArrows: '.case-studies',
-        dots: true,
-		responsive: [
-	    {
-	      breakpoint: 768,
-	      settings: {
-            arrows: false,
-            dots: false,
-	        slidesToShow: 2
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-            arrows: false,
-            dots: false,
-	        slidesToShow: 1
-	      }
-	    }
-	  ]
-	});
+$('document').ready(($) => {
+    init();
 });
