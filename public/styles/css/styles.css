@@ -150,7 +150,7 @@ strong {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
   position: relative;
   overflow: hidden;
-  margin: 115px auto 50px;
+  margin: 200px auto 50px;
   height: 90vh;
   background: white; }
   .ctas .cta .banner-text-wrapper {
@@ -370,7 +370,7 @@ header {
   header.group {
     min-height: 198px; }
   .home section.ctas {
-    margin: 227px 0 0 0; } }
+    margin: 250px 0 0 0; } }
 
 .container {
   width: 100%;
@@ -593,7 +593,6 @@ section.grey {
 section h3.section-title {
   font-family: 'Fjalla One', sans-serif;
   font-size: 3.35vw;
-  text-align: center;
   font-weight: 500; }
 
 #case-studies {
@@ -628,11 +627,10 @@ section h3.section-title {
     position: absolute;
     bottom: 1.5vw;
     left: 36vw;
-    height: 1.05vw;
-    width: 2.1vw;
+    height: 2.78vw;
+    width: 2.78vw;
     border: solid 2px white;
-    /* padding: 18px 10px; */
-    padding: 1.25vw 0.7vw; }
+    padding: 0.84vw 0.35vw; }
   #case-studies a:hover {
     transform: unset; }
   #case-studies .case-studies-wrapper {
@@ -707,10 +705,10 @@ section h3.section-title {
       position: absolute;
       bottom: 1.1vw;
       left: 36vw;
-      height: 0.556vw;
-      width: 1.67vw;
-      border: solid 0.14vw white;
-      padding: 0.97vw 0.42vw; }
+      height: 1.97vw;
+      width: 1.97vw;
+      border: solid 0.10vw white;
+      padding: 0.58vw 0.25vw; }
 
 section h3.section-title:after {
   background: none repeat scroll 0 0 #3eb5a9;
@@ -730,7 +728,9 @@ section h3.section-title:after {
   #case-studies .case-studies-wrapper div.third-h-case.case-study p.case-study-text {
     top: unset; }
   #case-studies .case-studies-wrapper div.third-h-case.case-study a img {
-    top: -1vw; } }
+    top: -1vw; }
+  .services-page .ctas {
+    margin-top: 250px; } }
 
 #testimonials-wrapper {
   margin-top: 10vw; }
@@ -793,54 +793,55 @@ section h3.section-title:after {
         #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper p {
           font-size: 1.113vw; }
 
-#blog-posts {
-  margin-top: 8vw; }
-  #blog-posts .posts-wrapper {
+#blog-posts h3 {
+  text-align: center; }
+
+#blog-posts .posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 3vw 7vw;
+  box-sizing: border-box;
+  width: 100%; }
+  #blog-posts .posts-wrapper .post {
+    width: 100%;
+    max-height: 25vw;
     display: flex;
-    flex-direction: column;
-    padding: 3vw 7vw;
-    box-sizing: border-box;
-    width: 100%; }
-    #blog-posts .posts-wrapper .post {
-      width: 100%;
-      max-height: 25vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2.5vw;
-      color: black; }
-      #blog-posts .posts-wrapper .post img {
-        width: 40%; }
-      #blog-posts .posts-wrapper .post div.post-content {
-        width: 57%; }
-        #blog-posts .posts-wrapper .post div.post-content h4 {
-          font-size: 1.65vw;
-          font-family: 'Fjalla One', sans-serif;
-          font-weight: 500;
-          display: block;
-          margin-bottom: 1.4vw; }
-        #blog-posts .posts-wrapper .post div.post-content span {
-          font-size: 1.65vw;
-          font-family: 'Maven Pro', sans-serif;
-          font-weight: 300;
-          display: inline-block;
-          position: relative;
-          top: -1vw; }
-        #blog-posts .posts-wrapper .post div.post-content p {
-          font-family: 'Maven Pro', sans-serif;
-          font-size: 1.39vw;
-          margin-bottom: 1.5vw; }
-        #blog-posts .posts-wrapper .post div.post-content a {
-          display: inline-block;
-          font-family: 'Fjalla One', sans-serif;
-          width: 15vw;
-          height: 3.5vw;
-          background: black;
-          color: white;
-          text-align: center;
-          font-size: 1.65vw;
-          font-weight: 400;
-          line-height: 3.5vw; }
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5vw;
+    color: black; }
+    #blog-posts .posts-wrapper .post img {
+      width: 40%; }
+    #blog-posts .posts-wrapper .post div.post-content {
+      width: 57%; }
+      #blog-posts .posts-wrapper .post div.post-content h4 {
+        font-size: 1.65vw;
+        font-family: 'Fjalla One', sans-serif;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 1.4vw; }
+      #blog-posts .posts-wrapper .post div.post-content span {
+        font-size: 1.65vw;
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: 300;
+        display: inline-block;
+        position: relative;
+        top: -1vw; }
+      #blog-posts .posts-wrapper .post div.post-content p {
+        font-family: 'Maven Pro', sans-serif;
+        font-size: 1.39vw;
+        margin-bottom: 1.5vw; }
+      #blog-posts .posts-wrapper .post div.post-content a {
+        display: inline-block;
+        font-family: 'Fjalla One', sans-serif;
+        width: 15vw;
+        height: 3.5vw;
+        background: black;
+        color: white;
+        text-align: center;
+        font-size: 1.65vw;
+        font-weight: 400;
+        line-height: 3.5vw; }
 
 #contact-area {
   z-index: 4;
@@ -848,6 +849,8 @@ section h3.section-title:after {
   margin: 2vw 0 0 0;
   background: url("../../img/homepage/jacek.jpg");
   background-size: cover; }
+  #contact-area .section-title:after {
+    display: none; }
   #contact-area div.contact-shade {
     background: linear-gradient(to right, rgba(54, 88, 108, 0.9), rgba(14, 16, 50, 0.9));
     height: 100%;
@@ -889,8 +892,7 @@ section h3.section-title:after {
     height: 100%;
     display: inline-block;
     color: white; }
-    #contact-area .form-wrapper h4 {
-      font-size: 2.09vw;
+    #contact-area .form-wrapper h3 {
       font-family: 'Fjalla One', sans-serif;
       margin-bottom: 1.5vw; }
     #contact-area .form-wrapper form .margin-right {
@@ -1177,6 +1179,8 @@ section h3.section-title:after {
 .services-page .ctas {
   min-height: 200px;
   max-height: 300px; }
+  .services-page .ctas .cta img {
+    width: 100%; }
 
 .services-page .in-page-nav {
   width: 20%;
@@ -1231,7 +1235,8 @@ a:hover {
       transform: scale(1);
       color: #fff; }
     .container header {
-      min-height: 50px; }
+      min-height: 50px;
+      top: 0; }
       .container header .wrapper {
         margin: 1vh auto;
         justify-content: center; }
@@ -1240,17 +1245,30 @@ a:hover {
         padding: .7vh 2vw .7vh; }
         .container header .infoBar .review-us {
           min-width: 225px;
+<<<<<<< HEAD
           width: 55%;
           margin-left: 10px; }
+=======
+          width: 60%; }
+>>>>>>> 880e7377cc7bcd4bc4046c3958cb745509b5c1dd
           .container header .infoBar .review-us span {
             font-size: 3vw;
             margin: 0 10px 0 0; }
           .container header .infoBar .review-us ul {
             flex-direction: row;
             min-width: 145px; }
+<<<<<<< HEAD
             .container header .infoBar .review-us ul li a {
               font-size: 3vw;
               padding: 5px; }
+=======
+            .container header .infoBar .review-us ul li {
+              white-space: nowrap; }
+              .container header .infoBar .review-us ul li a {
+                padding: 5px;
+                display: block;
+                font-size: 12px; }
+>>>>>>> 880e7377cc7bcd4bc4046c3958cb745509b5c1dd
             .container header .infoBar .review-us ul .google {
               padding-right: 5px;
               border-right: 1px dotted rgba(255, 255, 255, 0.5);
@@ -1297,10 +1315,11 @@ a:hover {
             text-align: center;
             font-size: 4vw; }
   .home .ctas {
-    margin-top: 103px;
+    margin-top: 101px;
     height: auto; }
     .home .ctas .banner-text-wrapper {
-      min-height: 350px; }
+      min-height: 350px;
+      height: unset; }
       .home .ctas .banner-text-wrapper .action {
         padding: 2vw 6.5vw;
         font-size: 5vw;
@@ -1323,10 +1342,12 @@ a:hover {
         section.our-services .services-wrapper div.service img {
           height: 45%; }
         section.our-services .services-wrapper div.service a {
-          font-size: 2.8vw; }
+          font-size: 5vw; }
         section.our-services .services-wrapper div.service a:after {
-          width: 2vw;
-          height: 2.5vw; }
+          width: 4vw;
+          height: 4.5vw;
+          margin-top: 2%;
+          margin-left: 2%; }
       section.our-services .services-wrapper div.service:last-child {
         width: 88%; }
   section.grey {
@@ -1338,7 +1359,7 @@ a:hover {
       position: initial; }
     section.grey div {
       position: relative;
-      height: auto;
+      height: 320px;
       min-height: 280px;
       width: 95%; }
       section.grey div#cta2-image-wrapper img:nth-child(2) {
@@ -1389,7 +1410,8 @@ a:hover {
     margin: 0 auto; }
     section#testimonials-wrapper #testimonials .testimonial-wrapper {
       width: 80%;
-      margin: 0; }
+      margin: 0;
+      max-height: 80px; }
       section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper {
         width: 23.33%; }
         section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper img.portrait {
@@ -1446,6 +1468,7 @@ a:hover {
   section#contact-area {
     height: unset; }
     section#contact-area div.contact-shade {
+      max-height: 590px;
       padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;
       align-items: center; }
@@ -1454,7 +1477,8 @@ a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 0 1vh; }
+        margin: 0 0 1vh;
+        max-height: 150px; }
         section#contact-area div.contact-shade div.cta-wrapper h4 {
           font-size: 3.5vw; }
         section#contact-area div.contact-shade div.cta-wrapper h5 {
@@ -1480,7 +1504,12 @@ a:hover {
             padding: 1vh 3vw;
             margin: 0vw 0 2vw 0;
             width: 100%;
-            font-size: 2vh; }
+            font-size: 2vh;
+            -webkit-appearance: none;
+            border-radius: 0; }
+          section#contact-area div.contact-shade .form-wrapper form textarea {
+            font-size: 2vh;
+            border-radius: 0; }
           section#contact-area div.contact-shade .form-wrapper form input.submit {
             height: auto; }
     section#contact-area #copyright {
@@ -1489,9 +1518,15 @@ a:hover {
       align-items: center;
       background: #222222;
       color: white;
-      height: 5vw; }
+      height: 5vw;
+      max-height: 25px; }
       section#contact-area #copyright p {
         font-size: 2vw; }
+  h3.section-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.35vw;
+    text-align: center;
+    font-weight: 500; }
   .home .client-cases {
     flex-direction: column;
     justify-content: space-between;
@@ -1602,17 +1637,21 @@ a:hover {
       bottom: 30%; }
   .about-page .ctas, .services-page .ctas {
     height: 200px;
-    margin-top: 17vw; }
+    margin-top: 100px; }
     .about-page .ctas .cta img, .services-page .ctas .cta img {
       height: 100%;
       width: initial;
       margin-left: -500px; } }
 
 @media only screen and (max-device-width: 321px) {
-  header .logo {
-    margin-top: 1.5vw; }
-  .home .ctas .banner-text-wrapper {
-    min-height: 300px; }
+  header {
+    top: 0; }
+    header .logo {
+      margin-top: 1.5vw; }
+  .home .ctas {
+    margin-top: 75px; }
+    .home .ctas .banner-text-wrapper {
+      min-height: 300px; }
   .services-page .ctas {
     margin-top: 16vw; }
   .about-page .ctas, .services-page .ctas {

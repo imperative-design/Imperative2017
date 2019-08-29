@@ -15,7 +15,7 @@ and (max-device-width : 415px){
     overflow: hidden;
     header {
         min-height: 50px;
-
+        top: 0;
         .wrapper { 
           margin: 1vh auto;
           justify-content: center;
@@ -25,8 +25,7 @@ and (max-device-width : 415px){
           padding: .7vh 2vw .7vh;
           .review-us {
             min-width: 225px;
-            width: 55%;
-            margin-left: 10px;
+            width: 60%;
             span {
                 font-size: 3vw;
                 margin: 0 10px 0 0;
@@ -35,9 +34,11 @@ and (max-device-width : 415px){
               flex-direction: row;
               min-width: 145px;
               li {
+                white-space: nowrap;
                 a {
-                  font-size: 3vw;
                   padding: 5px;
+                  display: block;
+                  font-size: 12px;
                 }
               }
               .google {
@@ -105,10 +106,11 @@ and (max-device-width : 415px){
     }
   }
   .home .ctas { 
-    margin-top: 103px;
+    margin-top: 101px;
     height: auto;
     .banner-text-wrapper {
       min-height: 350px;
+      height: unset;
       .action {
         padding: 2vw 6.5vw;
         font-size: 5vw;
@@ -138,11 +140,13 @@ and (max-device-width : 415px){
           height: 45%;
         }
         a {
-          font-size: 2.8vw;
+          font-size: 5vw;
         }
         a:after {
-          width: 2vw;
-          height: 2.5vw;
+          width: 4vw;
+          height: 4.5vw;
+          margin-top: 2%;
+          margin-left: 2%;
         }
       }
       div.service:last-child{width: 88%;}
@@ -160,7 +164,7 @@ and (max-device-width : 415px){
     }
     div {
       position: relative;
-      height: auto;
+      height: 320px;
       min-height: 280px;
       width: 95%;
       &#cta2-image-wrapper{
@@ -234,6 +238,7 @@ and (max-device-width : 415px){
       .testimonial-wrapper {
         width: 80%;
         margin: 0;
+        max-height: 80px;
         
         .testimonial-image-wrapper {
           width: 23.33%;
@@ -320,6 +325,7 @@ and (max-device-width : 415px){
   section#contact-area {
     height: unset;
     div.contact-shade{
+      max-height: 590px;
       padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;
       align-items: center;
@@ -329,6 +335,7 @@ and (max-device-width : 415px){
         flex-direction: column;
         align-items: center;
         margin: 0 0 1vh;
+        max-height: 150px;
         h4 {
           font-size: 3.5vw;
         }
@@ -346,6 +353,7 @@ and (max-device-width : 415px){
       }
 
       .form-wrapper {
+        // max-height: 330px;
         h3.section-title { margin: 0 0 2vh; }
         h4 { text-align: center; }
         width: 99%;
@@ -359,8 +367,13 @@ and (max-device-width : 415px){
             margin: 0vw 0 2vw 0;
             width: 100%;
             font-size: 2vh;
+            -webkit-appearance: none;
+            border-radius: 0;
           }
-
+          textarea {
+            font-size: 2vh;
+            border-radius: 0;
+          }
           input.submit {
             height: auto;
           }
@@ -374,8 +387,16 @@ and (max-device-width : 415px){
       background: #222222;
       color: white;
       height: 5vw;
+      max-height: 25px;
       p { font-size: 2vw; }
     }
+  }
+
+  h3.section-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.35vw;
+    text-align: center;
+    font-weight: 500;
   }
 
     .home .client-cases {
@@ -507,8 +528,8 @@ and (max-device-width : 415px){
     .about-page, .services-page {
       .ctas { 
         height: 200px;
-        margin-top: 17vw;
-        // margin-top: 150px; 
+        // margin-top: 12vh;
+        margin-top: 100px; 
         .cta img { height: 100%; width: initial; margin-left: -500px; }
       }
     }
@@ -516,11 +537,13 @@ and (max-device-width : 415px){
 
 @media only screen and (max-device-width: 321px) {
   header {
+    top: 0;
     .logo {
       margin-top: 1.5vw;
     }
   }
   .home .ctas { 
+    margin-top: 75px;
     .banner-text-wrapper { min-height: 300px; }
   }
   .services-page .ctas {

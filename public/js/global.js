@@ -2,6 +2,7 @@
 function bindEvents(){
     $('a.nav-toggle').on('click', toggleNav);
     $('.show-contact').on('click', toggleQuickContact);
+    $('.email').on('click', scrollToContactForm);
     //$('.quick-contact .close').on('click', retractQuickContact);
     initProductGallery();
 
@@ -82,6 +83,12 @@ function retractQuickContact(){
     window.setTimeout(function(){
         $('.shade').removeClass('active');
     }, 700);
+}
+
+function scrollToContactForm(evt){
+    evt.preventDefault()
+    $('html, body').animate({scrollTop:$(document).height()}, 1000);
+    return false;
 }
 
 function toggleNav(evt){

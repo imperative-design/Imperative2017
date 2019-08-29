@@ -197,7 +197,7 @@ section.grey {
 section h3.section-title {
     font-family: 'Fjalla One', sans-serif;
     font-size: 3.35vw;
-    text-align: center;
+    // text-align: center;
     font-weight: 500;
 }
 
@@ -241,11 +241,10 @@ section h3.section-title {
             position: absolute;
             bottom: 1.5vw;
             left: 36vw;
-            height: 1.05vw;
-            width: 2.1vw;
+            height: 2.78vw;
+            width: 2.78vw;
             border: solid 2px white;
-            /* padding: 18px 10px; */
-            padding: 1.25vw 0.7vw;
+            padding: 0.84vw 0.35vw;
         }
     }
     a:hover {
@@ -342,11 +341,12 @@ section h3.section-title {
                 position: absolute;
                 bottom: 1.1vw;
                 left: 36vw;
-                height: 0.556vw;
-                width: 1.67vw;
-                border: solid 0.14vw white;
-                padding: 0.97vw 0.42vw;
+                height: 1.97vw;
+                width: 1.97vw;
+                border: solid 0.10vw white;
+                padding: 0.58vw 0.25vw;
             }
+
         }
     }
 }  
@@ -377,6 +377,9 @@ and (min-device-width : 1441px){
                 a img { top: -1vw; }
             }
         }
+    }
+    .services-page .ctas {
+        margin-top: 250px;
     }
 }
 
@@ -459,9 +462,8 @@ and (min-device-width : 1441px){
 
 #blog-posts {
 
-    margin-top: 8vw;
     h3 {
-
+        text-align: center;
     }
     .posts-wrapper {
         display: flex;
@@ -525,6 +527,9 @@ and (min-device-width : 1441px){
     margin: 2vw 0 0 0;
     background:url("../../img/homepage/jacek.jpg");
     background-size: cover;
+    .section-title:after {
+        display: none;
+    }
     div.contact-shade {
         background: linear-gradient(to right, rgba(54, 88, 108, 0.9), rgba(14, 16, 50, 0.9));
         height: 100%;
@@ -576,8 +581,7 @@ and (min-device-width : 1441px){
         height: 100%;
         display: inline-block;
         color: white;
-        h4 {
-            font-size: 2.09vw;
+        h3 {
             font-family: 'Fjalla One', sans-serif;
             margin-bottom: 1.5vw
         }
