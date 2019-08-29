@@ -1182,7 +1182,8 @@ section h3.section-title:after {
 .about-page .content {
   width: 80%;
   border-left: 1px dotted #333;
-  padding: 0 0 0 30px; }
+  padding: 0 0 0 30px;
+  margin: 0 auto; }
 
 .clients-page .page.wrapper {
   margin: 0;
@@ -1457,6 +1458,9 @@ a:hover {
           padding: 1vh 0; }
   section#contact-area {
     height: unset; }
+    section#contact-area .contact-wrapper {
+      flex-direction: column;
+      width: 100%; }
     section#contact-area div.contact-shade {
       padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;
