@@ -65,7 +65,7 @@ function bindEvents(){
             Rx.Observable.ajax.post('/contact', formData)
             .subscribe( resp => {
                 console.log(resp);
-                if(resp.status === 200 && resp.response[0].status == 'sent') toggleSuccessMsg('.quick-contact form', '.quick-contact .success-msg');
+                if (resp.status === 200 && resp.response[0].status == 'sent') toggleSuccessMsg('form.quick-contact', '.form-wrapper .success-msg');
             });
         });
     }
