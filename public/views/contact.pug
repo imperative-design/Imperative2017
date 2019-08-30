@@ -9,7 +9,7 @@ section#contact-area
                     section.form-wrapper
                         h3.section-title DROP US A LINE
                         p.success-msg Thanks for for dropping us a line! We'll be in touch soon.
-                        form.quick-contact(onsubmit="tracker.send('event', {eventCategory: 'contact', eventAction: 'main_form_submission', eventLabel: 'footer contact form', eventValue: 10});")
+                        form.quick-contact
                             input.margin-right(type="text", placeholder="first name", required)
                             input(type="text", placeholder="last name")
                             input.margin-right(type="email", placeholder="email", required)
