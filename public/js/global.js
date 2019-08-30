@@ -66,6 +66,7 @@ function bindEvents(){
             .subscribe( resp => {
                 console.log(resp);
                 if (resp.status === 200 && resp.response[0].status == 'sent') toggleSuccessMsg('form.quick-contact', '.form-wrapper .success-msg');
+                tracker.send('event', { eventCategory: 'contact', eventAction: 'main_form_submission', eventLabel: 'footer contact form', eventValue: 10 })
             });
         });
     }
