@@ -66,7 +66,7 @@ function bindEvents(){
             .subscribe( resp => {
                 console.log(resp);
                 if (resp.status === 200 && resp.response[0].status == 'sent') toggleSuccessMsg('form.quick-contact', '.form-wrapper .success-msg');
-                tracker.send('event', { eventCategory: 'contact', eventAction: 'main_form_submission', eventLabel: 'footer contact form', eventValue: 10 })
+                // tracker.send('event', { eventCategory: 'contact', eventAction: 'main_form_submission', eventLabel: 'footer contact form', eventValue: 10 })
             });
         });
     }
@@ -84,7 +84,7 @@ function initProductGallery(){
 
     if ($('.case-studies-wrapper').length <= 0) { return }
     if ($('#testimonials').length <= 0) { return }
-    if ($('.case-studies-wrapper').width() > 450) { console.log('ignore slick on case studies'); return;}
+    if ($('.case-studies-wrapper').width() > 450) { return;}
 
     $('.case-studies-wrapper').slick({
         arrows: false,
