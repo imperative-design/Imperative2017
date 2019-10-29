@@ -385,6 +385,7 @@ section {
         display: flex;
         justify-content: center;
         div.testimonial-wrapper {
+            position: relative;
             background: white;
             color: #696969;
             box-shadow: 0 0 20px #e0e0e0;
@@ -418,8 +419,10 @@ section {
             }
             .testimonial-text-wrapper {
                 width: 66.65%;
-                padding: 2vh 1.6vw 0.8vh 0;
+                padding: 4vh 1.6vw 45px 0;
                 position: relative;
+                height: 250px;
+                overflow: auto;
                 img{
                     height: 1.9vw;
                     // position: relative;
@@ -436,6 +439,19 @@ section {
                 p {
                     font-size: 1.113vw;
                 }
+            }
+            .bottom-shade {
+                position: absolute;
+                bottom: 0px;
+                right: 0;
+                width: 67%;
+                height: 45px;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+                background: -moz-linear-gradient(top,  rgba(255,255,255,.4) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,.4) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,.4) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
             }
         }
     }
