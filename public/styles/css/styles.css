@@ -725,6 +725,7 @@ section h3.section-title:after {
     display: flex;
     justify-content: center; }
     #testimonials-wrapper #testimonials div.testimonial-wrapper {
+      position: relative;
       background: white;
       color: #696969;
       box-shadow: 0 0 20px #e0e0e0;
@@ -755,8 +756,10 @@ section h3.section-title:after {
           z-index: 1; }
       #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper {
         width: 66.65%;
-        padding: 2vh 1.6vw 0.8vh 0;
-        position: relative; }
+        padding: 4vh 1.6vw 45px 0;
+        position: relative;
+        height: 250px;
+        overflow: auto; }
         #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper img {
           height: 1.9vw;
           position: absolute;
@@ -768,6 +771,21 @@ section h3.section-title:after {
           text-transform: uppercase; }
         #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper p {
           font-size: 1.113vw; }
+      #testimonials-wrapper #testimonials div.testimonial-wrapper .bottom-shade {
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        width: 67%;
+        height: 45px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, white 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, white 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, white 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+        /* IE6-9 */ }
 
 #blog-posts h3 {
   text-align: center; }
@@ -1173,7 +1191,7 @@ section h3.section-title:after {
 .services-page .content {
   width: 80%;
   border-left: 1px dotted #333;
-  padding: 0 0 0 30px; }
+  padding: 0 5% 0 30px; }
 
 .about-page .ctas {
   min-height: 200px;
