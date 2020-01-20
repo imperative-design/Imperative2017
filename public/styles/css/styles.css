@@ -361,6 +361,8 @@ header {
           border: none; }
 
 @media only screen and (max-device-width: 1439px) and (min-device-width: 1023px) {
+  body {
+    background: green !important; }
   header.group {
     min-height: 150px; }
   .home section.ctas {
@@ -644,9 +646,14 @@ section h3.section-title {
     #case-studies .case-studies-wrapper .case-link-wrapper {
       position: unset;
       opacity: unset;
-      width: 49%; }
+      width: 49%;
+      height: 49.5%;
+      padding-bottom: 5px; }
+      #case-studies .case-studies-wrapper .case-link-wrapper.third-h-case {
+        height: 33.1%; }
       #case-studies .case-studies-wrapper .case-link-wrapper .case-study {
-        width: 100%; }
+        width: 100%;
+        height: 100%; }
     #case-studies .case-studies-wrapper .case-study {
       position: relative; }
     #case-studies .case-studies-wrapper .duluth-background {
@@ -1457,7 +1464,6 @@ a:hover {
   section#contact-area {
     height: unset; }
     section#contact-area div.contact-shade {
-      max-height: 590px;
       padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;
       align-items: center; }
@@ -1466,8 +1472,7 @@ a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 0 1vh;
-        max-height: 150px; }
+        margin: 0 0 1vh; }
         section#contact-area div.contact-shade div.cta-wrapper h4 {
           font-size: 3.5vw; }
         section#contact-area div.contact-shade div.cta-wrapper h5 {

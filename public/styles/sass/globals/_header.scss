@@ -112,6 +112,9 @@ header {
 @media only screen 
 and (max-device-width : 1439px)
 and (min-device-width : 1023px){
+    body {
+        background: green !important;
+    }
     header.group {
         min-height: 150px;
     }

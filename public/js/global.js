@@ -46,6 +46,7 @@ function initProductGallery(){
     if ($('#testimonials').length <= 0) { return }
     if ($('.case-studies-wrapper').width() > 450) { console.log('ignore slick on case studies'); return;}
 
+
     $('.case-studies-wrapper').slick({
         arrows: false,
         slidesToShow: 1,

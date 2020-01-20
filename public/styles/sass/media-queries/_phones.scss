@@ -325,7 +325,7 @@ and (max-device-width : 415px){
   section#contact-area {
     height: unset;
     div.contact-shade{
-      max-height: 590px;
+      // max-height: 660px;
       padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;
       align-items: center;
@@ -335,7 +335,7 @@ and (max-device-width : 415px){
         flex-direction: column;
         align-items: center;
         margin: 0 0 1vh;
-        max-height: 150px;
+        // max-height: 150px;
         h4 {
           font-size: 3.5vw;
         }
