@@ -227,14 +227,21 @@ and (max-device-width : 415px){
   }
 
   section#testimonials-wrapper {
+    overflow: hidden;
     h3 {
       font-size: 4.5vw;
     }
+
+    #testimonials-bg-img {
+      height: 120px;
+    }
+
     #testimonials {
       display: block;
       justify-content: unset;
       width: 89%;
       margin: 0 auto;
+
       .testimonial-wrapper {
         width: 80%;
         margin: 0;
@@ -324,8 +331,11 @@ and (max-device-width : 415px){
 
   section#contact-area {
     height: unset;
+    .contact-wrapper {
+      flex-direction: column;
+      width: 100%;
+    }
     div.contact-shade{
-      // max-height: 660px;
       padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;
       align-items: center;

@@ -727,20 +727,8 @@ section h3.section-title:after {
   width: 10vw;
   margin: 0 auto; }
 
-@media only screen and (max-device-width: 1921px) and (min-device-width: 1441px) {
-  #case-studies .case-study-text {
-    top: -6vw; }
-  #case-studies .case-studies-wrapper div.third-h-case.case-study .case-study-text {
-    top: -6.5vh; }
-  #case-studies .case-studies-wrapper div.third-h-case.case-study p.case-study-text {
-    top: unset; }
-  #case-studies .case-studies-wrapper div.third-h-case.case-study a img {
-    top: -1vw; }
-  .services-page .ctas {
-    margin-top: 250px; } }
-
 #testimonials-wrapper {
-  margin-top: 10vw; }
+  margin-top: 5vw; }
   #testimonials-wrapper #testimonials-bg-img {
     background: url("../../img/homepage/testimonials-bg.png");
     background-size: cover;
@@ -756,6 +744,7 @@ section h3.section-title:after {
     display: flex;
     justify-content: center; }
     #testimonials-wrapper #testimonials div.testimonial-wrapper {
+      position: relative;
       background: white;
       color: #696969;
       box-shadow: 0 0 20px #e0e0e0;
@@ -786,8 +775,10 @@ section h3.section-title:after {
           z-index: 1; }
       #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper {
         width: 66.65%;
-        padding: 2vh 1.6vw 0.8vh 0;
-        position: relative; }
+        padding: 4vh 1.6vw 45px 0;
+        position: relative;
+        height: 250px;
+        overflow: auto; }
         #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper img {
           height: 1.9vw;
           position: absolute;
@@ -799,6 +790,21 @@ section h3.section-title:after {
           text-transform: uppercase; }
         #testimonials-wrapper #testimonials div.testimonial-wrapper .testimonial-text-wrapper p {
           font-size: 1.113vw; }
+      #testimonials-wrapper #testimonials div.testimonial-wrapper .bottom-shade {
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        width: 67%;
+        height: 45px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, white 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, white 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, white 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+        /* IE6-9 */ }
 
 #blog-posts h3 {
   text-align: center; }
@@ -852,10 +858,11 @@ section h3.section-title:after {
 
 #contact-area {
   z-index: 4;
-  height: 40vw;
   margin: 2vw 0 0 0;
   background: url("../../img/homepage/jacek.jpg");
   background-size: cover; }
+  #contact-area .contact-wrapper {
+    display: flex; }
   #contact-area .section-title:after {
     display: none; }
   #contact-area div.contact-shade {
@@ -864,13 +871,14 @@ section h3.section-title:after {
     width: 100%;
     z-index: 3;
     display: flex;
-    padding: 4vw 7vw 4vw 7vw;
+    padding: 4vw 10vw 4vw 10vw;
     box-sizing: border-box; }
   #contact-area div.cta-wrapper {
-    width: 45%;
+    width: 30%;
     height: 100%;
     display: inline-block;
-    color: white; }
+    color: white;
+    margin-right: 10vw; }
     #contact-area div.cta-wrapper .section-title {
       margin: 0 0 1.4vh; }
     #contact-area div.cta-wrapper h4 {
@@ -883,20 +891,19 @@ section h3.section-title:after {
       margin-bottom: 1.5vw; }
     #contact-area div.cta-wrapper a {
       margin-bottom: 1.5vw;
-      display: inline-block;
+      display: block;
       font-family: 'Fjalla One', sans-serif;
-      width: 75%;
-      height: 6vw;
       background: white;
       color: black;
       text-align: center;
       font-size: 2.5vw;
       font-weight: 400;
-      line-height: 6vw;
-      text-transform: uppercase; }
+      line-height: 1.4;
+      text-transform: uppercase;
+      padding: 1vh; }
   #contact-area .form-wrapper {
-    width: 55%;
-    height: 100%;
+    width: 60%;
+    /* height: 100%; */
     display: inline-block;
     color: white; }
     #contact-area .form-wrapper h3 {
@@ -1203,7 +1210,7 @@ section h3.section-title:after {
 .services-page .content {
   width: 80%;
   border-left: 1px dotted #333;
-  padding: 0 0 0 30px; }
+  padding: 0 5% 0 30px; }
 
 .about-page .ctas {
   min-height: 200px;
@@ -1212,7 +1219,8 @@ section h3.section-title:after {
 .about-page .content {
   width: 80%;
   border-left: 1px dotted #333;
-  padding: 0 0 0 30px; }
+  padding: 0 0 0 30px;
+  margin: 0 auto; }
 
 .clients-page .page.wrapper {
   margin: 0;
@@ -1230,6 +1238,26 @@ a {
 a:hover {
   transform: scale(1.1);
   color: #fff; }
+
+@media only screen and (max-device-width: 1439px) {
+  header.group {
+    min-height: 150px; }
+  .home section.ctas {
+    margin: 150px 0 0 0; } }
+
+@media only screen and (max-device-width: 1921px) and (min-device-width: 1441px) {
+  header.group {
+    min-height: 198px; }
+  #case-studies .case-study-text {
+    top: -6vw; }
+  #case-studies .case-studies-wrapper div.third-h-case.case-study .case-study-text {
+    top: -6.5vh; }
+  #case-studies .case-studies-wrapper div.third-h-case.case-study p.case-study-text {
+    top: unset; }
+  #case-studies .case-studies-wrapper div.third-h-case.case-study a img {
+    top: -1vw; }
+  .services-page .ctas {
+    margin-top: 250px; } }
 
 @media only screen and (max-device-width: 415px) {
   section h3.section-title {
@@ -1397,39 +1425,43 @@ a:hover {
           top: -10vw; }
         section#case-studies .case-studies-wrapper .case-link-wrapper .case-study p {
           font-size: 1.8vw; }
-  section#testimonials-wrapper h3 {
-    font-size: 4.5vw; }
-  section#testimonials-wrapper #testimonials {
-    display: block;
-    justify-content: unset;
-    width: 89%;
-    margin: 0 auto; }
-    section#testimonials-wrapper #testimonials .testimonial-wrapper {
-      width: 80%;
-      margin: 0;
-      max-height: 80px; }
-      section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper {
-        width: 23.33%; }
-        section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper img.portrait {
-          height: 7.5vw;
-          width: 7.5vw;
-          top: 30%; }
-      section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-text-wrapper {
-        width: 76.65%; }
-        section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-text-wrapper img {
-          height: 3vw;
-          top: 10px;
-          right: 0;
-          left: -20px; }
-        section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-text-wrapper p {
-          font-size: 1.5vw; }
-    section#testimonials-wrapper #testimonials .testimonial-wrapper:last-child {
-      display: none; }
-  section#testimonials-wrapper .slick-dots li {
-    margin: 0; }
-    section#testimonials-wrapper .slick-dots li.slick-active button:before {
-      opacity: 1;
-      color: #0036bf; }
+  section#testimonials-wrapper {
+    overflow: hidden; }
+    section#testimonials-wrapper h3 {
+      font-size: 4.5vw; }
+    section#testimonials-wrapper #testimonials-bg-img {
+      height: 120px; }
+    section#testimonials-wrapper #testimonials {
+      display: block;
+      justify-content: unset;
+      width: 89%;
+      margin: 0 auto; }
+      section#testimonials-wrapper #testimonials .testimonial-wrapper {
+        width: 80%;
+        margin: 0;
+        max-height: 80px; }
+        section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper {
+          width: 23.33%; }
+          section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-image-wrapper img.portrait {
+            height: 7.5vw;
+            width: 7.5vw;
+            top: 30%; }
+        section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-text-wrapper {
+          width: 76.65%; }
+          section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-text-wrapper img {
+            height: 3vw;
+            top: 10px;
+            right: 0;
+            left: -20px; }
+          section#testimonials-wrapper #testimonials .testimonial-wrapper .testimonial-text-wrapper p {
+            font-size: 1.5vw; }
+      section#testimonials-wrapper #testimonials .testimonial-wrapper:last-child {
+        display: none; }
+    section#testimonials-wrapper .slick-dots li {
+      margin: 0; }
+      section#testimonials-wrapper .slick-dots li.slick-active button:before {
+        opacity: 1;
+        color: #0036bf; }
   section#blog-posts .posts-wrapper {
     padding: 5vw 7vw; }
     section#blog-posts .posts-wrapper .post {
@@ -1463,6 +1495,9 @@ a:hover {
           padding: 1vh 0; }
   section#contact-area {
     height: unset; }
+    section#contact-area .contact-wrapper {
+      flex-direction: column;
+      width: 100%; }
     section#contact-area div.contact-shade {
       padding: 4vw 7vw 2vw 7vw;
       flex-direction: column;

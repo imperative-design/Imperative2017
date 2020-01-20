@@ -33,27 +33,9 @@ html
             block bodyscripts
                 script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
                 script(src='/js/global.js')
-                
+        
+        include contact
         //- Load Facebook SDK for JavaScript
-        section#contact-area
-            div.contact-shade
-                div.cta-wrapper
-                    h3.section-title YOU HAD ME AT HELLO
-                    h5 NOW WHAT'S NEXT?
-                    a(href="/insights/getting-started/") Get Started
-                    a(href="tel:4703583559") Give us a call
-                section.form-wrapper
-                    h3.section-title DROP US A LINE
-                    p.success-msg Thanks for for dropping us a line! We'll be in touch soon.
-                    form
-                        input.margin-right(type="text", placeholder="first name", required)
-                        input(type="text", placeholder="last name")
-                        input.margin-right(type="email", placeholder="email", required)
-                        input(type="phone", placeholder="phone", required)
-                        textarea(placeholder="Reason for writing", rows="7", required)
-                        input.submit(type="submit")
-            section#copyright
-                p &copy; Copyright 2019. IMPERATIVE DESIGN. All Rights Reserved.
         div#fb-root
         script.
             window.fbAsyncInit = function() {
@@ -74,12 +56,4 @@ html
         //Your customer chat code
         div.fb-customerchat(attribution="setup_tool", page_id="163143773718123", theme_color="#0036bf", logged_in_greeting="Hey thanks for getting in touch. What can we do for you?", logged_out_greeting="Hey thanks for getting in touch. What can we do for you?")
 
-    
-        //- script(async,  src="https://www.googletagmanager.com/gtag/js?id=UA-30304370-2")
-        script(async,  src="https://www.googletagmanager.com/gtag/js?id=UA-10395310-1")
-        script. 
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-10395310-1');
+        include ga

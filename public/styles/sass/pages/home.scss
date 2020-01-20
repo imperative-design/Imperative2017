@@ -373,27 +373,8 @@ section {
     }
 }
 
-@media only screen 
-and (max-device-width : 1921px)
-and (min-device-width : 1441px){
-    #case-studies {
-        .case-study-text {top: -6vw;}
-        // a { img { top: -2vw; } }
-        .case-studies-wrapper {
-            div.third-h-case.case-study {
-                .case-study-text { top: -6.5vh; }
-                p.case-study-text { top: unset; }
-                a img { top: -1vw; }
-            }
-        }
-    }
-    .services-page .ctas {
-        margin-top: 250px;
-    }
-}
-
 #testimonials-wrapper {
-    margin-top: 10vw;
+    margin-top: 5vw;
     // height: 33vw;
     #testimonials-bg-img {
         background:url("../../img/homepage/testimonials-bg.png");
@@ -413,6 +394,7 @@ and (min-device-width : 1441px){
         display: flex;
         justify-content: center;
         div.testimonial-wrapper {
+            position: relative;
             background: white;
             color: #696969;
             box-shadow: 0 0 20px #e0e0e0;
@@ -446,8 +428,10 @@ and (min-device-width : 1441px){
             }
             .testimonial-text-wrapper {
                 width: 66.65%;
-                padding: 2vh 1.6vw 0.8vh 0;
+                padding: 4vh 1.6vw 45px 0;
                 position: relative;
+                height: 250px;
+                overflow: auto;
                 img{
                     height: 1.9vw;
                     // position: relative;
@@ -464,6 +448,19 @@ and (min-device-width : 1441px){
                 p {
                     font-size: 1.113vw;
                 }
+            }
+            .bottom-shade {
+                position: absolute;
+                bottom: 0px;
+                right: 0;
+                width: 67%;
+                height: 45px;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+                background: -moz-linear-gradient(top,  rgba(255,255,255,.4) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,.4) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,.4) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
             }
         }
     }
@@ -532,10 +529,13 @@ and (min-device-width : 1441px){
 
 #contact-area {
     z-index: 4;
-    height: 40vw;
+    // height: 40vw;
     margin: 2vw 0 0 0;
     background:url("../../img/homepage/jacek.jpg");
     background-size: cover;
+    .contact-wrapper {
+        display: flex;
+    }
     .section-title:after {
         display: none;
     }
@@ -545,15 +545,15 @@ and (min-device-width : 1441px){
         width: 100%;
         z-index: 3;
         display: flex;
-        padding: 4vw 7vw 4vw 7vw;
+        padding: 4vw 10vw 4vw 10vw;
         box-sizing: border-box;
-        // padding: 2vw 5vw;
     }
     div.cta-wrapper {
-        width: 45%;
+        width: 30%;
         height: 100%;
         display: inline-block;
         color: white;
+        margin-right: 10vw;
 
         .section-title {
             margin: 0 0 1.4vh;
@@ -570,24 +570,24 @@ and (min-device-width : 1441px){
             font-family: 'Maven Pro', sans-serif;
             margin-bottom: 1.5vw
         }
+
         a {
             margin-bottom: 1.5vw;
-            display: inline-block;
+            display: block;
             font-family: 'Fjalla One', sans-serif;
-            width: 75%;
-            height: 6vw;
             background: white;
             color: black;
             text-align: center;
             font-size: 2.5vw;
             font-weight: 400;
-            line-height: 6vw;
+            line-height: 1.4;
             text-transform: uppercase;
+            padding: 1vh;
         }
     }
     .form-wrapper {
-        width: 55%;
-        height: 100%;
+        width: 60%;
+        /* height: 100%; */
         display: inline-block;
         color: white;
         h3 {

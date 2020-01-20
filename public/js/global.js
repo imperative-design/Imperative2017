@@ -1,4 +1,43 @@
 
+
+function init(){
+    bindEvents();
+
+    compensateHeaderHeight()
+
+    if ($('.client-cases').length <= 0) { return }
+    $('.client-cases').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        // appendArrows: '.case-studies',
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    dots: false,
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    dots: false,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+}
+
+function compensateHeaderHeight(){
+    const ctaHeight = String($('header').outerHeight()) + 'px';
+    $('.ctas:first').css('marginTop', ctaHeight);
+}
+
 function bindEvents(){
     $('a.nav-toggle').on('click', toggleNav);
     $('.show-contact').on('click', toggleQuickContact);
@@ -26,7 +65,10 @@ function bindEvents(){
             Rx.Observable.ajax.post('/contact', formData)
             .subscribe( resp => {
                 console.log(resp);
-                if(resp.status === 200 && resp.response[0].status == 'sent') toggleSuccessMsg('.quick-contact form', '.quick-contact .success-msg');
+                if (resp.status === 200 && resp.response[0].status == 'sent') {
+                    toggleSuccessMsg('form.quick-contact', '.form-wrapper .success-msg');
+                    tracker.send('event', { eventCategory: 'contact', eventAction: 'main_form_submission', eventLabel: 'footer contact form', eventValue: 10 })
+                }
             });
         });
     }
@@ -44,7 +86,7 @@ function initProductGallery(){
 
     if ($('.case-studies-wrapper').length <= 0) { return }
     if ($('#testimonials').length <= 0) { return }
-    if ($('.case-studies-wrapper').width() > 450) { console.log('ignore slick on case studies'); return;}
+    if ($('.case-studies-wrapper').width() > 450) { return;}
 
 
     $('.case-studies-wrapper').slick({
@@ -184,32 +226,6 @@ function bindCtaAnimations(sel){
 }
 
 //Kickoff jQuery
-$('document').ready(function(){
-    bindEvents();
-    if ($('.client-cases').length <= 0) { return }
-    $('.client-cases').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        focusOnSelect: true,
-        // appendArrows: '.case-studies',
-        dots: true,
-		responsive: [
-	    {
-	      breakpoint: 768,
-	      settings: {
-            arrows: false,
-            dots: false,
-	        slidesToShow: 2
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-            arrows: false,
-            dots: false,
-	        slidesToShow: 1
-	      }
-	    }
-	  ]
-	});
+$('document').ready(($) => {
+    init();
 });

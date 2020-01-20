@@ -7,8 +7,8 @@ block content
                 //- img(src='img/homepage/banner-pic.png')
                 div.banner-text-wrapper
                     h2.message WHAT IF
-                    h3.message YOU COULD CHOOSE YOU CUSTOMERS
-                    h4.message intead of them choosing you
+                    h3.message YOU COULD CHOOSE YOUR CUSTOMERS
+                    h4.message instead of them choosing you
                     //- != 'What if <span class="highlight">you could choose your customers</span> intead of them choosing you?'
                     a.action(href="/services/search-engine-optimization") Read More
                     div.arrow-cta
@@ -111,18 +111,48 @@ block content
             div#testimonials
                 div.testimonial-wrapper
                     div.testimonial-image-wrapper
-                        img.portrait(src="../img/homepage/marius.jpg", alt="")
+                        img.portrait(src="../img/homepage/emil.jpg", alt="")
                     div.testimonial-text-wrapper
                         img(src="../img/Icons/left-quote-testimonials.png", alt="")
-                        p Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                        p.name - John Doe, Los Angeles
+                        p 
+                            | I needed help with my digital marketing because my previous marketing company ( kudzu.com ) 
+                            | went out of business in November 2018 and was in desperate need of getting my company's name out there on the web. 
+                            | I have a painting business and needed to advertise on google ASAP. I asked a few other painting companies where 
+                            | they were getting their leads from and luckily I came across a company that referred me to Paul. I was a little hesitant
+                            | at first but after seeing the other company's websites designed by Paul &amp; Imperative Design and their setup on google,
+                            | I had to give him a shot. Boy am I glad I did. Not only did he build my sight professionally but he also put me on google and 
+                            | told me about all the different ways and options I could advertise on google, facebook, and Nextdoor. He gave me a lot of tools to work with to build my business 
+                            | online. I'm forever grateful. He knows his stuff and knows what he's doing. Highly recommend him and his team. 
+                            | Thank you Paul!
+                            
+                        p.name - Emil S. Prime painters llc 
+                    .bottom-shade
                 div.testimonial-wrapper
                     div.testimonial-image-wrapper
-                        img.portrait(src="../img/homepage/marius.jpg", alt="")
+                        img.portrait(src="../img/homepage/erion.jpg", alt="")
                     div.testimonial-text-wrapper
                         img(src="../img/Icons/left-quote-testimonials.png", alt="")
-                        p Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                        p.name - John Doe, Los Angeles
+                        p 
+                            | We started working with Imperative Design years ago. Throught the years Paul and his team have designed and built several iterations of our site.
+                            | It is clear from his attention to detail and the time he takes to craft a stratagey that really fits our business, that we are more than a project to him.
+                            | It's nice to work with a company that genuinely cares about how your business is going to do, and they take the time to get it right. 
+
+                        p.name - Erion Ziu, Duluth Diner
+                    .bottom-shade
+                div.testimonial-wrapper
+                    div.testimonial-image-wrapper
+                        img.portrait(src="../img/homepage/ben.jpg", alt="")
+                    div.testimonial-text-wrapper
+                        img(src="../img/Icons/left-quote-testimonials.png", alt="")
+                        p 
+                            | I met Paul through happenstance at a Starbucks one day and having my own development company myself we struck up a conversation.
+                            | As it stands, that was an awesome stroke of serendipity. We have collaborated now on multiple projects. Given that the projects that we 
+                            | have collaborated on have had small room for error and high visibility, we are happy to be able to say Imperative Design puts out top
+                            | notch work and quickly has demonstrated to us the wide breadth of knowledge they have when it comes to full-stack development. Whether it is
+                            | WordPress, Angular, or NativeScript, Paul has always given us great ideas when we have chatted over a cup of coffee and discussed projects. 
+                            
+                        p.name - Ben Howerton, DevMethods
+                    .bottom-shade
         
         section#blog-posts
             h3.section-title CHECK OUT OUR LATEST BLOG POSTS
@@ -145,42 +175,4 @@ block content
                         span The ABC's of event binding 
                         p In the olden days of jQuery there were a myriad of ways to bind events in the DOM. You had to take into account things like, is the element always present when the page loads, are things going to be added to the DOM dynamically, and so on. With those things to consider you had tons of options for binding events.
                         a.read-more.btn(href="/insights/event-binding-with-delegated-events-async-dom-manipulation/") READ MORE
-        section#contact-area
-            div.contact-shade
-                div.cta-wrapper
-                    h3.section-title YOU HAD ME AT HELLO
-                    h5 NOW WHAT'S NEXT?
-                    a(href="/insights/getting-started/") Get Started
-                    a(href="tel:4703583559") Give us a call
-                section.form-wrapper
-                    h3.section-title DROP US A LINE
-                    p.success-msg Thanks for for dropping us a line! We'll be in touch soon.
-                    form
-                        input.margin-right(type="text", placeholder="first name", required)
-                        input(type="text", placeholder="last name")
-                        input.margin-right(type="email", placeholder="email", required)
-                        input(type="phone", placeholder="phone", required)
-                        textarea(placeholder="Reason for writing", rows="7", required)
-                        input.submit(type="submit")
-            section#copyright
-                p &copy; Copyright 2019. IMPERATIVE DESIGN. All Rights Reserved.
-        //- section#contact.band.blue.band3
-        //-     div.wrapper
-        //-         div.message
-        //-             .next-step-ctas
-        //-                 h4 You had me at hello
-        //-                 p Now what's next?
-        //-                 ul.next-steps
-        //-                     li.btn: a(href="/insights/getting-started/"): h2 Get Started
-        //-                     li.btn.contact: a(href="tel:4703583559"): h2 give us a call
-        //-                     li.social-icons
-        //-             .quick-contact
-        //-                 h4 drop us a line
-        //-                 p.success-msg Thanks for for dropping us a line! We'll be in touch soon.
-        //-                 form
-        //-                     input(type="text", placeholder="first name", required)
-        //-                     input(type="text", placeholder="last name")
-        //-                     input(type="email", placeholder="email", required)
-        //-                     input(type="phone", placeholder="phone", required)
-        //-                     textarea(placeholder="Reason for writing", rows="7", required)
-        //-                     input(type="submit")
+        include contact

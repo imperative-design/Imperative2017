@@ -5,4 +5,5 @@
 .about-page .content {
   width: 80%;
   border-left: 1px dotted #333;
-  padding: 0 0 0 30px; }
+  padding: 0 0 0 30px;
+  margin: 0 auto; }
