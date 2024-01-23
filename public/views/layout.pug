@@ -1,18 +1,28 @@
 //- layout.pug
 html
-  head
-    title Imperative Design | A Full Stop Web Shop
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="theme-color", content="#0036bf")
-    link(rel="manifest", href="/manifest.json")
-    block scripts
+    head
+        title Imperative Design | A Full Stop Web Shop
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="theme-color" content="#0036bf")
+        link(rel="manifest" href="/manifest.json")
+        block scripts
+<!-- Google Tag Manager -->
+    script.
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KBWPHMKX');
+<!-- End Google Tag Manager -->
 
     block styles
-        link(rel="stylesheet", href="/styles/css/styles.css")
-        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-        link(rel="stylesheet", href="/scripts/slick-carousel/slick/slick.css")
-        link(rel="stylesheet", href="/scripts/slick-carousel/slick/slick-theme.css")
+        link(rel="stylesheet" href="/styles/css/styles.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="stylesheet" href="/scripts/slick-carousel/slick/slick.css")
+        link(rel="stylesheet" href="/scripts/slick-carousel/slick/slick-theme.css")
     body.page(class=active_page)
+        noscript
+            iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-KBWPHMKX" height="0" width="0" style="display:none;visibility:hidden")
         div.container
             include header    
             block content
@@ -42,6 +52,6 @@ html
             }(document, 'script', 'facebook-jssdk'));
 
         //Your customer chat code
-        div.fb-customerchat(attribution="setup_tool", page_id="163143773718123", theme_color="#0036bf", logged_in_greeting="Hey thanks for getting in touch. What can we do for you?", logged_out_greeting="Hey thanks for getting in touch. What can we do for you?")
+        div.fb-customerchat(attribution="setup_tool" page_id="163143773718123" theme_color="#0036bf" logged_in_greeting="Hey thanks for getting in touch. What can we do for you?" logged_out_greeting="Hey thanks for getting in touch. What can we do for you?")
 
         include ga
