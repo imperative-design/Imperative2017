@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
-    "node-sass": "^4.11.0",
+    "node-sass": "^9.0.0",
     "nodemon": "^1.11.0"
   }
 }
