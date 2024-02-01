@@ -11,6 +11,7 @@ var utils = require('./node_modules/ghost/core/server/utils');
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 var app = express();
 var mandrill = require('mandrill-api/mandrill');
@@ -62,9 +63,12 @@ if (NODE_ENV === 'production') {
 		}
 	};
 
-	app.get('/blog', (req, res) => {
-		request('https://imperative-design.ghost.io').pipe(res);
-	})
+	const blogProxy = createProxyMiddleware({
+		target: 'https://imperative-design.ghost.io',
+		changeOrigin: true,
+	  });
+
+	app.use('/blog', blogProxy);
 
 	//Init Ghost in a subdirectory
 	// ghost(env_config).then((ghostServer) => {
