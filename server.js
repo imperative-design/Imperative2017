@@ -5,16 +5,16 @@
  * - make sure to copy the ghost content and config over from the node_modules folder.
  * - set the content directory path in the config or it wont be able to find your theme or login.
  */
-var process 		= require('process');
-var path 			= require('path');
-var utils 			= require('./node_modules/ghost/core/server/utils');
-var express     	= require('express');
-var bodyParser 		= require('body-parser');
-var path        	= require('path');
+var process = require('process');
+var path = require('path');
+var utils = require('./node_modules/ghost/core/server/utils');
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
 
-var app         	= express();
-var mandrill 		= require('mandrill-api/mandrill');
-const NODE_ENV 		= process.env.NODE_ENV;
+var app = express();
+var mandrill = require('mandrill-api/mandrill');
+const NODE_ENV = process.env.NODE_ENV;
 
 
 //Middleware Configs
@@ -23,9 +23,9 @@ app.use('/scripts', express.static(__dirname + '/node_modules'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.urlencoded({ extended: true }));
- 
-if(NODE_ENV === 'production'){
-	var ghost 			= require('ghost');
+
+if (NODE_ENV === 'production') {
+	var ghost = require('ghost');
 
 	app.set('database', {
 		"client": "mysql",
@@ -42,7 +42,7 @@ if(NODE_ENV === 'production'){
 	});
 
 	let env_config = {
-		"server":{
+		"server": {
 			"host": "http://imperativedesign.net",
 			"port": process.env.PORT
 		},
@@ -62,36 +62,40 @@ if(NODE_ENV === 'production'){
 		}
 	};
 
+	app.get('/blog', (req, res) => {
+		request('https://imperative-design.ghost.io').pipe(res);
+	})
+
 	//Init Ghost in a subdirectory
-	ghost(env_config).then((ghostServer) => {
-		app.use('/insights', ghostServer.rootApp);
+	// ghost(env_config).then((ghostServer) => {
+	// 	app.use('/insights', ghostServer.rootApp);
 
-		if(process.env.NODE_ENV == "production"){	
-			let paths = ghostServer.config.get('paths');
-			paths.contentPath = "/app/insights/content"
-			ghostServer.config.set('paths', paths);
-		}
+	// 	if(process.env.NODE_ENV == "production"){	
+	// 		let paths = ghostServer.config.get('paths');
+	// 		paths.contentPath = "/app/insights/content"
+	// 		ghostServer.config.set('paths', paths);
+	// 	}
 
-		if(process.env.NODE_ENV == "development"){
-			console.log('==============================');
-			console.log('working in local');
-			console.log('==============================');
+	// 	if(process.env.NODE_ENV == "development"){
+	// 		console.log('==============================');
+	// 		console.log('working in local');
+	// 		console.log('==============================');
 
-			let paths = ghostServer.config.get('paths');
-			paths.contentPath = __dirname + '/insights/content'
-			ghostServer.config.set('paths', paths);
+	// 		let paths = ghostServer.config.get('paths');
+	// 		paths.contentPath = __dirname + '/insights/content'
+	// 		ghostServer.config.set('paths', paths);
 
-			console.log('==============================');
-			console.log(paths);
-			console.log('==============================');
-		}
+	// 		console.log('==============================');
+	// 		console.log(paths);
+	// 		console.log('==============================');
+	// 	}
 
-		ghostServer.start(app);
-	});
-	
+	// 	ghostServer.start(app);
+	// });
+
 	console.log(`===== prod db config is a ${typeof env_config.database} with a host of ${env_config.database.connection.host} =======`);
 }
- 
+
 console.log(`Debug Info: App is running in  ${process.env.NODE_ENV} mode on port ${process.env.PORT}`);
 
 
@@ -102,21 +106,21 @@ app.set('views', __dirname + '/public/views');
 app.set('view engine', 'pug');
 
 //Routes
-app.get('/', (req, res) => res.render('index', {active_page: 'home'}));
-app.get('/about', (req, res) => res.render('about', {message: 'Great and nerdy things coming... stay tuned.', title: 'this is how you pass data from express to your views.', active_page: 'about-page'}));
-app.get('/clients', (req, res) => res.render('clients', {message: 'Great and nerdy things coming... stay tuned.', title: 'this is how you pass data from express to your views.', active_page: 'clients-page'}));
-app.get('/services', (req, res) => res.render('services', {active_page: 'services-page'}));
-app.get('/services/website-development', (req, res) => res.render('web-development', {active_page: 'services-page', sub_page: 'website-development' }));
-app.get('/services/application-development', (req, res) => res.render('appdev', {active_page: 'services-page', sub_page: 'appdev' }));
-app.get('/services/search-engine-optimization', (req, res) => res.render('seo', {active_page: 'services-page', sub_page: 'seo' }));
-app.get('/services/social-media-marketing', (req, res) => res.render('smm', {active_page: 'services-page', sub_page: 'smm' }));
-app.get('/services/digital-marketing-strategy', (req, res) => res.render('strategy', {active_page: 'services-page', sub_page: 'strategy' }));
-app.get('/services/copywriting', (req, res) => res.render('copywriting', {active_page: 'services-page', sub_page: 'copywriting' }));
-app.get('/services/branding', (req, res) => res.render('branding', {active_page: 'services-page', sub_page: 'branding' }));
-app.get('/services/website-rennovation', (req, res) => res.render('web-rennovation', {active_page: 'services-page', sub_page: 'web-rennovation' }));
-app.get('/services/mentoring', (req, res) => res.render('mentoring', {active_page: 'services-page', sub_page: 'mentoring' }));
+app.get('/', (req, res) => res.render('index', { active_page: 'home' }));
+app.get('/about', (req, res) => res.render('about', { message: 'Great and nerdy things coming... stay tuned.', title: 'this is how you pass data from express to your views.', active_page: 'about-page' }));
+app.get('/clients', (req, res) => res.render('clients', { message: 'Great and nerdy things coming... stay tuned.', title: 'this is how you pass data from express to your views.', active_page: 'clients-page' }));
+app.get('/services', (req, res) => res.render('services', { active_page: 'services-page' }));
+app.get('/services/website-development', (req, res) => res.render('web-development', { active_page: 'services-page', sub_page: 'website-development' }));
+app.get('/services/application-development', (req, res) => res.render('appdev', { active_page: 'services-page', sub_page: 'appdev' }));
+app.get('/services/search-engine-optimization', (req, res) => res.render('seo', { active_page: 'services-page', sub_page: 'seo' }));
+app.get('/services/social-media-marketing', (req, res) => res.render('smm', { active_page: 'services-page', sub_page: 'smm' }));
+app.get('/services/digital-marketing-strategy', (req, res) => res.render('strategy', { active_page: 'services-page', sub_page: 'strategy' }));
+app.get('/services/copywriting', (req, res) => res.render('copywriting', { active_page: 'services-page', sub_page: 'copywriting' }));
+app.get('/services/branding', (req, res) => res.render('branding', { active_page: 'services-page', sub_page: 'branding' }));
+app.get('/services/website-rennovation', (req, res) => res.render('web-rennovation', { active_page: 'services-page', sub_page: 'web-rennovation' }));
+app.get('/services/mentoring', (req, res) => res.render('mentoring', { active_page: 'services-page', sub_page: 'mentoring' }));
 
-app.post('/contact', (req, res)=>{
+app.post('/contact', (req, res) => {
 	let formData = req.body;
 	console.log('formData', formData);
 
@@ -151,10 +155,10 @@ app.post('/contact', (req, res)=>{
 		"from_email": 'dev@imperativedesign.net',
 		"from_name": formData['first name'] + formData['last name'],
 		"to": [{
-				"email": "dev@imperativedesign.net",
-				"name": "Imperative Design",
-				"type": "to"
-			}],
+			"email": "dev@imperativedesign.net",
+			"name": "Imperative Design",
+			"type": "to"
+		}],
 		"headers": {
 			"Reply-To": formData['email']
 		},
@@ -171,15 +175,15 @@ app.post('/contact', (req, res)=>{
 
 	var async = false;
 	var ip_pool = "Main Pool";
-	
+
 	//YYYY-MM-DD HH:MM:SS
-	var now 	= new Date();
+	var now = new Date();
 	var send_at = '2011-01-01 12:00:00';
-	mandrill_client.messages.send({"message": message, "async": async, "ip_pool": ip_pool, "send_at": send_at}, (result) => {
+	mandrill_client.messages.send({ "message": message, "async": async, "ip_pool": ip_pool, "send_at": send_at }, (result) => {
 		console.log(result);
 		res.status(200).send(result);
-		
-	}, function(e) {
+
+	}, function (e) {
 		// Mandrill returns the error as an object with name and message keys
 		console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
 		// A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
@@ -188,5 +192,5 @@ app.post('/contact', (req, res)=>{
 });
 
 //Port Configs
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 4999));
 app.listen(app.get('port'), () => console.log('Node app is running on port', app.get('port')));
