@@ -88,6 +88,7 @@ function initProductGallery(){
     if ($('#testimonials').length <= 0) { return }
     if ($('.case-studies-wrapper').width() > 450) { return;}
 
+
     $('.case-studies-wrapper').slick({
         arrows: false,
         slidesToShow: 1,

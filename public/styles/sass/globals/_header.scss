@@ -110,6 +110,31 @@ header {
     }
 }
 
+@media only screen 
+and (max-device-width : 1439px)
+and (min-device-width : 1023px){
+    body {
+        background: green !important;
+    }
+    header.group {
+        min-height: 150px;
+    }
+    .home section.ctas {
+        margin: 150px 0 0 0;
+    }
+}
+
+@media only screen 
+and (max-device-width : 1921px)
+and (min-device-width : 1441px){
+    header.group {
+        min-height: 198px;
+    }
+    .home section.ctas {
+        margin: 250px 0 0 0;
+    }
+}
+
 .container {
     // max-width: 1500px;
     width: 100%;
